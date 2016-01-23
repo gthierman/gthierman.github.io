@@ -1,23 +1,35 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="hero dark-bg">
+  <h1>UX &amp; UI in Vancouver, BC.</h1>
+  Working on UI &#64; Clio<br>
+  <a href="" class="button">See my work</a>
+  <a href="" class="button">Read my blog</a>
+</section>
+<section class="what-i-do light-bg">
+  <h1>What I do</h1>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-lg-4">
+        <strong>Title</strong>
+        <p>Plura mihi bona sunt, inclinet, amari petere vellent. Inmensae subtilitatis, obscuris et malesuada fames.</p>
+      </div>
+      <div class="col-lg-4">
+        <strong>Title</strong>
+        <p>Plura mihi bona sunt, inclinet, amari petere vellent. Inmensae subtilitatis, obscuris et malesuada fames.</p>
+      </div>
+      <div class="col-lg-4">
+        <strong>Title</strong>
+        <p>Plura mihi bona sunt, inclinet, amari petere vellent. Inmensae subtilitatis, obscuris et malesuada fames.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="dark-bg large-quote">
+  <blockquote>
+    Work is love made visible.
+    <br>
+    <span class="large-quote-author">- Khalil Gibran</span>
+  </blockquote>
+</section>
