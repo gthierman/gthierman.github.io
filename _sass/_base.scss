@@ -13,6 +13,10 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+html, .content {
+    position: relative;
+    min-height: 100%;   
+}
 body {
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -20,6 +24,7 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    margin: 0 0 $footer-height;
 }
 
 
@@ -53,7 +58,7 @@ figure > img {
     display: block;
 }
 
-figcaption {
+figcaption {    
     font-size: $small-font-size;
 }
 
