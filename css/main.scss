@@ -11,31 +11,21 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 24px;
 
-$spacing-unit:     30px;
+$spacing-unit:     32px;
 
-$blue-1:           #84C3FF;
-$blue-2:           #329BFF;
-$blue-3:           #226CB2;
-$blue-4:           #143E66;
-$blue-5:           #0A1F33;
+$red: #FF4B48;
 
-$text-color:       $blue-5;
+$text-color: black;
+$link-color-hover: black;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-$grey-1:           #F4F5F5;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$hero-grey-text: #9A9FA3;
 
-$header-height: 60px;
+// $header-height: 60px;
 $footer-height: 90px;
 
-
-
 // Width of the content area
-$content-width:    1100px;
-
+$content-width:    1200px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
