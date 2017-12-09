@@ -2,11 +2,13 @@ $blue: #005EBB;
 $blue-subdued: #5DC2FF;
 $white: #fff;
 
-$nav-width: 310px;
+$nav-width: 250px;
 $nav-background: $blue;
 $nav-color-bright: $white;
 $nav-color-subdued: $blue-subdued;
 $nav-padding: 20px;
+
+$content-padding: 60px;
 * {
   box-sizing: border-box;
 }
@@ -26,4 +28,12 @@ nav {
   color: $nav-color-bright;
   flex-direction: column;
   background: $nav-background;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: $nav-width;
+  right: 0;
+  bottom: 0;
+  padding: $content-padding;
 }
