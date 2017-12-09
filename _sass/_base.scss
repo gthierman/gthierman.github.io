@@ -1,198 +1,29 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+$blue: #005EBB;
+$blue-subdued: #5DC2FF;
+$white: #fff;
+
+$nav-width: 310px;
+$nav-background: $blue;
+$nav-color-bright: $white;
+$nav-color-subdued: $blue-subdued;
+$nav-padding: 20px;
+* {
+  box-sizing: border-box;
 }
 
-
-
-/**
- * Basic styling
- */
-html, .content {
-    position: relative;
-    min-height: 100%;
-}
 body {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 400;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    margin: 0 0 $footer-height;
-    font-family: "Niveau Grotesk","Helvetica-Nueue", Helvetica, Arial, sans-serif;
-}
-
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
-
-
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-
-
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
-
-figcaption {
-    font-size: $small-font-size;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
-
-
-
-/**
- * Links
- */
-a {
-    //color: $blue-2;
-    text-decoration: none;
-
-    &:visited {
-        //color: darken($blue-2, 15%);
-    }
-
-    &:hover {
-        color: $link-color-hover;
-        text-decoration: underline;
-    }
-}
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-h1 {
-    font-size: 42px;
-}
-h2 {
-    font-size: 30px;
-}
-strong {
-    font-weight: 600;
-}
-
-header{
-  width: 100%;
-  padding: 40px 0;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 nav {
-  float: right;
-}
-.hero-copy {
-  h1 {
-    color: black;
-    font-size: 54px;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 24px;
-    font-family: 'Proxima Nova'!important;
-    margin-bottom: 24px;
-  }
-}
-.red-text {
-  color: $red;
-}
-.light-text {
-  color: $hero-grey-text;
-  // color: black;
-}
-#ipad-image {
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 90px;
-}
-.clio-case-study {
-  font-family: 'Proxima Nova'!important;
-  h1 {
-    margin-top: 100px;
-    font-size: 24px;
-    margin-bottom: 40px;
-    font-family: 'Proxima Nova'!important;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $nav-width;
+  padding: $nav-padding;
+  display: flex;
+  color: $nav-color-bright;
+  flex-direction: column;
+  background: $nav-background;
 }

@@ -4,29 +4,13 @@
   {% include head.html %}
 
   <body>
-
-    {% include header.html %}
+    <nav>
+      <h1 class="masthead">Geoff Thierman<br>Product designer</h1>
+      {% for post in site.posts %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </nav>
     <div class="content">
-      <section class="hero-copy">
-        <div class="wrapper">
-          <h2>Geoff Thierman</h2>
-          <h1><span class="light-text">Interface <span class="red-text">&amp;</span> experience</span> design.</span></h1>
-        </div>
-      </section>
-      <section class="clio-case-study">
-        <div class="wrapper">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-5">
-              <h1>Case study: Clio web</h1>
-              <p>Fictum,  deserunt mollit anim laborum astutumque! Etiam habebis sem dicantur magna mollis euismod. Praeterea iter est quasdam res quas ex communi. Quo usque tandem abutere, Catilina, patientia nostra?</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
-              <img src="images/ipad@2x.png" id="ipad-image">
-            </div>
-          </div>
-        </div>
-      </section>
-      {% include footer.html %}
     </div>
 
   </body>
