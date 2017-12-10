@@ -1,6 +1,15 @@
 $blue: #005EBB;
 $blue-subdued: #5DC2FF;
+$grey: #263238;
+$grey-subdued: #667881;
 $white: #fff;
+
+$spacing-xs: 4px;
+$spacing-s: 8px;
+$spacing-m: 12px;
+$spacing-l: 20px;
+$spacing-xl: 32px;
+
 
 $nav-width: 250px;
 $nav-background: $blue;
@@ -9,18 +18,24 @@ $nav-color-subdued: $blue-subdued;
 $nav-padding: 60px 20px 60px;
 
 $base-font-size: 14px;
+$base-line-height: 18px;
+$base-font-color: $grey;
+$base-font-color-subdued: $grey-subdued;
 $h1-font-size: 24px;
+$h1-line-height: 28px;
+$h1-spacing: $spacing-xl;
+$h2-font-size: 20px;
+$h2-line-height: 24px;
+$h2-spacing: $spacing-l;
+$h3-font-size: 16px;
+$h3-line-height: 20px;
+$h3-spacing: $spacing-m;
+$h4-font-size: 14px;
+$h4-line-height: 18px;
+$h4-spacing: $spacing-xs;
+$p-spacing: $spacing-l;
 
 $content-padding: 60px;
-
-$spacing-xs: 4px;
-
-
-$spacing-s: 8px;
-$spacing-m: 12px;
-$spacing-l: 20px;
-$spacing-xl: 32px;
-
 
 * {
   box-sizing: border-box;
@@ -28,8 +43,10 @@ $spacing-xl: 32px;
 
 body {
   height: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
 }
 nav {
   position: absolute;
@@ -42,6 +59,11 @@ nav {
   color: $nav-color-bright;
   flex-direction: column;
   background: $nav-background;
+}
+.nav-masthead {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin-bottom: $spacing-l * 2;
 }
 .nav-item {
   color: $nav-color-subdued;
@@ -57,15 +79,33 @@ nav {
   padding: $content-padding;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+  font-weight: 600;
 }
 h1 {
   font-size: $h1-font-size;
-  margin-bottom: $spacing-xl;
+  line-height: $h1-line-height;
+  margin-bottom: $h1-spacing;
 }
-.masthead {
-  font-size: $base-font-size;
-  margin-bottom: $spacing-l * 2;
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-bottom: $h2-spacing;
+}
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin-bottom: $h3-spacing;
+}
+h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin-bottom: $h4-spacing;
+}
+p {
+  font-weight: 400;
+  color: $base-font-color-subdued;
+  margin-bottom: $p-spacing;
 }

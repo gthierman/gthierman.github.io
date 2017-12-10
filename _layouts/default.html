@@ -5,14 +5,15 @@
 
   <body>
     <nav>
-      <h1 class="masthead">Geoff Thierman<br>Product designer</h1>
+      <h1 class="nav-masthead">Geoff Thierman<br>Product designer</h1>
       {% for post in site.posts %}
         <a class="nav-item" href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
     </nav>
     <div class="content">
       <h1>{{ page.title }}</h1>
-      {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+      <p>{{ page.intro }}</p>
+      <!-- {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta}}{% endif %} -->
       {{ content }}
     </div>
 
