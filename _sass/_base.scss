@@ -6,9 +6,22 @@ $nav-width: 250px;
 $nav-background: $blue;
 $nav-color-bright: $white;
 $nav-color-subdued: $blue-subdued;
-$nav-padding: 20px;
+$nav-padding: 60px 20px 60px;
+
+$base-font-size: 14px;
+$h1-font-size: 24px;
 
 $content-padding: 60px;
+
+$spacing-xs: 4px;
+
+
+$spacing-s: 8px;
+$spacing-m: 12px;
+$spacing-l: 20px;
+$spacing-xl: 32px;
+
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +29,7 @@ $content-padding: 60px;
 body {
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $base-font-size;
 }
 nav {
   position: absolute;
@@ -29,6 +43,11 @@ nav {
   flex-direction: column;
   background: $nav-background;
 }
+.nav-item {
+  color: $nav-color-subdued;
+  text-decoration: none;
+  margin-bottom: $spacing-xs;
+}
 .content {
   position: absolute;
   top: 0;
@@ -36,4 +55,17 @@ nav {
   right: 0;
   bottom: 0;
   padding: $content-padding;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: $h1-font-size;
+  margin-bottom: $spacing-xl;
+}
+.masthead {
+  font-size: $base-font-size;
+  margin-bottom: $spacing-l * 2;
 }
