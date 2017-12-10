@@ -7,7 +7,7 @@
     <nav>
       <h1 class="nav-masthead">Geoff Thierman<br>Product designer</h1>
       {% for post in site.posts %}
-        <a class="nav-item" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="nav-item {% if post.url == page.url %}active{% endif %}" href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
     </nav>
     <div class="content">
