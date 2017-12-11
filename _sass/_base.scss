@@ -1,5 +1,6 @@
 $blue: #005EBB;
 $blue-subdued: #5DC2FF;
+$grey-1: #F5F7F8;
 $grey: #263238;
 $grey-subdued: #667881;
 $white: #fff;
@@ -17,25 +18,28 @@ $nav-color-bright: $white;
 $nav-color-subdued: $blue-subdued;
 $nav-padding: 60px 20px 60px;
 
+$content-padding: 60px;
+$post-header-padding: $spacing-xl $content-padding;
+$post-content-padding: $spacing-xl $content-padding;
+$post-hero-padding: $content-padding;
+
 $base-font-size: 14px;
 $base-line-height: 18px;
 $base-font-color: $grey;
 $base-font-color-subdued: $grey-subdued;
 $h1-font-size: 24px;
 $h1-line-height: 28px;
-$h1-spacing: $spacing-xl;
+$h1-spacing: $spacing-l;
 $h2-font-size: 20px;
 $h2-line-height: 24px;
-$h2-spacing: $spacing-l;
+$h2-spacing: $spacing-m;
 $h3-font-size: 16px;
 $h3-line-height: 20px;
-$h3-spacing: $spacing-m;
+$h3-spacing: $spacing-s;
 $h4-font-size: 14px;
 $h4-line-height: 18px;
 $h4-spacing: $spacing-xs;
 $p-spacing: $spacing-l;
-
-$content-padding: 60px;
 
 * {
   box-sizing: border-box;
@@ -47,40 +51,6 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $base-font-color;
-}
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: $nav-width;
-  padding: $nav-padding;
-  display: flex;
-  color: $nav-color-bright;
-  flex-direction: column;
-  background: $nav-background;
-}
-.nav-masthead {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  margin-bottom: $spacing-l * 2;
-}
-.nav-item {
-  color: $nav-color-subdued;
-  text-decoration: none;
-  margin-bottom: $spacing-xs;
-}
-.nav-item.active {
-  color: $nav-color-bright;
-}
-.content {
-  position: absolute;
-  top: 0;
-  left: $nav-width;
-  right: 0;
-  bottom: 0;
-  padding: $content-padding;
-  overflow: scroll;
 }
 
 img {
@@ -116,6 +86,7 @@ p {
   font-weight: 400;
   color: $base-font-color-subdued;
   margin-bottom: $p-spacing;
+  max-width: 600px;
 }
 section {
   margin-bottom: $spacing-xl * 2;
@@ -124,6 +95,18 @@ section {
   }
 }
 
-.case-study-intro-image {
-  margin-bottom: $spacing-xl * 2;
+.post-header {
+  padding: $post-header-padding;
+}
+.post-intro {
+  margin: 0;
+}
+.post-content {
+  padding: $post-content-padding;
+}
+.post-hero {
+  background: $grey-1;
+  min-height: 200px;
+  height: 500px;
+  padding: $post-hero-padding;
 }

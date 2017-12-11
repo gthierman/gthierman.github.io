@@ -11,11 +11,7 @@
       {% endfor %}
     </nav>
     <div class="content">
-      <h1>{{ page.title }}</h1>
-      <p>{{ page.intro }}</p>
-      <img src="/images/placeholder.png" class="case-study-intro-image">
-      <!-- {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta}}{% endif %} -->
-      {{ content }}
+      {{content}}
     </div>
 
   </body>

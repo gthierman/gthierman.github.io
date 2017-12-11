@@ -1,0 +1,35 @@
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $nav-width;
+  padding: $nav-padding;
+  display: flex;
+  color: $nav-color-bright;
+  flex-direction: column;
+  background: $nav-background;
+  overflow-y: scroll;
+}
+.nav-masthead {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin-bottom: $spacing-l * 2;
+}
+.nav-item {
+  color: $nav-color-subdued;
+  text-decoration: none;
+  margin-bottom: $spacing-xs;
+}
+.nav-item.active {
+  color: $nav-color-bright;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: $nav-width;
+  right: 0;
+  bottom: 0;
+  // padding: $content-padding;
+  overflow: scroll;
+}
