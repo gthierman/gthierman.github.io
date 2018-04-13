@@ -5,12 +5,15 @@
 
   <body>
     <nav>
-      <h1 class="nav-masthead">Geoff Thierman<br>Product designer</h1>
+      {% for item in site.data.navigation.nav-items %}
+        <a class="nav-item {% if item.url == page.url %}active{% endif %}" href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
+      {% endfor %}
       {% for post in site.posts %}
         <a class="nav-item {% if post.url == page.url %}active{% endif %}" href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
     </nav>
     <div class="content">
+      {{page.title}}
       {{content}}
     </div>
 

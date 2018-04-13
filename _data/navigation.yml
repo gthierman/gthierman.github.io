@@ -1,0 +1,10 @@
+nav-items:
+
+- title: Styleguide
+  url: /styleguide.html
+
+- title: Case studies
+  url: /case_studies.html
+
+- title: Blog
+  url: /blog.html
