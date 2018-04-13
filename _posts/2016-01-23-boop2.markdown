@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Redesigning Clio's datatable"
+title:  "Redesigning Clio's datatable33"
 date:   2016-01-23 02:10:43
 intro: "The datatable component is core to the Clio experience. It makes up many of the primary views inside of the application, and we wanted to turn component into a powerful tool that our customers could use to extract the data they wanted, in the way they wanted."
 image: "placeholder.png"
-category: blog
+category: case_studies
 ---
 
 <section>

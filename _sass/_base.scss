@@ -11,11 +11,13 @@ $spacing-m: 12px;
 $spacing-l: 20px;
 $spacing-xl: 32px;
 
+$header-height: 56px;
+$header-background-color: $grey-1;
 
 $nav-width: 250px;
 $nav-background: $blue;
-$nav-color-bright: $white;
-$nav-color-subdued: $blue-subdued;
+$nav-color-active: $grey;
+$nav-color-subdued: $grey-subdued;
 $nav-padding: 60px 20px 60px;
 
 $content-padding: 60px;

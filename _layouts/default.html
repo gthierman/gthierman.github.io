@@ -4,15 +4,18 @@
   {% include head.html %}
 
   <body>
-    <nav>
-      {% for item in site.data.navigation.nav-items %}
-        <a class="nav-item {% if item.url == page.url %}active{% endif %}" href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
-      {% endfor %}
-      {% for post in site.posts %}
+    <header>
+      <div></div>
+      <nav>
+        {% for item in site.data.navigation.nav-items %}
+          <a class="nav-item {% if item.category == page.category %}active{% endif %}" href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+    <div class="page">
+      {% for post in site.categories[page.category] %}
         <a class="nav-item {% if post.url == page.url %}active{% endif %}" href="{{ post.url }}">{{ post.title }}</a>
       {% endfor %}
-    </nav>
-    <div class="content">
       {{page.title}}
       {{content}}
     </div>

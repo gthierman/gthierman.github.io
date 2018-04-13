@@ -1,35 +1,30 @@
-nav {
+header{
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  width: $nav-width;
-  padding: $nav-padding;
+  right: 0;
+  height: $header-height;
+  background: $header-background-color;
   display: flex;
-  color: $nav-color-bright;
-  flex-direction: column;
-  background: $nav-background;
-  overflow-y: scroll;
+  justify-content: space-between;
 }
-.nav-masthead {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  margin-bottom: $spacing-l * 2;
+nav {
+  display: flex;
+  align-items: center;
 }
 .nav-item {
   color: $nav-color-subdued;
   text-decoration: none;
-  margin-bottom: $spacing-xs;
+  padding: $spacing-s;
 }
 .nav-item.active {
-  color: $nav-color-bright;
+  color: $nav-color-active;
 }
-.content {
+.page {
   position: absolute;
-  top: 0;
-  left: $nav-width;
+  top: $header-height;
+  left: 0;
   right: 0;
   bottom: 0;
-  // padding: $content-padding;
   overflow: scroll;
 }

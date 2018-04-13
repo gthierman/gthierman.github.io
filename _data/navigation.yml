@@ -5,6 +5,8 @@ nav-items:
 
 - title: Case studies
   url: /case_studies.html
+  category: case_studies
 
 - title: Blog
   url: /blog.html
+  category: blog
