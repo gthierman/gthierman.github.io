@@ -1,4 +1,4 @@
-header{
+.global-header {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@ header{
   display: flex;
   justify-content: space-between;
 }
-nav {
+.global-nav {
   display: flex;
   align-items: center;
 }
@@ -26,5 +26,23 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
+}
+.page-sidebar {
+  width: $page-sidebar-width;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   overflow: scroll;
+
+}
+.page-content {
+  position: absolute;
+  left: $page-sidebar-width;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: scroll;
+
 }
