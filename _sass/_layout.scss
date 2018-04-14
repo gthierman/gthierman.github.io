@@ -21,11 +21,11 @@
 .global-header-identity-avatar {
   width: 30px;
   height:30px;
-  margin-right: $spacing-m;
+  margin-right: spacing(m);
 }
 .global-header-identity-subtext {
   display: inline-block;
-  margin: 0 $spacing-m;
+  margin: 0 spacing(m);
 }
 .global-nav {
   display: flex;
@@ -66,7 +66,7 @@
   text-decoration: none;
   color: $page-sidebar-link-color;
   font-size: $page-sidebar-link-size;
-  margin-bottom: $spacing-s;
+  margin-bottom: spacing(s);
   &.active {
     color: $page-sidebar-link-color-active;
   }

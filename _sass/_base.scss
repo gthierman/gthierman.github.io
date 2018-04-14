@@ -3,12 +3,6 @@ $grey-1: #F5F7F8;
 $grey-5: #667881;
 $grey-6: #263238;
 $white: #fff;
-//
-$spacing-xs: 4px;
-$spacing-s: 8px;
-$spacing-m: 12px;
-$spacing-l: 20px;
-$spacing-xl: 32px;
 
 $spacing: (
   xs: 4px,
@@ -42,24 +36,24 @@ $font-color: $grey-6;
 $font-color-subdued: $grey-5;
 $h1-font-size: 32px;
 $h1-line-height: 36px;
-$h1-spacing: $spacing-l;
+$h1-spacing: spacing(l);
 $h2-font-size: 24px;
 $h2-line-height: 28px;
-$h2-spacing: $spacing-m;
+$h2-spacing: spacing(m);
 $h3-font-size: 16px;
 $h3-line-height: 20px;
-$h3-spacing: $spacing-s;
+$h3-spacing: spacing(s);
 $h4-font-size: 14px;
 $h4-line-height: 18px;
-$h4-spacing: $spacing-xs;
-$p-spacing: $spacing-l;
+$h4-spacing: spacing(xs);
+$p-spacing: spacing(l);
 
 $font-weight-regular: 500;
 $font-weight-bold: 700;
 
 $global-margin-x: spacing(xl);
 
-$global-nav-link-padding: $spacing-s;
+$global-nav-link-padding: spacing(s);
 $global-nav-link-size: $font-size-small;
 $global-nav-link-color-active: $blue;
 $global-nav-link-color-subdued: $grey-5;
@@ -70,7 +64,7 @@ $global-header-height: 56px;
 $global-header-background-color: $white;
 $global-header-padding-x: $global-margin-x - $global-nav-link-padding;
 
-$page-padding-y: $spacing-xl;
+$page-padding-y: spacing(xl);
 $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;
 $page-sidebar-link-color: $font-color-subdued;
@@ -78,8 +72,8 @@ $page-sidebar-link-color-active: $blue;
 $page-sidebar-link-size: $font-size-small;
 
 $content-padding: 60px;
-$post-header-padding: $spacing-xl $content-padding;
-$post-content-padding: $spacing-xl $content-padding;
+$post-header-padding: spacing(xl) $content-padding;
+$post-content-padding: spacing(xl) $content-padding;
 $post-hero-padding: $content-padding;
 
 * {
@@ -151,7 +145,7 @@ strong {
 
 
 section {
-  margin-bottom: $spacing-xl * 2;
+  margin-bottom: spacing(xl) * 2;
   &:last-child {
     margin-bottom: 0;
   }
