@@ -8,3 +8,8 @@ git clone git@github.com:gthierman/gthierman.github.io.git
 ```
 jekyll serve
 ```
+
+## Add a new case study
+Duplicate a post in `_posts/case_studies`.
+Change the front matter and add your case study content.
+Push to the remote repo when it's ready to publish.
