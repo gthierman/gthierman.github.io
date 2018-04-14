@@ -3,17 +3,30 @@ $grey-1: #F5F7F8;
 $grey-5: #667881;
 $grey-6: #263238;
 $white: #fff;
-
+//
 $spacing-xs: 4px;
 $spacing-s: 8px;
 $spacing-m: 12px;
 $spacing-l: 20px;
 $spacing-xl: 32px;
 
-$spacing: ($spacing-xs,
-           $spacing-s,
-           $spacing-l,
-           $spacing-xl);
+$spacing: (
+  spacing-xs: 4px,
+  spacing-s: 8px,
+  spacing-m: 12px,
+  spacing-l: 20px,
+  spacing-xl: 32px,
+);
+
+@function spacing($spacing-size) {
+  @return map-get($spacing, "spacing-" + $spacing-size);
+}
+
+@each $name, $value in $spacing {
+  .stack-#{$name} {
+    margin-bottom: $value;
+  }
+}
 
 $font-size: 16px;
 $line-height: 20px;
@@ -38,7 +51,7 @@ $p-spacing: $spacing-l;
 $font-weight-regular: 500;
 $font-weight-bold: 700;
 
-$global-margin-x: $spacing-xl;
+$global-margin-x: spacing(xl);
 
 $global-nav-link-padding: $spacing-s;
 $global-nav-link-size: $font-size-small;
