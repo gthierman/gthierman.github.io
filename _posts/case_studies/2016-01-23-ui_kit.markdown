@@ -6,6 +6,7 @@ intro: "Intro text"
 image: "placeholder.png"
 role: "Design"
 category: case_studies
+timeframe: 6 months
 ---
 
 <section>

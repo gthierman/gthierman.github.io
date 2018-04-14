@@ -3,8 +3,8 @@ layout: post
 title:  "Color system"
 date:   2016-01-23 02:10:43
 intro: "Intro text"
+status: "Shipped"
 image: "placeholder.png"
-role: "Design & SCSS"
 category: case_studies
 ---
 

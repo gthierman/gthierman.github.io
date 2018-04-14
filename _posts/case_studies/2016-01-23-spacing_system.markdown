@@ -5,7 +5,8 @@ title:  "Spacing system"
 date:   2016-01-23 02:10:43
 intro: "Intro text"
 image: "placeholder.png"
-role: "Design & SCSS"
+role: Design & SCSS
+status: Shipped
 ---
 
 <section>

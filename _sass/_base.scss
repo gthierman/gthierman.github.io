@@ -10,6 +10,11 @@ $spacing-m: 12px;
 $spacing-l: 20px;
 $spacing-xl: 32px;
 
+$spacing: ($spacing-xs,
+           $spacing-s,
+           $spacing-l,
+           $spacing-xl);
+
 $font-size: 16px;
 $line-height: 20px;
 $font-size-small: 14px;
@@ -119,6 +124,10 @@ strong {
   @media only screen and (max-width: 768px) {
     display: none!important;
   }
+}
+
+.margin-bottom-s {
+
 }
 
 

@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign meta-data = page.role or page.status or page.timeframe %}
+
 <div class="page">
   <div class="page-sidebar tablet-portrait-hide">
     {% for post in site.categories[page.category] %}
@@ -13,13 +15,17 @@ layout: default
     {% endfor %}
   </div>
   <div class="page-content">
-    <header class="post-header">
-      <h1>{{ page.title }}</h1>
-      <p class="post-intro">{{ page.intro }}</p>
-      <p>{{page.role}}</p>
-    </header>
+    <h1 {% if meta-data %}class=""{% endif %}>{{ page.title }}</h1>
+    {% if meta-data %}
+      <div class="post-meta-data">
+        {% if page.role %}<div class="post-meta-data-item"><strong>Role:</strong> {{page.role}}</div> {% endif %}
+        {% if page.status %}<div class="post-meta-data-item"><strong>Status:</strong> {{page.status}}</div> {% endif %}
+        {% if page.timeframe %}<div class="post-meta-data-item"><strong>Timeframe:</strong> {{page.timeframe}}</div> {% endif %}
+      </div>
+    {% endif %}
+    <p class="post-intro">{{ page.intro }}</p>
     <div class="post-hero"></div>
-    <!-- <img src="/images/placeholder.png" class="case-study-intro-image"> -->
+    <img src="/images/placeholder.png" class="case-study-intro-image">
     <!-- {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta}}{% endif %} -->
     <div class="post-content">
       {{ content }}
