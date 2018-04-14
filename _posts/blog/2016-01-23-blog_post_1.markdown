@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: "post"
 title:  "Blog post 1"
 date:   2016-01-23 02:10:43
 intro: "This is the blog intro"

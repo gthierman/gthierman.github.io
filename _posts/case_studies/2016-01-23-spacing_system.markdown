@@ -1,5 +1,5 @@
 ---
-layout: case_study
+layout: post
 category: case_studies
 title:  "Spacing system"
 date:   2016-01-23 02:10:43
