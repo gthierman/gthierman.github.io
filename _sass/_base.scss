@@ -1,8 +1,7 @@
-$blue: #005EBB;
-$blue-subdued: #5DC2FF;
+$blue: #178AFF;
 $grey-1: #F5F7F8;
-$grey: #263238;
-$grey-subdued: #667881;
+$grey-5: #667881;
+$grey-6: #263238;
 $white: #fff;
 
 $spacing-xs: 4px;
@@ -11,34 +10,16 @@ $spacing-m: 12px;
 $spacing-l: 20px;
 $spacing-xl: 32px;
 
-$global-margin-x: $spacing-l;
-
-$global-nav-link-padding: $spacing-s;
-$global-nav-link-color-active: $blue;
-$global-nav-link-color-subdued: $grey-subdued;
-
-$global-header-height: 56px;
-$global-header-background-color: $grey-1;
-$global-header-padding-x: $global-margin-x - $global-nav-link-padding;
-
-$page-top-padding: $spacing-l;
-$page-sidebar-width: 200px;
-$page-sidebar-x-padding: $global-margin-x;
-
-$content-padding: 60px;
-$post-header-padding: $spacing-xl $content-padding;
-$post-content-padding: $spacing-xl $content-padding;
-$post-hero-padding: $content-padding;
-
-$base-font-size: 14px;
+$base-font-size: 16px;
+$font-size-small: 14px;
 $base-line-height: 18px;
-$base-font-color: $grey;
-$base-font-color-subdued: $grey-subdued;
-$h1-font-size: 24px;
-$h1-line-height: 28px;
+$base-font-color: $grey-6;
+$base-font-color-subdued: $grey-5;
+$h1-font-size: 32px;
+$h1-line-height: 36px;
 $h1-spacing: $spacing-l;
-$h2-font-size: 20px;
-$h2-line-height: 24px;
+$h2-font-size: 24px;
+$h2-line-height: 28px;
 $h2-spacing: $spacing-m;
 $h3-font-size: 16px;
 $h3-line-height: 20px;
@@ -51,6 +32,31 @@ $p-spacing: $spacing-l;
 $font-weight-regular: 500;
 $font-weight-bold: 700;
 
+$global-margin-x: $spacing-xl;
+
+$global-nav-link-padding: $spacing-s;
+$global-nav-link-size: $font-size-small;
+$global-nav-link-color-active: $blue;
+$global-nav-link-color-subdued: $grey-5;
+
+$global-header-border-width: 3px;
+$global-header-border-color: $blue;
+$global-header-height: 56px;
+$global-header-background-color: $white;
+$global-header-padding-x: $global-margin-x - $global-nav-link-padding;
+
+$page-padding-y: $spacing-xl;
+$page-sidebar-width: 200px;
+$page-sidebar-padding-x: $global-margin-x;
+$page-sidebar-link-color: $base-font-color-subdued;
+$page-sidebar-link-color-active: $blue;
+$page-sidebar-link-size: $font-size-small;
+
+$content-padding: 60px;
+$post-header-padding: $spacing-xl $content-padding;
+$post-content-padding: $spacing-xl $content-padding;
+$post-hero-padding: $content-padding;
+
 * {
   box-sizing: border-box;
 }
@@ -60,7 +66,8 @@ body {
   font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: $base-font-color;
+  color: $base-font-color-subdued;
+  margin: 0;
 }
 
 img {
@@ -71,6 +78,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
   font-weight: 700;
+  color: $base-font-color;
 }
 h1 {
   font-size: $h1-font-size;
@@ -97,6 +105,13 @@ p {
   color: $base-font-color-subdued;
   margin-bottom: $p-spacing;
   max-width: 600px;
+}
+strong {
+  font-weight: $font-weight-bold;
+  color: $base-font-color;
+}
+.small {
+  font-size: $font-size-small;
 }
 section {
   margin-bottom: $spacing-xl * 2;

@@ -1,9 +1,5 @@
 nav-items:
 
-- title: Styleguide
-  url: /styleguide/
-  category: styleguide
-
 - title: Case studies
   url: /case_studies/
   category: case_studies
@@ -11,3 +7,7 @@ nav-items:
 - title: Blog
   url: /blog/
   category: blog
+  
+- title: Styleguide
+  url: /styleguide/
+  category: styleguide

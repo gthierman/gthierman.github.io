@@ -13,3 +13,8 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title
+defaults:
+  - scope:
+      path: "images"
+    values:
+      image: true
