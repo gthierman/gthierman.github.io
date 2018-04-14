@@ -11,20 +11,26 @@ $spacing-l: 20px;
 $spacing-xl: 32px;
 
 $spacing: (
-  spacing-xs: 4px,
-  spacing-s: 8px,
-  spacing-m: 12px,
-  spacing-l: 20px,
-  spacing-xl: 32px,
+  xs: 4px,
+  s: 8px,
+  m: 12px,
+  l: 20px,
+  xl: 32px,
 );
 
 @function spacing($spacing-size) {
-  @return map-get($spacing, "spacing-" + $spacing-size);
+  @return map-get($spacing, $spacing-size);
 }
 
 @each $name, $value in $spacing {
   .stack-#{$name} {
     margin-bottom: $value;
+  }
+  .inline-#{$name} {
+    margin-right: $value;
+  }
+  .insets-#{$name} {
+    padding: $value;
   }
 }
 

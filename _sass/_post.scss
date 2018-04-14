@@ -1,8 +1,9 @@
 .post-meta-data {
   display: flex;
   font-size: $font-size-small;
+  margin-bottom: spacing(l);
 }
 .post-meta-data-item {
-  margin-right: $spacing-l;
+  margin-right: spacing(l);
   flex: 0 0 auto;
 }
