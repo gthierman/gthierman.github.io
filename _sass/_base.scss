@@ -24,13 +24,13 @@ $spacing: (
 
 @each $name, $value in $spacing {
   .stack-#{$name} {
-    margin-bottom: $value;
+    margin-bottom: $value !important;
   }
   .inline-#{$name} {
-    margin-right: $value;
+    margin-right: $value !important;
   }
   .insets-#{$name} {
-    padding: $value;
+    padding: $value !important;
   }
 }
 
