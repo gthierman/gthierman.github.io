@@ -15,5 +15,13 @@
   </p>
 </header>
 <div class="post-content">
-  {{ content }}
+  {% if post.role %}
+    {{ post.role }}
+  {% elsif page.role %}
+    {{ page.role}}
+  {% endif %}
+  {% if page %}
+    {{ post.content }}
+  {% endif %}
+  {{content}}
 </div>
