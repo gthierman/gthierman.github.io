@@ -11,12 +11,19 @@ $spacing-m: 12px;
 $spacing-l: 20px;
 $spacing-xl: 32px;
 
-$header-height: 56px;
-$header-background-color: $grey-1;
-$nav-color-active: $grey;
-$nav-color-subdued: $grey-subdued;
+$global-margin-x: $spacing-l;
 
+$global-nav-link-padding: $spacing-s;
+$global-nav-link-color-active: $blue;
+$global-nav-link-color-subdued: $grey-subdued;
+
+$global-header-height: 56px;
+$global-header-background-color: $grey-1;
+$global-header-padding-x: $global-margin-x - $global-nav-link-padding;
+
+$page-top-padding: $spacing-l;
 $page-sidebar-width: 250px;
+$page-sidebar-x-padding: $global-margin-x;
 
 $content-padding: 60px;
 $post-header-padding: $spacing-xl $content-padding;
@@ -40,6 +47,9 @@ $h4-font-size: 14px;
 $h4-line-height: 18px;
 $h4-spacing: $spacing-xs;
 $p-spacing: $spacing-l;
+
+$font-weight-regular: 500;
+$font-weight-bold: 700;
 
 * {
   box-sizing: border-box;

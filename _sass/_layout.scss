@@ -3,26 +3,28 @@
   top: 0;
   left: 0;
   right: 0;
-  height: $header-height;
-  background: $header-background-color;
+  height: $global-header-height;
+  background: $global-header-background-color;
   display: flex;
   justify-content: space-between;
+  padding: 0 $global-margin-x 0 $global-header-padding-x;
 }
 .global-nav {
   display: flex;
   align-items: center;
 }
 .global-nav-link{
-  color: $nav-color-subdued;
+  color: $global-nav-link-color-subdued;
   text-decoration: none;
-  padding: $spacing-s;
-}
-.global-nav-link.active {
-  color: $nav-color-active;
+  padding: $global-nav-link-padding;
+  &.active {
+    color: $global-nav-link-color-active;
+    font-weight: $font-weight-bold;
+  }
 }
 .page {
   position: absolute;
-  top: $header-height;
+  top: $global-header-height;
   left: 0;
   right: 0;
   bottom: 0;
@@ -30,6 +32,8 @@
 }
 .page-sidebar {
   width: $page-sidebar-width;
+  padding-top: $page-top-padding;
+  padding-left: $page-sidebar-x-padding;
   position: absolute;
   top: 0;
   left: 0;
@@ -41,6 +45,7 @@
   display: block;
 }
 .page-content {
+  padding-top: $page-top-padding;
   position: absolute;
   left: $page-sidebar-width;
   right: 0;
