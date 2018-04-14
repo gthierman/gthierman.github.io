@@ -1,12 +1,12 @@
 nav-items:
 
 - title: Styleguide
-  url: /styleguide.html
+  url: /styleguide/
 
 - title: Case studies
-  url: /case_studies.html
+  url: /case_studies/
   category: case_studies
 
 - title: Blog
-  url: /blog.html
+  url: /blog/
   category: blog

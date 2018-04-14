@@ -1,0 +1,9 @@
+---
+layout: default
+title: Case studies
+category: case_studies
+---
+
+{% for post in site.categories[page.category] %}
+    {% include case_study.html %}
+{% endfor %}
