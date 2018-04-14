@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Blog post 1"
+date:   2016-01-23 02:10:43
+intro: "This is the blog intro"
+image: "placeholder.png"
+category: blog
+---
+
+## This is the first blog post
+Pellentesque habitant morbi tristique senectus et netus. A communi observantia non est recedendum. Mercedem aut nummos unde unde extricat, amaras.
+Hi omnes lingua, institutis, legibus inter se differunt. Plura mihi bona sunt, inclinet, amari petere vellent. Salutantibus vitae elit libero, a pharetra augue. Quis aute iure reprehenderit in voluptate velit esse. Quae vero auctorem tractata ab fiducia dicuntur. Ambitioni dedisse scripsisse iudicaretur.
+
+Pellentesque habitant morbi tristique senectus et netus. A communi observantia non est recedendum. Mercedem aut nummos unde unde extricat, amaras.
+Hi omnes lingua, institutis, legibus inter se differunt. Plura mihi bona sunt, inclinet, amari petere vellent. Salutantibus vitae elit libero, a pharetra augue. Quis aute iure reprehenderit in voluptate velit esse. Quae vero auctorem tractata ab fiducia dicuntur. Ambitioni dedisse scripsisse iudicaretur.

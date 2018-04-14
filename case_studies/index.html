@@ -1,9 +1,0 @@
----
-layout: default
-title: Case studies
-category: case_studies
----
-
-{% for post in site.categories.case_studies limit:1%}
-  {% include case_study.html content=post.content %}
-{% endfor %}
