@@ -1,11 +1,11 @@
 ---
 layout: case_study
+category: case_studies
 title:  "Spacing system"
 date:   2016-01-23 02:10:43
 intro: "Intro text"
 image: "placeholder.png"
 role: "Design & SCSS"
-category: case_studies
 ---
 
 <section>
