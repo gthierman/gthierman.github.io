@@ -23,13 +23,13 @@
         </a>
       </nav>
       <div class="global-header-identity">
+        <strong class="tablet-portrait-hide">Geoff Thierman</strong>
+        <span class="global-header-identity-subtext tablet-portrait-hide">Product & system design</span>
         <img class="global-header-identity-avatar" src="{{baseurl}}/images/avatar.png" width="30" height="30">
-        <strong>Geoff Thierman</strong>
-        <span class="global-header-identity-subtext">Product & system design</span>
       </div>
     </header>
     <div class="page">
-      <div class="page-sidebar">
+      <div class="page-sidebar tablet-portrait-hide">
         {% for post in site.categories[page.category] %}
           <a
             class="page-sidebar-link {% if post.url == page.url %}active{% endif %}"

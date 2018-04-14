@@ -25,7 +25,7 @@
 }
 .global-header-identity-subtext {
   display: inline-block;
-  margin-left: $spacing-m;
+  margin: 0 $spacing-m;
 }
 .global-nav {
   display: flex;
@@ -60,7 +60,6 @@
   left: 0;
   bottom: 0;
   overflow: scroll;
-
 }
 .page-sidebar-link {
   display: block;
@@ -83,13 +82,16 @@
     max-width: 800px;
     width: 800px;
     margin-left: -400px;
-    // left: auto;
   }
   @media only screen and (max-width: 1260px) {
     position: absolute;
     left: $page-sidebar-width;
     right: 0;
     padding-right: $global-margin-x;
+  }
+  @media only screen and (max-width: 768px) {
+    left: 0;
+    padding-left: $global-margin-x;
   }
 
 }
