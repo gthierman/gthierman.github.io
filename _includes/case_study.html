@@ -6,11 +6,14 @@
       {{ page.title}}
     {% endif %}
   </h1>
-  <p class="post-intro">{{ page.intro }}</p>
+  <p class="post-intro">
+    {% if post.intro %}
+      {{ post.intro }}
+    {% elsif page.intro %}
+      {{ page.intro}}
+    {% endif %}
+  </p>
 </header>
-<div class="post-hero"></div>
-<!-- <img src="/images/placeholder.png" class="case-study-intro-image"> -->
-<!-- {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta}}{% endif %} -->
 <div class="post-content">
   {{ content }}
 </div>
