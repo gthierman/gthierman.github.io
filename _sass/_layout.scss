@@ -49,7 +49,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 .page-sidebar {
   width: $page-sidebar-width;
@@ -73,7 +73,7 @@
 }
 .page-content {
   padding-top: $page-padding-y;
-  overflow: scroll;
+  // overflow: scroll;
   position: absolute;
   bottom: 0;
   top: 0;
