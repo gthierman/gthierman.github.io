@@ -9,8 +9,7 @@ category: case_studies
 ---
 
 <section>
-  This is the case study content. It can take HTML and markdown.
-  It can also take code snippets:
+  Building the clio colour system.
   {% highlight ruby %}
   def foo
     puts 'foo'

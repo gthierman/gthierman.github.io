@@ -20,8 +20,5 @@
   {% elsif page.role %}
     {{ page.role}}
   {% endif %}
-  {% if page %}
-    {{ post.content }}
-  {% endif %}
-  {{content}}
+  {{include.content}}
 </div>
