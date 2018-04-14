@@ -71,16 +71,15 @@ $global-header-background-color: color(white);
 $global-header-padding-x: $global-margin-x - $global-nav-link-padding;
 
 $page-padding-y: spacing(xl);
+
 $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;
 $page-sidebar-link-color: $font-color-subdued;
 $page-sidebar-link-color-active: color(blue);
 $page-sidebar-link-size: $font-size-small;
 
-$content-padding: 60px;
-$post-header-padding: spacing(xl) $content-padding;
-$post-content-padding: spacing(xl) $content-padding;
-$post-hero-padding: $content-padding;
+$code-snippet-background-color: color(grey-1);
+$code-snippet-padding: spacing(l);
 
 * {
   box-sizing: border-box;
