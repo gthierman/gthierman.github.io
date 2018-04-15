@@ -2,14 +2,134 @@
 layout: post
 title:  "Color system"
 date:   2016-01-23 02:10:43
-intro: "Intro text"
+intro: Over the years, Clio's design language has evolved, and the colors in use and the CSS that powers it had grown, with little thought paid to maintenance. By 2017, it was in bad need of an overhaul.
 status: "Shipped"
 image: "placeholder.png"
 category: case_studies
+role: Design & SCSS
+status: Shipped
 ---
-Building the clio colour system.
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
+![palette](/images/posts/color_system/palette.png)
+
+## The problem
+
+* Too many color variables
+* Hardcoded values
+* Poor accessibility and non-adherence to guidelines
+
+### Too many color variables
+
+This is a snippet from the SCSS variables file - just way too many variables in play. It's hard for designers and developers to know what color to use:
+
+{% highlight scss %}
+// So many...variables..
+$yellow: #FEC902;
+$blue: #3D7BBA;
+$light-blue: #5AB1E7;
+$red: #BF1E2E;
+$green: #58B028;
+$grey: #d0d0d0;
+$dark-grey: #333333;
+$medium-grey: #666666;
+$link-blue: #3a7abd;
+
+$yellow-1: #f4e5a0;
+$yellow-2: #f1dd80;
+$yellow-3: #edd460;
+$yellow-4: #c8b457;
+$yellow-5: #a3944e;
+
+$blue-1: #89afd7;
+$blue-2: #6195ca;
+$blue-3: #3a7abd;
+$blue-4: #396ca1;
+$blue-5: #375e86;
+
+$green-1: #74c88c;
+$green-2: #46b666;
+$green-3: #18A440;
+$green-4: #1d8d3d;
+$green-5: #23773b;
+
+$orange-1: #f8a28a;
+$orange-2: #f58363;
+$orange-3: #f3643c;
+$orange-4: #cd5a3a;
+$orange-5: #a65038;
+
+$red-1: #e88e89;
+$red-2: #e06962;
+$red-3: #d8433b;
+$red-4: #b74039;
+$red-5: #963d38;
+
+$dark-grey-1: #858585;
+$dark-grey-2: #717171;
+$dark-grey-3: #5c5c5c;
+$dark-grey-4: #484848;
+$dark-grey-5: #333333;
+
+$light-grey-1: #ebebeb;
+$light-grey-2: #d6d6d6;
+$light-grey-3: #c2c2c2;
+$light-grey-4: #adadad;
+$light-grey-5: #999999;
+
+$yellow: #f6d654;
+$yellow-tint: tint($yellow, 10%);
+$yellow-shade: shade($yellow, 10%);
+
+$blue: #4891dc;
+$blue-tint: tint($blue, 10%);
+$blue-shade: shade($blue, 10%);
+
+$red: #c9282d;
+$red-tint: tint($red, 10%);
+$red-shade: shade($red, 10%);
+
+$green: #55a51c;
+$green-tint: tint($green, 10%);
+$green-shade: shade($green, 10%);
+
+$orange: #FF8800;
+
+$white: #ffffff;
+$white-shade: shade($white, 10%);
+
+$grey: #3a3d3f;
+$grey-10: tint($grey, 10%);
+$grey-20: tint($grey, 20%);
+$grey-30: tint($grey, 30%);
+$grey-40: tint($grey, 40%);
+$grey-50: tint($grey, 50%);
+$grey-60: tint($grey, 60%);
+$grey-70: tint($grey, 70%);
+$grey-80: tint($grey, 80%);
+$grey-90: tint($grey, 90%);
+$grey-95: tint($grey, 95%);
+
 {% endhighlight %}
+
+### Hardcoded colors
+Alot of the CSS was written before Clio was using SCSS variables, so colors were hardcoded – an absolute nightmare to maintain.
+{% highlight scss %}
+// Examples from the master file of hardcoded color values
+.settings a {
+  color: #0000ee;
+}
+.settings-submenu li .selected {
+  background: #e5e5e7;
+}
+{% endhighlight %}
+
+## Step 1: Audit
+
+## Step 2: Convert
+
+## Step 3: Document
+
+## Documenting the system
+
+## Adding secondary palette
+
+## Learnings, misses, and next steps
