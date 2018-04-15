@@ -70,7 +70,7 @@ $global-header-height: 56px;
 $global-header-background-color: color(white);
 $global-header-padding-x: $global-margin-x - $global-nav-link-padding;
 
-$page-padding-y: spacing(xl);
+$page-padding-y: spacing(m);
 
 $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;
@@ -128,7 +128,6 @@ p {
   font-weight: 400;
   color: $font-color-subdued;
   margin-bottom: $p-spacing;
-  max-width: 600px;
 }
 strong {
   font-weight: $font-weight-bold;

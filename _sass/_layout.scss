@@ -38,6 +38,7 @@
   text-decoration: none;
   padding: $global-nav-link-padding;
   font-size: $global-nav-link-size;
+  font-weight: $font-weight-bold;
   &.active {
     color: $global-nav-link-color-active;
     font-weight: $font-weight-bold;
@@ -55,8 +56,8 @@
   width: $page-sidebar-width;
   padding-top: $page-padding-y;
   padding-left: $page-sidebar-padding-x;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: $global-header-height;
   left: 0;
   bottom: 0;
   overflow: scroll;
