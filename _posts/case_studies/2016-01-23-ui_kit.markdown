@@ -8,13 +8,5 @@ role: "Design"
 category: case_studies
 timeframe: 6 months
 ---
-
-<section>
 Pellentesque habitant morbi tristique senectus et netus. Nihil hic munitissimus habendi senatus locus, nihil horum? Paullum deliquit, ponderibus modulisque suis ratio utitur.
 Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicantur magna mollis euismod. Sed haec quis possit intrepidus aestimare tellus. Prima luce, cum quibus mons aliud consensu ab eo. Quam diu etiam furor iste tuus nos eludet? Contra legem facit qui id facit quod lex prohibet.
-  {% highlight ruby %}
-  def foo
-    puts 'foo'
-  end
-  {% endhighlight %}
-</section>

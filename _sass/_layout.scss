@@ -73,11 +73,17 @@
   }
 }
 .page-content {
-  padding-top: $page-padding-y;
-  // overflow: scroll;
   position: absolute;
   bottom: 0;
   top: 0;
+  padding-top: $page-padding-y;
+}
+.page-default .page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $page-padding-y $page-padding-x;
+}
+.page-post .page-content {
   @media only screen and (min-width: 1261px) {
     left: 50%;
     max-width: 800px;

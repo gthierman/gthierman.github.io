@@ -8,13 +8,10 @@ image: "placeholder.png"
 role: Design & SCSS
 status: Shipped
 ---
-
-<section>
-  This is the case study content. It can take HTML and markdown.
-  It can also take code snippets:
-  {% highlight ruby %}
-  def foo
-    puts 'foo'
-  end
-  {% endhighlight %}
-</section>
+This is the case study content. It can take HTML and markdown.
+It can also take code snippets:
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}

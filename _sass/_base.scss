@@ -59,8 +59,8 @@ $font-weight-bold: 700;
 
 $global-margin-x: spacing(xl);
 
-$global-nav-link-padding: spacing(s);
-$global-nav-link-size: $font-size-small;
+$global-nav-link-padding: spacing(m);
+$global-nav-link-size: $font-size;
 $global-nav-link-color-active: color(blue);
 $global-nav-link-color-subdued: color(grey-5);
 
@@ -71,6 +71,7 @@ $global-header-background-color: color(white);
 $global-header-padding-x: $global-margin-x - $global-nav-link-padding;
 
 $page-padding-y: spacing(m);
+$page-padding-x: $global-margin-x;
 
 $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;

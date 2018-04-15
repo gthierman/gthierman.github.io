@@ -7,12 +7,9 @@ status: "Shipped"
 image: "placeholder.png"
 category: case_studies
 ---
-
-<section>
-  Building the clio colour system.
-  {% highlight ruby %}
-  def foo
-    puts 'foo'
-  end
-  {% endhighlight %}
-</section>
+Building the clio colour system.
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}

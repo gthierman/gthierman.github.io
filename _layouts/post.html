@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign meta-data = page.role or page.status or page.timeframe %}
 
-<div class="page">
+<div class="page page-post">
   <div class="page-sidebar tablet-portrait-hide">
     {% for post in site.categories[page.category] %}
       <a
@@ -24,11 +24,6 @@ layout: default
       </div>
     {% endif %}
     <p class="post-intro">{{ page.intro }}</p>
-    <div class="post-hero"></div>
-    <img src="/images/placeholder.png" class="case-study-intro-image">
-    <!-- {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta}}{% endif %} -->
-    <div class="post-content">
-      {{ content }}
-    </div>
+    {{ content }}
   </div>
 </div>
