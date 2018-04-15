@@ -11,15 +11,18 @@ status: Shipped
 ---
 ![palette](/images/posts/color_system/palette.png)
 
-## The problem
+## Problems
 
 * Too many color variables
 * Hardcoded values
 * Poor accessibility and non-adherence to guidelines
 
-### Too many color variables
+### Too many colors
+The palette had become tremendously bloated with variations of the same colour. Multiple reds, blues, greens, and greys.
 
-This is a snippet from the SCSS variables file - just way too many variables in play. It's hard for designers and developers to know what color to use:
+![palette](/images/posts/color_system/audit.png)
+
+This is a snippet from the Clio SCSS variables file - way too many variables in play. It's hard for designers and developers to know what color to use, and it's hard to maintain and update:
 
 {% highlight scss %}
 // So many...variables..
@@ -133,3 +136,36 @@ Alot of the CSS was written before Clio was using SCSS variables, so colors were
 ## Adding secondary palette
 
 ## Learnings, misses, and next steps
+
+
+{% highlight scss %}
+$blue: #0075bb;
+$blue-dark: #004670;
+$blue-light: #EBF4F9;
+
+$red: #E41B28;
+$red-dark: #A40618;
+$red-light: #FCF1EF;
+
+$green: #339931;
+$green-dark: #0A6B0C;
+$green-light: #D5F0D3;
+
+$mint: #00B980;
+$blue-bright: #089CFF;
+
+$grey-6: #263238;
+$grey-5: #667881;
+$grey-4: #B0BEC5;
+$grey-3: #D7DEE2;
+$grey-2: #ECEFF1;
+$grey-1: #F5F7F8;
+
+$yellow: #f6d654;
+$orange: #FDAA1E;
+$orange-dark: #D58600;
+$orange-light: #FEF6E8;
+
+$white: white;
+$black: black;
+{% endhighlight %}
