@@ -20,10 +20,12 @@ $spacing: (
   xl: 32px,
 );
 
+// Function for setting spacing inside rules - margin-bottom: spacing(xl)
 @function spacing($spacing-size) {
   @return map-get($spacing, $spacing-size);
 }
 
+// Utility classes - class="stack-xl"
 @each $name, $value in $spacing {
   .stack-#{$name} {
     margin-bottom: $value !important;
@@ -36,28 +38,119 @@ $spacing: (
   }
 }
 
-$font-size: 16px;
-$line-height: 20px;
-$font-size-small: 14px;
-$line-height-small: 18px;
+$font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-color: color(grey-400);
 $font-color-subdued: color(grey-300);
+$font-color-link: color(brand);
+
 $font-weight-regular: 500;
 $font-weight-bold: 700;
 
+$body-font-size: 16px;
+$body-line-height: 20px;
+
+$small-font-size: 14px;
+$small-line-height: 18px;
+
 $h1-font-size: 32px;
 $h1-line-height: 36px;
-$h1-spacing: spacing(l);
+
 $h2-font-size: 24px;
 $h2-line-height: 28px;
-$h2-spacing: spacing(m);
+
 $h3-font-size: 18px;
 $h3-line-height: 24px;
 $h3-spacing: spacing(s);
+
 $h4-font-size: 14px;
 $h4-line-height: 18px;
-$h4-spacing: spacing(xs);
-$p-spacing: spacing(l);
+
+$type-styles: (
+  body: (
+    font-size: $body-font-size,
+    line-height: $body-line-height,
+    font-weight: $font-weight-regular,
+    color: $font-color
+  ),
+  body-subdued: (
+    font-size: $body-font-size,
+    line-height: $body-line-height,
+    font-weight: $font-weight-regular,
+    color: $font-color-subdued
+  ),
+  body-strong: (
+    font-size: $body-font-size,
+    line-height: $body-line-height,
+    font-weight: $font-weight-bold,
+    color: $font-color
+  ),
+  body-link: (
+    font-size: $body-font-size,
+    line-height: $body-line-height,
+    font-weight: $font-weight-regular,
+    color: $font-color-link
+  ),
+  h1: (
+    font-size: $h1-font-size,
+    line-height: $h1-line-height,
+    font-weight: $font-weight-bold,
+    color: $font-color
+  ),
+  h2: (
+    font-size: $h2-font-size,
+    line-height: $h2-line-height,
+    font-weight: $font-weight-bold,
+    color: $font-color
+  ),
+  h3: (
+    font-size: $h3-font-size,
+    line-height: $h3-line-height,
+    font-weight: $font-weight-bold,
+    color: $font-color
+  ),
+  h4: (
+    font-size: $h4-font-size,
+    line-height: $h4-line-height,
+    font-weight: $font-weight-bold,
+    color: $font-color
+  ),
+  tagline: (
+    font-size: 20px,
+    line-height: 24px,
+    font-weight: $font-weight-regular,
+    color: $font-color-subdued
+  ),
+  small: (
+    font-size: $small-font-size,
+    line-height: $small-line-height,
+    font-weight: $font-weight-regular,
+    color: $font-color
+  ),
+  small-subdued: (
+    font-size: $small-font-size,
+    line-height: $small-line-height,
+    font-weight: $font-weight-regular,
+    color: $font-color-subdued
+  ),
+  small-strong: (
+    font-size: $small-font-size,
+    line-height: $small-line-height,
+    font-weight: $font-weight-bold,
+    color: $font-color-subdued
+  ),
+);
+
+// e.g. color: property(body-subdued, color)
+@function type-property($type-style, $property) {
+  @return map-deep-get($type-styles, $type-style, $property);
+}
+
+@mixin typeset( $type ) {
+  font-size: map-deep-get($type-styles, $type, font-size);
+  font-weight: map-deep-get($type-styles, $type, font-weight);
+  line-height: map-deep-get($type-styles, $type, line-height);
+  color: map-deep-get($type-styles, $type, color);
+}
 
 $border-dark: 1px solid color(grey-250);
 $border-light: 1px solid color(grey-200);
@@ -82,7 +175,7 @@ $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;
 $page-sidebar-link-color: $font-color-subdued;
 $page-sidebar-link-color-active: color(brand);
-$page-sidebar-link-size: $font-size-small;
+$page-sidebar-link-size: $small-font-size;
 $page-sidebar-link-height: 32px;
 
 $code-snippet-background-color: color(grey-100);
@@ -96,10 +189,8 @@ $image-box-shadow: 0 0 15px 0 rgba(38,50,56,0.20);
 
 body {
   height: 100%;
-  font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $font-color-subdued;
+  font-family: $font-family;
+  @include typeset(body-subdued);
   margin: 0;
 }
 
@@ -110,40 +201,29 @@ img {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
-  font-weight: 700;
-  color: $font-color;
 }
 h1 {
-  font-size: $h1-font-size;
-  line-height: $h1-line-height;
-  margin-bottom: $h1-spacing;
+  @include typeset(h1);
+  margin-bottom: spacing(l);
 }
 h2 {
-  font-size: $h2-font-size;
-  line-height: $h2-line-height;
-  margin-bottom: $h2-spacing;
+  @include typeset(h2);
+  margin-bottom: spacing(m);
 }
 h3 {
-  font-size: $h3-font-size;
-  line-height: $h3-line-height;
-  margin-bottom: $h3-spacing;
+  @include typeset(h3);
+  margin-bottom: spacing(s);
 }
 h4 {
-  font-size: $h4-font-size;
-  line-height: $h4-line-height;
-  margin-bottom: $h4-spacing;
+  @include typeset(h4);
+  margin-bottom: spacing(xs);
 }
 p {
-  font-weight: 400;
-  color: $font-color-subdued;
-  margin-bottom: $p-spacing;
+  @include typeset(body-subdued);
+  margin-bottom: spacing(l);
 }
 strong {
-  font-weight: $font-weight-bold;
-  color: $font-color;
-}
-.small {
-  font-size: $font-size-small;
+  @include typeset(body-strong);
 }
 .tagline {
   font-size: 20px;

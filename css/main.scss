@@ -48,6 +48,7 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "mixins",
         "base",
         "grid",
         "layout",

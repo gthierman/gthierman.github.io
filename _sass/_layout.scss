@@ -17,7 +17,7 @@
   align-self: stretch;
   align-items: center;
   flex: 0 0 auto;
-  font-size: $font-size-small;
+  @include typeset(small);
 }
 .global-header-identity-avatar {
   width: 30px;
@@ -47,7 +47,6 @@
   align-self: stretch;
   &.active {
     color: $global-nav-link-color-active;
-    font-weight: $font-weight-bold;
     border-color: color(brand);
   }
 }
