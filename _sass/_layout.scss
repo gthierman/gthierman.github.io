@@ -90,8 +90,8 @@
   padding-top: $page-padding-y;
 }
 .page-default .page-content {
-  max-width: 800px;
-  margin: 0 auto;
+  right: 0;
+  left: 0;
   padding: $page-padding-y $page-padding-x;
 }
 .page-post .page-content {

@@ -162,3 +162,18 @@ strong {
     margin-bottom: 0;
   }
 }
+
+$gallery-item-height: 400px;
+.gallery {
+  display: flex;
+  width: 100%;
+
+}
+.gallery-item {
+  background: color(grey-200);
+  border: $border-dark;
+  height: $gallery-item-height;
+  margin-bottom: spacing(xl);
+  display: flex;
+  flex: 1 1 auto;
+}

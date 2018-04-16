@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="page page-default">
+  <div class="page-content">
+    <div class="gallery">
+      {% for post in site.categories.case_studies %}
+        <div class="gallery-item">
+          {{post.title}}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
