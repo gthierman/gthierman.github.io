@@ -8,6 +8,7 @@ $post-hero-padding: spacing(l);
   margin-bottom: spacing(xs);
 }
 .post-tagline {
+  @include typeset(tagline);
   margin-bottom: spacing(m);
 }
 .post-hero {

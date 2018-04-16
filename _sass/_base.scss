@@ -78,15 +78,15 @@ $type-styles: (
     font-weight: $font-weight-regular,
     color: $font-color-subdued
   ),
-  body-strong: (
-    font-size: $body-font-size,
-    line-height: $body-line-height,
+  strong: (
+    font-size: inherit,
+    line-height: inherit,
     font-weight: $font-weight-bold,
-    color: $font-color
+    color: inherit
   ),
-  body-link: (
-    font-size: $body-font-size,
-    line-height: $body-line-height,
+  link: (
+    font-size: inherit,
+    line-height: inherit,
     font-weight: $font-weight-regular,
     color: $font-color-link
   ),
@@ -131,13 +131,7 @@ $type-styles: (
     line-height: $small-line-height,
     font-weight: $font-weight-regular,
     color: $font-color-subdued
-  ),
-  small-strong: (
-    font-size: $small-font-size,
-    line-height: $small-line-height,
-    font-weight: $font-weight-bold,
-    color: $font-color-subdued
-  ),
+  )
 );
 
 // e.g. color: property(body-subdued, color)
@@ -150,6 +144,13 @@ $type-styles: (
   font-weight: map-deep-get($type-styles, $type, font-weight);
   line-height: map-deep-get($type-styles, $type, line-height);
   color: map-deep-get($type-styles, $type, color);
+}
+
+// Utility classes - class="type-body"
+@each $name, $value in $type-styles {
+  .type-#{$name} {
+    @include typeset($name)
+  }
 }
 
 $border-dark: 1px solid color(grey-250);
@@ -223,14 +224,11 @@ p {
   margin-bottom: spacing(l);
 }
 strong {
-  @include typeset(body-strong);
+  @include typeset(strong);
 }
-.tagline {
-  font-size: 20px;
-  color: color(grey-300);
-  font-weight: $font-weight-regular;
+a {
+  @include typeset(link)
 }
-
 .tablet-portrait-hide {
   @media only screen and (max-width: 768px) {
     display: none!important;
