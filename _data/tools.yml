@@ -1,0 +1,28 @@
+comms-tools:
+ - title: Sketch
+ - title: Abstract
+ - title: Invision
+ - title: Principle
+ - title: Flinto
+ - title: Framer
+design-tools:
+ - title: JIRA
+ - title: Confluence
+ - title: Slack
+ - title: GSuite
+ - title: JIRA
+
+tech-basic:
+ - title: HTML
+ - title: SCSS
+ - title: JavaScript
+ - title: Git
+ - title: Liquid
+
+tech-frameworks:
+ - title: Angular
+ - title: React
+ - title: Jekyll
+ - title: Liquid templating
+ - title: Rails
+ - title: Wordpress

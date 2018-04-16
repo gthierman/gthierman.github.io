@@ -222,6 +222,10 @@ strong {
 a {
   @include type(link)
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
 .tablet-portrait-hide {
   @media only screen and (max-width: 768px) {
     display: none!important;

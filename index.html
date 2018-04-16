@@ -2,13 +2,46 @@
 layout: about
 ---
 
-<h1 class="stack-xl">Geoff Thierman</h1>
+<h1 class="stack-xs">Geoff Thierman</h1>
 <h2 class="stack-xl">Product & systems designer</h2>
 
-<h3>Design systems</h3>
-<p class="stack-m">Prima luce, cum quibus mons aliud consensu ab eo. Mercedem aut nummos unde unde extricat, amaras. Cum ceteris in veneratione tui montes, nascetur mus.</p>
-<a href="/case_studies/">View case study</a>
+<p>I’m currently working on empowering teams through design systems at <a href="https://www.clio.com/" target="_blank">Clio</a>.  Read some of my <a href="/case_studies">case studies</a> to get an idea what I work on and how I work.</p>
+<p>I also like to experiment with typography and illustration. See a full range of my creative interests on my <a href="https://dribbble.com/gthierman" target="_blank">dribbble page.</a></p>
 
-<h3>Product design</h3>
-<p class="stack-m">Prima luce, cum quibus mons aliud consensu ab eo. Mercedem aut nummos unde unde extricat, amaras. Cum ceteris in veneratione tui montes, nascetur mus.</p>
-<a href="/case_studies/">View case study</a>
+<p>I’m passionate about code and how it can empower designers to do better work. Check out my <a href="https://github.com/gthierman/" target="_blank">github.</a></p>
+
+<h3>I work with most of these tools on a daily basis</h3>
+
+<ul>
+  {% for item in site.data.tools.design-tools %}
+  <li>
+    {{ item.title }}
+  </li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for item in site.data.tools.comms-tools %}
+  <li>
+    {{ item.title }}
+  </li>
+  {% endfor %}
+</ul>
+
+<h3>I'm comfortable with these technologies</h3>
+
+<ul>
+  {% for item in site.data.tools.tech-basic %}
+  <li>
+    {{ item.title }}
+  </li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for item in site.data.tools.tech-frameworks %}
+  <li>
+    {{ item.title }}
+  </li>
+  {% endfor %}
+</ul>
