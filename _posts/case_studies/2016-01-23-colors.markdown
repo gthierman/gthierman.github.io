@@ -6,6 +6,7 @@ intro: Over the years, Clio's design language has evolved, and the colors in use
 status: "Shipped"
 image: "placeholder.png"
 category: case_studies
+tagline: Nihil hic munitissimus habendi senatus
 role: Design & SCSS
 status: Shipped
 ---

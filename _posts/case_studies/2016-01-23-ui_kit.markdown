@@ -5,6 +5,7 @@ date:   2016-01-23 02:10:43
 intro: "Intro text"
 image: "placeholder.png"
 role: "Design"
+tagline: Nihil hic munitissimus habendi senatus
 category: case_studies
 timeframe: 6 months
 ---
@@ -15,4 +16,4 @@ Quisque ut dolor gravida, placerat libero vel, euismod. Etiam habebis sem dicant
 
 ## Learnings
 
-## Sketch text styles do not carry into new documents 
+## Sketch text styles do not carry into new documents
