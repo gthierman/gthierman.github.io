@@ -26,6 +26,7 @@ $gallery-item-padding-x: spacing(l);
   left: 0;
   background: color(white);
   padding: spacing(m) $gallery-item-padding-x;
+  border-radius: 0 0 $border-radius $border-radius;
 }
 .gallery-item-label-title {
   @include type(strong, default);
