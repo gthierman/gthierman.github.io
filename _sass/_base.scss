@@ -39,98 +39,85 @@ $spacing: (
 }
 
 $font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif;
+
 $font-color: color(grey-400);
 $font-color-subdued: color(grey-300);
 $font-color-link: color(brand);
 
-$font-weight-regular: 500;
-$font-weight-bold: 700;
 
-$body-font-size: 16px;
-$body-line-height: 20px;
+$type-weights: (
+  regular: 400,
+  bold: 700
+);
+@function type-weights($weight) {
+  @return map-get($type-weights, $weight)
+};
 
-$small-font-size: 14px;
-$small-line-height: 18px;
+$type-colors: (
+  default: color(grey-400),
+  subdued: color(grey-300),
+  link: color(brand)
+);
 
-$h1-font-size: 32px;
-$h1-line-height: 36px;
-
-$h2-font-size: 24px;
-$h2-line-height: 28px;
-
-$h3-font-size: 18px;
-$h3-line-height: 24px;
-$h3-spacing: spacing(s);
-
-$h4-font-size: 14px;
-$h4-line-height: 18px;
+@function type-colors($color) {
+  @return map-get($type-colors, $color)
+};
 
 $type-styles: (
   body: (
-    font-size: $body-font-size,
-    line-height: $body-line-height,
-    font-weight: $font-weight-regular,
-    color: $font-color
-  ),
-  body-subdued: (
-    font-size: $body-font-size,
-    line-height: $body-line-height,
-    font-weight: $font-weight-regular,
-    color: $font-color-subdued
-  ),
-  strong: (
-    font-size: inherit,
-    line-height: inherit,
-    font-weight: $font-weight-bold,
-    color: inherit
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: type-weights(regular),
+    color: type-colors(subdued)
   ),
   link: (
-    font-size: inherit,
-    line-height: inherit,
-    font-weight: $font-weight-regular,
-    color: $font-color-link
+    color: color(brand)
   ),
   h1: (
-    font-size: $h1-font-size,
-    line-height: $h1-line-height,
-    font-weight: $font-weight-bold,
-    color: $font-color
+    font-size: 32px,
+    line-height: 36px,
+    font-weight: type-weights(bold),
+    color: type-colors(default)
   ),
   h2: (
-    font-size: $h2-font-size,
-    line-height: $h2-line-height,
-    font-weight: $font-weight-bold,
-    color: $font-color
+    font-size: 24px,
+    line-height: 28px,
+    font-weight: type-weights(bold),
+    color: type-colors(default)
   ),
   h3: (
-    font-size: $h3-font-size,
-    line-height: $h3-line-height,
-    font-weight: $font-weight-bold,
-    color: $font-color
+    font-size: 18px,
+    line-height: 24px,
+    font-weight: type-weights(bold),
+    color: type-colors(default)
   ),
   h4: (
-    font-size: $h4-font-size,
-    line-height: $h4-line-height,
-    font-weight: $font-weight-bold,
-    color: $font-color
+    font-size: 16px,
+    line-height: 20px,
+    font-weight: type-weights(bold),
+    color: type-colors(default)
   ),
   tagline: (
     font-size: 20px,
     line-height: 24px,
-    font-weight: $font-weight-regular,
-    color: $font-color-subdued
+    font-weight: type-weights(regular),
+    color: type-colors(subdued)
   ),
   small: (
-    font-size: $small-font-size,
-    line-height: $small-line-height,
-    font-weight: $font-weight-regular,
-    color: $font-color
+    font-size: 14px,
+    line-height: 18px,
   ),
-  small-subdued: (
-    font-size: $small-font-size,
-    line-height: $small-line-height,
-    font-weight: $font-weight-regular,
-    color: $font-color-subdued
+  subdued: (
+    color: type-colors(subdued)
+  ),
+  strong: (
+    font-weight: type-weights(bold)
+  ),
+  tab: (
+    font-size: 12px,
+    line-height: 14px,
+    font-weight: type-weights(bold),
+    text-transform: uppercase
   )
 );
 
@@ -139,17 +126,41 @@ $type-styles: (
   @return map-deep-get($type-styles, $type-style, $property);
 }
 
-@mixin typeset( $type ) {
-  font-size: map-deep-get($type-styles, $type, font-size);
-  font-weight: map-deep-get($type-styles, $type, font-weight);
-  line-height: map-deep-get($type-styles, $type, line-height);
-  color: map-deep-get($type-styles, $type, color);
+@mixin type( $type-style: body, $type-color: null, $type-weight: null ) {
+  @if $type-style {
+    $type-style: map-get($type-styles, $type-style);
+    @if map-has-key($type-style, font-size) {
+      font-size: map-get($type-style, font-size);
+    }
+    @if map-has-key($type-style, font-weight) and not $type-weight {
+      font-weight: map-get($type-style, font-weight);
+    }
+    @if map-has-key($type-style, line-height) {
+      line-height: map-get($type-style, line-height);
+    }
+    @if map-has-key($type-style, color) and not $type-color {
+      color: map-get($type-style, color);
+    }
+    @if map-has-key($type-style, text-transform) {
+      text-transform: map-get($type-style, text-transform);
+    }
+  }
+  @if $type-color {
+    @if map-has-key($type-colors, $type-color) {
+      color: map-get($type-colors, $type-color);
+    }
+  }
+  @if $type-weight {
+    @if map-has-key($type-weights, $type-weight) {
+      weight: map-get($type-weights, $type-weight);
+    }
+  }
 }
 
 // Utility classes - class="type-body"
 @each $name, $value in $type-styles {
   .type-#{$name} {
-    @include typeset($name)
+    @include type($name)
   }
 }
 
@@ -159,25 +170,11 @@ $border-radius: 6px;
 
 $global-margin-x: spacing(xl);
 
-$global-nav-link-size: 12px;
-$global-nav-link-color-active: color(brand);
-$global-nav-link-color-subdued: color(grey-300);
-
 $global-header-border-width: 3px;
 $global-header-border-color: color(brand);
 $global-header-height: 56px;
 $global-header-background-color: color(white);
 $global-header-padding-x: $global-margin-x;
-
-$page-padding-y: spacing(xl);
-$page-padding-x: $global-margin-x;
-
-$page-sidebar-width: 200px;
-$page-sidebar-padding-x: $global-margin-x;
-$page-sidebar-link-color: $font-color-subdued;
-$page-sidebar-link-color-active: color(brand);
-$page-sidebar-link-size: $small-font-size;
-$page-sidebar-link-height: 32px;
 
 $code-snippet-background-color: color(grey-100);
 $code-snippet-padding: spacing(l);
@@ -189,9 +186,9 @@ $image-box-shadow: 0 0 15px 0 rgba(38,50,56,0.20);
 }
 
 body {
+  @include type(body);
   height: 100%;
   font-family: $font-family;
-  @include typeset(body-subdued);
   margin: 0;
 }
 
@@ -204,30 +201,29 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 h1 {
-  @include typeset(h1);
+  @include type(h1);
   margin-bottom: spacing(l);
 }
 h2 {
-  @include typeset(h2);
+  @include type(h2);
   margin-bottom: spacing(m);
 }
 h3 {
-  @include typeset(h3);
+  @include type(h3);
   margin-bottom: spacing(s);
 }
 h4 {
-  @include typeset(h4);
+  @include type(h4);
   margin-bottom: spacing(xs);
 }
 p {
-  @include typeset(body-subdued);
   margin-bottom: spacing(l);
 }
 strong {
-  @include typeset(strong);
+  @include type(strong);
 }
 a {
-  @include typeset(link)
+  @include type(link)
 }
 .tablet-portrait-hide {
   @media only screen and (max-width: 768px) {

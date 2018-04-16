@@ -20,7 +20,6 @@ $gallery-item-padding-x: spacing(l);
   }
 }
 .gallery-item-label {
-  @include typeset(body);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -29,8 +28,9 @@ $gallery-item-padding-x: spacing(l);
   padding: spacing(m) $gallery-item-padding-x;
 }
 .gallery-item-label-title {
-  @include typeset(strong);
+  @include type(strong, default);
 }
 .gallery-item-label-tagline {
-  @include typeset(small-subdued);
+  @include type(subdued);
+  // @include typeset(small-subdued);
 }

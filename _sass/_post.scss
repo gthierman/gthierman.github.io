@@ -7,7 +7,7 @@ $post-hero-padding: spacing(l);
   margin-bottom: spacing(xs);
 }
 .post-tagline {
-  @include typeset(tagline);
+  @include type(tagline);
   margin-bottom: spacing(m);
 }
 .post-hero {
@@ -30,7 +30,7 @@ $post-hero-padding: spacing(l);
   box-shadow: 0 2px 20px 0 rgba(0,42,85,0.05);
 }
 .post-meta-data-item {
-  @include typeset(small);
+  @include type(small, default);
   margin-bottom: spacing(xs);
   flex: 0 0 auto;
   &:last-child {

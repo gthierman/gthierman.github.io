@@ -1,3 +1,13 @@
+$page-padding-y: spacing(xl);
+$page-padding-x: $global-margin-x;
+
+$page-sidebar-width: 200px;
+$page-sidebar-padding-x: $global-margin-x;
+
+$page-sidebar-link-color: type-colors(subdued);
+$page-sidebar-link-color-active: color(brand);
+$page-sidebar-link-height: 32px;
+
 .global-header {
   position: absolute;
   top: 0;
@@ -17,7 +27,7 @@
   align-self: stretch;
   align-items: center;
   flex: 0 0 auto;
-  @include typeset(small);
+  @include type(small);
 }
 .global-header-identity-avatar {
   width: 30px;
@@ -35,10 +45,10 @@
   flex: 0 0 auto;
 }
 .global-nav-link{
-  color: $global-nav-link-color-subdued;
+  @include type(tab);
+  color: type-colors(subdued);
   text-decoration: none;
-  font-size: $global-nav-link-size;
-  font-weight: $font-weight-bold;
+  font-size: 12px;
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
   margin-right: spacing(l);
@@ -46,7 +56,8 @@
   align-items: center;
   align-self: stretch;
   &.active {
-    color: $global-nav-link-color-active;
+    @include type(tab);
+    color: type-colors(link);
     border-color: color(brand);
   }
 }
@@ -70,12 +81,12 @@
   border-right: $border-light;
 }
 .page-sidebar-link {
+  @include type(small);
   padding: 0 $page-sidebar-padding-x;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: $page-sidebar-link-color;
-  font-size: $page-sidebar-link-size;
   height: $page-sidebar-link-height;
   &.active {
     color: $page-sidebar-link-color-active;
