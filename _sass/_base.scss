@@ -8,6 +8,7 @@ $colors: (
   white: #fff,
 );
 
+// Function for setting color inside rules - background-color: color(brand);
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
@@ -20,7 +21,7 @@ $spacing: (
   xl: 32px,
 );
 
-// Function for setting spacing inside rules - margin-bottom: spacing(xl)
+// Function for setting spacing inside rules - margin-bottom: spacing(xl);
 @function spacing($spacing-size) {
   @return map-get($spacing, $spacing-size);
 }
@@ -39,17 +40,12 @@ $spacing: (
 }
 
 $font-family: "Proxima Nova","Helvetica Neue", Helvetica, Arial, sans-serif;
-
-$font-color: color(grey-400);
-$font-color-subdued: color(grey-300);
-$font-color-link: color(brand);
-
-
 $type-weights: (
   regular: 400,
   bold: 700
 );
-@function type-weights($weight) {
+// Gets a type weight e.g. type-weight(bold);
+@function type-weight($weight) {
   @return map-get($type-weights, $weight)
 };
 
@@ -58,8 +54,8 @@ $type-colors: (
   subdued: color(grey-300),
   link: color(brand)
 );
-
-@function type-colors($color) {
+// Gets the type color e.g. type-color(link);
+@function type-color($color) {
   @return map-get($type-colors, $color)
 };
 
@@ -67,8 +63,8 @@ $type-styles: (
   body: (
     font-size: 16px,
     line-height: 24px,
-    font-weight: type-weights(regular),
-    color: type-colors(subdued)
+    font-weight: type-weight(regular),
+    color: type-color(subdued)
   ),
   link: (
     color: color(brand)
@@ -76,47 +72,47 @@ $type-styles: (
   h1: (
     font-size: 32px,
     line-height: 36px,
-    font-weight: type-weights(bold),
-    color: type-colors(default)
+    font-weight: type-weight(bold),
+    color: type-color(default)
   ),
   h2: (
     font-size: 24px,
     line-height: 28px,
-    font-weight: type-weights(bold),
-    color: type-colors(default)
+    font-weight: type-weight(bold),
+    color: type-color(default)
   ),
   h3: (
     font-size: 18px,
     line-height: 24px,
-    font-weight: type-weights(bold),
-    color: type-colors(default)
+    font-weight: type-weight(bold),
+    color: type-color(default)
   ),
   h4: (
     font-size: 16px,
     line-height: 20px,
     font-weight: type-weights(bold),
-    color: type-colors(default)
+    color: type-color(default)
   ),
   tagline: (
     font-size: 20px,
     line-height: 24px,
     font-weight: type-weights(regular),
-    color: type-colors(subdued)
+    color: type-color(subdued)
   ),
   small: (
     font-size: 14px,
     line-height: 18px,
   ),
   subdued: (
-    color: type-colors(subdued)
+    color: type-color(subdued)
   ),
   strong: (
-    font-weight: type-weights(bold)
+    font-weight: type-weight(bold)
   ),
   tab: (
     font-size: 12px,
     line-height: 14px,
-    font-weight: type-weights(bold),
+    font-weight: type-weight(bold),
     text-transform: uppercase
   )
 );

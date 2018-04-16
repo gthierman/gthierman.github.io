@@ -4,7 +4,7 @@ $page-padding-x: $global-margin-x;
 $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;
 
-$page-sidebar-link-color: type-colors(subdued);
+$page-sidebar-link-color: type-color(subdued);
 $page-sidebar-link-color-active: color(brand);
 $page-sidebar-link-height: 32px;
 
@@ -46,7 +46,7 @@ $page-sidebar-link-height: 32px;
 }
 .global-nav-link{
   @include type(tab);
-  color: type-colors(subdued);
+  color: type-color(subdued);
   text-decoration: none;
   font-size: 12px;
   text-transform: uppercase;
@@ -57,7 +57,7 @@ $page-sidebar-link-height: 32px;
   align-self: stretch;
   &.active {
     @include type(tab);
-    color: type-colors(link);
+    color: type-color(link);
     border-color: color(brand);
   }
 }
