@@ -95,21 +95,10 @@
   padding: $page-padding-y $page-padding-x;
 }
 .page-post .page-content {
-  @media only screen and (min-width: 1261px) {
-    left: 50%;
-    max-width: 800px;
-    width: 800px;
-    margin-left: -400px;
-  }
-  @media only screen and (max-width: 1260px) {
-    position: absolute;
-    left: $page-sidebar-width;
-    right: 0;
-    padding-right: $global-margin-x;
-  }
+  left: $page-sidebar-width;
+  right: 0;
+  padding: $global-margin-x;
   @media only screen and (max-width: 768px) {
     left: 0;
-    padding-left: $global-margin-x;
   }
-
 }
