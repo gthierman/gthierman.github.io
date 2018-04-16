@@ -1,8 +1,14 @@
 $post-hero-padding: spacing(l);
 .post {
     max-width: 800px;
-    // width: 800px;
+    width: 800px;
     margin: 0 auto;
+}
+.post-title {
+  margin-bottom: spacing(xs);
+}
+.post-tagline {
+  margin-bottom: spacing(m);
 }
 .post-hero {
   height: 300px;
@@ -10,6 +16,7 @@ $post-hero-padding: spacing(l);
   background: color(grey-200);
   border-radius: $border-radius;
   padding: $post-hero-padding;
+  margin-bottom: spacing(xl);
 }
 .post-meta-data {
   display: flex;

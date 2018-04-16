@@ -2,15 +2,17 @@
 layout: post
 title:  "Case Study 1"
 date:   2016-01-23 02:10:43
-intro: "The datatable component is core to the Clio experience. It makes up many of the primary views inside of the application, and we wanted to turn component into a powerful tool that our customers could use to extract the data they wanted, in the way they wanted."
 image: "placeholder.png"
-role: "UX & UI design"
+role: UX & UI design
 time: 6 months
-tagline: d
+team: 3 people
+status: Shipped
+tagline: Case study tag line
 thumbnail: d
 hero: d
 category: case_studies
 ---
+
 This is the case study content. It can take HTML and markdown.
 It can also take code snippets:
 {% highlight ruby %}

@@ -10,8 +10,8 @@
     {% for item in site.data.navigation.nav-items %}
       {% for post in site.categories.[item.category] limit: 1  %}
         <a
-          class="global-nav-link{% if item.category == page.category %} active{% endif %}"
-          href="{{ post.url }}"
+          class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+          href="/{{item.category}}"
           alt="{{ item.title }}"
         >
           {{ item.title }}

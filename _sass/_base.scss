@@ -2,7 +2,7 @@ $colors: (
   brand: #F86110,
   grey-100: #FBFCFD,
   grey-200: #F1F5F9,
-  grey-250: #F1F5F9,
+  grey-250: #DAE0E7,
   grey-300: #56728C,
   grey-400: #002A55,
   white: #fff,
@@ -145,6 +145,11 @@ strong {
 .small {
   font-size: $font-size-small;
 }
+.tagline {
+  font-size: 20px;
+  color: color(grey-300);
+  font-weight: $font-weight-regular;
+}
 
 .tablet-portrait-hide {
   @media only screen and (max-width: 768px) {
@@ -165,6 +170,7 @@ strong {
 }
 
 $gallery-item-height: 400px;
+$gallery-item-padding-x: spacing(l);
 .gallery {
   display: flex;
   width: 100%;
@@ -177,4 +183,13 @@ $gallery-item-height: 400px;
   margin-bottom: spacing(xl);
   display: flex;
   flex: 1 1 auto;
+  position: relative;
+}
+.gallery-item-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: color(white);
+  padding: spacing(m) $gallery-item-padding-x;
 }

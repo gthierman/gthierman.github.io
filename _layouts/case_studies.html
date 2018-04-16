@@ -6,9 +6,12 @@ layout: default
   <div class="page-content">
     <div class="gallery">
       {% for post in site.categories.case_studies %}
-        <div class="gallery-item">
-          {{post.title}}
-        </div>
+        <a class="gallery-item" href="{{post.url}}">
+          <div class="gallery-item-label">
+            {{post.title}}
+            {{post.tagline}}
+          </div>
+        </a>
       {% endfor %}
     </div>
   </div>
