@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign meta-data = page.role or page.status or page.timeframe %}
+{% assign meta-data = page.role or page.status or page.timeframe or page.team %}
 
 <div class="page page-post">
   <div class="page-sidebar tablet-portrait-hide">
@@ -17,13 +17,16 @@ layout: default
   <div class="page-content">
     <div class="post">
       <h1>{{ page.title }}</h1>
-      {% if meta-data %}
-        <div class="post-meta-data">
-          {% if page.role %}<div class="post-meta-data-item"><strong>Role:</strong> {{page.role}}</div> {% endif %}
-          {% if page.status %}<div class="post-meta-data-item"><strong>Status:</strong> {{page.status}}</div> {% endif %}
-          {% if page.timeframe %}<div class="post-meta-data-item"><strong>Timeframe:</strong> {{page.timeframe}}</div> {% endif %}
-        </div>
-      {% endif %}
+      <div class="post-hero">
+        {% if meta-data %}
+          <div class="post-meta-data">
+            {% if page.role %}<div class="post-meta-data-item"><strong>Role</strong> {{page.role}}</div> {% endif %}
+            {% if page.status %}<div class="post-meta-data-item"><strong>Status</strong> {{page.status}}</div> {% endif %}
+            {% if page.time %}<div class="post-meta-data-item"><strong>Time</strong> {{page.time}}</div> {% endif %}
+            {% if page.team %}<div class="post-meta-data-item"><strong>Team</strong> {{page.team}}</div> {% endif %}
+          </div>
+        {% endif %}
+      </div>
       <p class="post-intro">{{ page.intro }}</p>
       {{ content }}
     </div>
