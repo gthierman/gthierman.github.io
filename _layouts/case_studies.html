@@ -8,8 +8,8 @@ layout: default
       {% for post in site.categories.case_studies %}
         <a class="gallery-item" href="{{post.url}}">
           <div class="gallery-item-label">
-            {{post.title}}
-            {{post.tagline}}
+            <div class="gallery-item-label-title">{{post.title}}</div>
+            <div class="gallery-item-label-tagline">{{post.tagline}}</div>
           </div>
         </a>
       {% endfor %}

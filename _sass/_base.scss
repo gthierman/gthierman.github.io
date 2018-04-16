@@ -264,10 +264,18 @@ $gallery-item-padding-x: spacing(l);
   position: relative;
 }
 .gallery-item-label {
+  @include typeset(body);
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   background: color(white);
   padding: spacing(m) $gallery-item-padding-x;
+}
+.gallery-item-label-title {
+  @include typeset(strong);
+}
+.gallery-item-label-tagline {
+  @include typeset(small-subdued);
+
 }
