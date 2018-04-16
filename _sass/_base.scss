@@ -1,8 +1,10 @@
 $colors: (
-  blue: #178AFF,
-  grey-1: #F5F7F8,
-  grey-5: #667881,
-  grey-6: #263238,
+  brand: #F86110,
+  grey-100: #FBFCFD,
+  grey-200: #F1F5F9,
+  grey-250: #F1F5F9,
+  grey-300: #56728C,
+  grey-400: #002A55,
   white: #fff,
 );
 
@@ -38,8 +40,11 @@ $font-size: 16px;
 $line-height: 20px;
 $font-size-small: 14px;
 $line-height-small: 18px;
-$font-color: color(grey-6);
-$font-color-subdued: color(grey-5);
+$font-color: color(grey-400);
+$font-color-subdued: color(grey-300);
+$font-weight-regular: 500;
+$font-weight-bold: 700;
+
 $h1-font-size: 32px;
 $h1-line-height: 36px;
 $h1-spacing: spacing(l);
@@ -54,21 +59,20 @@ $h4-line-height: 18px;
 $h4-spacing: spacing(xs);
 $p-spacing: spacing(l);
 
-$font-weight-regular: 500;
-$font-weight-bold: 700;
+$border-dark: 1px solid color(grey-250);
+$border-light: 1px solid color(grey-200);
 
 $global-margin-x: spacing(xl);
 
-$global-nav-link-padding: spacing(m);
-$global-nav-link-size: $font-size;
-$global-nav-link-color-active: color(blue);
-$global-nav-link-color-subdued: color(grey-5);
+$global-nav-link-size: 12px;
+$global-nav-link-color-active: color(brand);
+$global-nav-link-color-subdued: color(grey-300);
 
 $global-header-border-width: 3px;
-$global-header-border-color: color(blue);
+$global-header-border-color: color(brand);
 $global-header-height: 56px;
 $global-header-background-color: color(white);
-$global-header-padding-x: $global-margin-x - $global-nav-link-padding;
+$global-header-padding-x: $global-margin-x;
 
 $page-padding-y: spacing(xl);
 $page-padding-x: $global-margin-x;
@@ -76,10 +80,11 @@ $page-padding-x: $global-margin-x;
 $page-sidebar-width: 200px;
 $page-sidebar-padding-x: $global-margin-x;
 $page-sidebar-link-color: $font-color-subdued;
-$page-sidebar-link-color-active: color(blue);
+$page-sidebar-link-color-active: color(brand);
 $page-sidebar-link-size: $font-size-small;
+$page-sidebar-link-height: 32px;
 
-$code-snippet-background-color: color(grey-1);
+$code-snippet-background-color: color(grey-100);
 $code-snippet-padding: spacing(l);
 
 $image-box-shadow: 0 0 15px 0 rgba(38,50,56,0.20);

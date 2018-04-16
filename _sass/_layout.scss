@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 0 $global-margin-x 0 $global-header-padding-x;
   border-top: $global-header-border-width solid $global-header-border-color;
+  border-bottom: $border-light;
 }
 .global-header-identity {
   display: flex;
@@ -36,12 +37,18 @@
 .global-nav-link{
   color: $global-nav-link-color-subdued;
   text-decoration: none;
-  padding: $global-nav-link-padding;
   font-size: $global-nav-link-size;
   font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  margin-right: spacing(l);
+  display: flex;
+  align-items: center;
+  align-self: stretch;
   &.active {
     color: $global-nav-link-color-active;
     font-weight: $font-weight-bold;
+    border-color: color(brand);
   }
 }
 .page {
@@ -54,22 +61,26 @@
 }
 .page-sidebar {
   width: $page-sidebar-width;
-  padding-top: $page-padding-y;
-  padding-left: $page-sidebar-padding-x;
+  padding: $page-padding-y 0;
   position: fixed;
   top: $global-header-height;
   left: 0;
   bottom: 0;
   overflow: scroll;
+  background-color: color(grey-100);
+  border-right: $border-light;
 }
 .page-sidebar-link {
-  display: block;
+  padding: 0 $page-sidebar-padding-x;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: $page-sidebar-link-color;
   font-size: $page-sidebar-link-size;
-  margin-bottom: spacing(s);
+  height: $page-sidebar-link-height;
   &.active {
     color: $page-sidebar-link-color-active;
+    background: color(grey-200);
   }
 }
 .page-content {
