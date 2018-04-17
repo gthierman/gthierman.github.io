@@ -20,7 +20,7 @@ $page-sidebar-link-height: 32px;
   justify-content: space-between;
   padding: 0 $global-margin-x 0 $global-header-padding-x;
   border-top: $global-header-border-width solid $global-header-border-color;
-  border-bottom: $border-light;
+  border-bottom: $border-dark;
 }
 .global-header-identity {
   display: flex;
@@ -78,7 +78,7 @@ $page-sidebar-link-height: 32px;
   bottom: 0;
   overflow: scroll;
   background-color: color(grey-100);
-  border-right: $border-light;
+  border-right: $border-dark;
 }
 .page-sidebar-link {
   @include type(small);

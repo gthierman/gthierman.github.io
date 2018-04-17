@@ -28,13 +28,13 @@ $spacing: (
 
 // Utility classes - class="stack-xl"
 @each $name, $value in $spacing {
-  .stack-#{$name} {
+  .spacing-stack-#{$name} {
     margin-bottom: $value !important;
   }
-  .inline-#{$name} {
+  .spacing-inline-#{$name} {
     margin-right: $value !important;
   }
-  .insets-#{$name} {
+  .spacing-insets-#{$name} {
     padding: $value !important;
   }
 }
@@ -236,4 +236,27 @@ ul {
   &:last-child {
     margin-bottom: 0;
   }
+}
+.about {
+  display: flex;
+  flex: 1 0 auto;
+  margin: 0 auto;
+  max-width: 700px;
+  flex-direction: column;
+}
+.about-description {
+  flex: 1 0 auto;
+}
+.about-lists h3 {
+  flex: 1 0 auto;
+  @include type(body, default, bold);
+}
+.d-flex {
+  display: flex!important;
+}
+.flex-direction-row {
+  flex-direction: row!important;
+}
+.flex-direction-column {
+  flex-direction: column!important;
 }
