@@ -19,6 +19,8 @@ $spacing: (
   m: 12px,
   l: 20px,
   xl: 32px,
+  xxl: 40px,
+  xxxl: 60px
 );
 
 // Function for setting spacing inside rules - margin-bottom: spacing(xl);
@@ -246,6 +248,8 @@ ul {
 }
 .about-description {
   flex: 1 0 auto;
+  font-size: 18px;
+  margin-bottom: spacing(xxl);
 }
 .about-lists h3 {
   flex: 1 0 auto;
