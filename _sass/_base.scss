@@ -1,5 +1,6 @@
 $colors: (
-  brand: #F86110,
+  brand: #178AFF,
+  brand-dark: #001B37,
   grey-100: #FBFCFD,
   grey-200: #F1F5F9,
   grey-250: #DAE0E7,
@@ -151,7 +152,7 @@ $type-styles: (
   }
   @if $type-weight {
     @if map-has-key($type-weights, $type-weight) {
-      weight: map-get($type-weights, $type-weight);
+      font-weight: map-get($type-weights, $type-weight);
     }
   }
 }
@@ -227,6 +228,16 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+blockquote {
+  border-left: 4px solid color(brand);
+  margin: 0;
+  padding-left: spacing(l);
+  font-style: italic;
+  cite {
+    @include type(body, default, bold);
+    font-style: normal;
+  }
 }
 .tablet-portrait-hide {
   @media only screen and (max-width: 768px) {
