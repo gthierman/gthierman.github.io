@@ -168,7 +168,9 @@ $border-dark: 1px solid color(grey-250);
 $border-light: 1px solid color(grey-200);
 $border-radius: 6px;
 
-$global-margin-x: spacing(xl);
+$global-margin-x: spacing(xl);//TODO delete
+
+$global-padding: spacing(xxxl);
 
 $global-header-border-width: 3px;
 $global-header-border-color: color(brand);
