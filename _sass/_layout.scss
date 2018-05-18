@@ -2,6 +2,7 @@ $left-side-bar-width: 350px;
 $meta-side-bar-width: 280px;
 $meta-side-bar-bg-color: color(grey-100);
 $meta-side-bar-bg-color: red;
+$global-nav-width: 230px;
 
 .left-sidebar,
 .content,
@@ -17,6 +18,13 @@ $meta-side-bar-bg-color: red;
   display: flex;
   width: 350px;
   padding: $global-padding 0;
+  justify-content: center;
+}
+.global-nav {
+  width: $global-nav-width;
+}
+.global-nav-link {
+  display: block;
 }
 .content-wrapper,
 .content,

@@ -1,5 +1,6 @@
 ---
 layout: post
+category: case_studies
 title:  "Case Study 1"
 date:   2016-01-23 02:10:43
 image: "placeholder.png"
@@ -10,11 +11,12 @@ status: Shipped
 tagline: Case study tag line
 thumbnail: d
 hero: d
-category: case_studies
+category: blog
 ---
 
 This is the case study content. It can take HTML and markdown.
 It can also take code snippets:
+
 {% highlight ruby %}
 def foo
   puts 'foo'
