@@ -14,14 +14,13 @@ hero: d
 category: blog
 ---
 
-# This is a header 1
+## This is a header 1
 
 Magna pars studiorum, prodita quaerimus. Mercedem aut nummos unde unde extricat, amaras. Ut enim ad minim veniam, quis nostrud exercitation. Etiam habebis sem dicantur magna mollis euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Petierunt uti sibi concilium totius Galliae in diem certam indicere.
 
-## This is a header 2
+### This is a header 2
 
-This is the case study content. It can take HTML and markdown.
-It can also take code snippets:
+Magna pars studiorum, prodita quaerimus. Mercedem aut nummos unde unde extricat, amaras. Ut enim ad minim veniam, quis nostrud exercitation. Etiam habebis sem dicantur magna mollis euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Petierunt uti sibi concilium totius Galliae in diem certam indicere.
 
 {% highlight ruby %}
 def foo
