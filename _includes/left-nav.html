@@ -1,21 +1,28 @@
 <nav class="left-nav">
   <div>
-    {% for post in site.categories.case_studies  %}
-      <a
-        class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
-        href="{{post.url}}"
-        alt="{{ item.title }}"
-      > {{post.title}}
-      </a>
-    {% endfor %}
-    {% for post in site.categories.blog  %}
-      <a
-        class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
-        href="{{post.url}}"
-        alt="{{ item.title }}"
-      > {{post.title}}
-      </a>
-    {% endfor %}
+    <div class="spacing-stack-xl">
+      <h4>Case studies</h4>
+
+      {% for post in site.categories.case_studies  %}
+        <a
+          class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+          href="{{post.url}}"
+          alt="{{ item.title }}"
+        > {{post.title}}
+        </a>
+      {% endfor %}
+    </div>
+    <div class="spacing-stack-xl">
+      <h4>Blog posts</h4>
+      {% for post in site.categories.blog  %}
+        <a
+          class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+          href="{{post.url}}"
+          alt="{{ item.title }}"
+        > {{post.title}}
+        </a>
+      {% endfor %}
+    </div>
   </div>
   <div class="social-links">
     <a href="https://dribbble.com/gthierman" target="_blank">

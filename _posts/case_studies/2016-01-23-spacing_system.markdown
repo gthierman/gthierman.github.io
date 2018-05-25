@@ -8,6 +8,7 @@ image: "placeholder.png"
 role: Design & SCSS
 status: Shipped
 tagline: Nihil hic habendi senatus
+published: false
 ---
 This is the case study content. It can take HTML and markdown.
 It can also take code snippets:

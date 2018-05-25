@@ -92,10 +92,11 @@ $type-styles: (
     color: type-color(default)
   ),
   h4: (
-    font-size: 16px,
-    line-height: 20px,
+    font-size: 12px,
+    line-height: 18px,
     font-weight: type-weight(bold),
-    color: type-color(default)
+    color: type-color(default),
+    text-transform: uppercase
   ),
   tagline: (
     font-size: 20px,

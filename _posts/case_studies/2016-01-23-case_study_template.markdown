@@ -1,25 +1,26 @@
 ---
 layout: post
 category: case_studies
-title:  "Case Study 1"
+title:  "Case study template"
 date:   2016-01-23 02:10:43
 image: "placeholder.png"
-role: UX & UI design
-time: 6 months
-team: 3 people
-status: Shipped
+role: Role here
+time: Timeframe here
+team: Team size here
+status: Shipped/In Development/etc
 tagline: Case study tag line
-thumbnail: d
-hero: d
-category: blog
-published: false
+thumbnail: /path/to/hero
+hero: hero
+category: case_studies
 ---
 
-## This is a header 1
+# This is header 1
+
+## This is a header 2
 
 Magna pars studiorum, prodita quaerimus. Mercedem aut nummos unde unde extricat, amaras. Ut enim ad minim veniam, quis nostrud exercitation. Etiam habebis sem dicantur magna mollis euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Petierunt uti sibi concilium totius Galliae in diem certam indicere.
 
-### This is a header 2
+### This is a header 3
 
 Magna pars studiorum, prodita quaerimus. Mercedem aut nummos unde unde extricat, amaras. Ut enim ad minim veniam, quis nostrud exercitation. Etiam habebis sem dicantur magna mollis euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Petierunt uti sibi concilium totius Galliae in diem certam indicere.
 
@@ -28,3 +29,5 @@ def foo
   puts 'foo'
 end
 {% endhighlight %}
+
+#### This is a header 4

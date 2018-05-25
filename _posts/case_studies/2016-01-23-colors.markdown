@@ -9,6 +9,7 @@ category: case_studies
 tagline: Nihil hic munitissimus habendi senatus
 role: Design & SCSS
 status: Shipped
+published: false
 ---
 ![palette](/images/posts/color_system/palette.png)
 

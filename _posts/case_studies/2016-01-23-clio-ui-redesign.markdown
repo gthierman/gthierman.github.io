@@ -11,6 +11,7 @@ tagline: Redesigning Clio's legal practice management interface
 thumbnail: d
 hero: d
 category: case_studies
+published: false
 ---
 
 ## Introduction

@@ -8,6 +8,7 @@ role: "Design"
 tagline: Nihil hic munitissimus habendi senatus
 category: case_studies
 timeframe: 6 months
+published: false
 ---
 ![palette](/images/posts/color_system/symbollib.png)
 
