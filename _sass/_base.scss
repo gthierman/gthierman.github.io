@@ -45,7 +45,7 @@ $spacing: (
 $font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $type-weights: (
-  regular: 400,
+  regular: 300,
   bold: 500
 );
 // Gets a type weight e.g. type-weight(bold);
@@ -76,31 +76,31 @@ $type-styles: (
   h1: (
     font-size: 32px,
     line-height: 36px,
-    font-weight: type-weight(regular),
+    font-weight: type-weight(bold),
     color: type-color(default)
   ),
   h2: (
     font-size: 24px,
     line-height: 28px,
-    font-weight: type-weight(regular),
+    font-weight: type-weight(bold),
     color: type-color(default)
   ),
   h3: (
     font-size: 18px,
     line-height: 24px,
-    font-weight: type-weight(regular),
+    font-weight: type-weight(bold),
     color: type-color(default)
   ),
   h4: (
     font-size: 16px,
     line-height: 20px,
-    font-weight: type-weight(regular),
+    font-weight: type-weight(bold),
     color: type-color(default)
   ),
   tagline: (
     font-size: 20px,
     line-height: 24px,
-    font-weight: type-weight(regular),
+    font-weight: type-weight(bold),
     color: type-color(subdued)
   ),
   small: (

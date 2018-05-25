@@ -1,0 +1,31 @@
+<nav class="left-nav">
+  <div>
+    {% for post in site.categories.case_studies  %}
+      <a
+        class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+        href="{{post.url}}"
+        alt="{{ item.title }}"
+      > {{post.title}}
+      </a>
+    {% endfor %}
+    {% for post in site.categories.blog  %}
+      <a
+        class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+        href="{{post.url}}"
+        alt="{{ item.title }}"
+      > {{post.title}}
+      </a>
+    {% endfor %}
+  </div>
+  <div class="social-links">
+    <a href="https://dribbble.com/gthierman" target="_blank">
+      <i class="fab fa-dribbble"></i>
+    </a>
+    <a  href="https://www.linkedin.com/in/gthierman/" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://github.com/gthierman" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</nav>
