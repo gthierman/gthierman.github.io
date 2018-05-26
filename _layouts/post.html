@@ -2,14 +2,16 @@
 layout: default
 ---
 {% assign meta-data = page.role or page.status or page.timeframe or page.team or page.company %}
-<h1>{{ page.title }}</h1>
-{% if meta-data %}
-  <div class="meta-data ipad-portrait-hide">
-    {% if page.company %}<div class="meta-data-item"><strong>Company</strong> {{page.company}}</div> {% endif %}
-    {% if page.role %}<div class="meta-data-item"><strong>Role</strong> {{page.role}}</div> {% endif %}
-    {% if page.status %}<div class="meta-data-item"><strong>Status</strong> {{page.status}}</div> {% endif %}
-    {% if page.time %}<div class="meta-data-item"><strong>Time</strong> {{page.time}}</div> {% endif %}
-    {% if page.team %}<div class="meta-data-item"><strong>Team</strong> {{page.team}}</div> {% endif %}
-  </div>
-{% endif %}
-{{content}}
+<div class="post">
+  <h1>{{ page.title }}</h1>
+  {% if meta-data %}
+    <div class="post-meta-data ipad-portrait-hide">
+      {% if page.company %}<div class="post-meta-data-item"><strong>Company</strong> {{page.company}}</div> {% endif %}
+      {% if page.role %}<div class="post-meta-data-item"><strong>Role</strong> {{page.role}}</div> {% endif %}
+      {% if page.status %}<div class="post-meta-data-item"><strong>Status</strong> {{page.status}}</div> {% endif %}
+      {% if page.time %}<div class="post-meta-data-item"><strong>Time</strong> {{page.time}}</div> {% endif %}
+      {% if page.team %}<div class="post-meta-data-item"><strong>Team</strong> {{page.team}}</div> {% endif %}
+    </div>
+  {% endif %}
+  {{content}}
+</div>

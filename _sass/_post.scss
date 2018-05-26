@@ -1,35 +1,21 @@
 $post-hero-padding: spacing(l);
 .post {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.post-title {
-  margin-bottom: spacing(xs);
-}
-.post-tagline {
-  margin-bottom: spacing(m);
-}
-.post-hero {
-  height: 300px;
-  position: relative;
-  background: color(grey-200);
-  border-radius: $border-radius;
-  padding: $post-hero-padding;
-  margin-bottom: spacing(xl);
-}
-.meta-data {
+.post-meta-data {
   display: flex;
   border-top: $border-light;
   border-bottom: $border-light;
   padding: spacing(l) 0;
   margin-bottom: spacing(xl);
 }
-.nav-active .meta-data {
+.nav-active .post-meta-data {
   @include breakpoint(ipad-portrait) {
     flex-wrap: wrap;
   }
 }
-.meta-data-item {
+.post-meta-data-item {
   @include type-style(small);
   @include type-style(subdued);
   margin-right: spacing(xl);
@@ -43,7 +29,7 @@ $post-hero-padding: spacing(l);
     width: 70px;
   }
 }
-.nav-active .meta-data-item {
+.nav-active .post-meta-data-item {
   @include breakpoint(ipad-portrait) {
     flex: 1 1 50%;
     margin-right: 0;
