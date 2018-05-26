@@ -49,7 +49,7 @@ $post-hero-padding: spacing(l);
   @include breakpoint(ipad-portrait) {
     flex: 1 1 50%;
     margin-right: 0;
-    margin-bottom: spacing(l);
+    margin-bottom: spacing(m);
     &:nth-last-child(-n+2) {
       margin: 0;
     }

@@ -42,11 +42,7 @@ $spacing: (
     padding: $value !important;
   }
 }
-// @if $type-style {
-//   $type-style: map-get($type-styles, $type-style);
-//   @if map-has-key($type-style, font-size) {
-//     font-size: map-get($type-style, font-size);
-//   }
+
 $breakpoints: (
   iphone:         340px,
   ipad-portrait:  768px,
