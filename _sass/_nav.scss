@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  padding: spacing(xl) 0;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: color(grey-500);
+  z-index: 1;
+}
+nav h4,
+.nav-link {
+  padding: 0 spacing(xl);
+}
+nav h4 {
+  color: color(white);
+  letter-spacing: 1px;
+  margin-bottom: spacing(s);
+}
+.nav-link {
+  display: flex;
+  height: 36px;
+  line-height: 36px;
+  align-content: center;
+  position: relative;
+  color: color(grey-200);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-weight: type-weight(light);
+}
+.nav-link:hover,
+.nav-link.active {
+  background: color(grey-400);
+}
+.nav-link.active {
+  color: color(white);
+}
+.nav-link .status-dot {
+  position: absolute;
+  margin-top: -($status-dot-width/2);
+  top: 50%;
+  left: 12px;
+  display: none;
+  background: color(brand);
+}
+.nav-link.active .status-dot {
+  display: flex;
+}
