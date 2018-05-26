@@ -28,15 +28,11 @@ header {
     margin-bottom: spacing(s);
   }
   .menu-toggle {
-    display: none;
     flex: 0 0 auto;
     margin-top: spacing(s);
     color: color(white);
     &:hover {
       color: color(brand);
-    }
-    @include breakpoint(ipad-portrait) {
-      display: flex;
     }
   }
   .social-links {
@@ -60,15 +56,20 @@ nav {
   display: flex;
   width: $nav-width;
   top: 0;
-  left: $header-width;
+  left: -$nav-width;
   bottom: 0;
   padding: spacing(xl) 0;
   flex-direction: column;
   overflow-y: scroll;
   background: color(grey-500);
+  z-index: 1;
   @include breakpoint(ipad-portrait){
     display: none;
   }
+}
+.nav-active nav {
+  display: flex;
+  left: $header-width;
 }
 nav h4,
 .nav-link {
@@ -121,15 +122,20 @@ nav h4 {
   padding: $global-padding;
 }
 .content-wrapper {
-  left: $nav-width + $header-width;
+  left: $header-width;
   overflow: auto;
   @include breakpoint(ipad-portrait){
     left: $header-width;
   }
 }
+.nav-active .content-wrapper {
+  display: flex;
+  left: $header-width + $nav-width;
+}
 .content {
   right: 0;
   bottom: initial;
   max-width: 1000px;
+  min-width: 320px;
   margin: 0 auto;
 }
