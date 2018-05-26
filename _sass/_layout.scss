@@ -25,6 +25,19 @@ header {
     border-radius: 50%;
     border: 2px solid color(white);
     box-sizing: content-box;
+    margin-bottom: spacing(s);
+  }
+  .menu-toggle {
+    display: none;
+    flex: 0 0 auto;
+    margin-top: spacing(s);
+    color: color(white);
+    &:hover {
+      color: color(brand);
+    }
+    @include breakpoint(ipad-portrait) {
+      display: flex;
+    }
   }
   .social-links {
     display: flex;
@@ -53,6 +66,9 @@ nav {
   flex-direction: column;
   overflow-y: scroll;
   background: color(grey-500);
+  @include breakpoint(ipad-portrait){
+    display: none;
+  }
 }
 nav h4,
 .nav-link {
@@ -94,6 +110,7 @@ nav h4 {
   display: flex;
 }
 
+
 .content-wrapper,
 .content,
 .meta-sidebar {
@@ -106,6 +123,9 @@ nav h4 {
 .content-wrapper {
   left: $nav-width + $header-width;
   overflow: auto;
+  @include breakpoint(ipad-portrait){
+    left: $header-width;
+  }
 }
 .content {
   right: 0;
