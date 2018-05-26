@@ -46,6 +46,7 @@ $spacing: (
 $font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $type-weights: (
+  light: 300,
   regular: 400,
   bold: 500
 );
@@ -173,7 +174,7 @@ $border-radius: 6px;
 
 $global-margin-x: spacing(xl);//TODO delete
 
-$global-padding: spacing(xxxl);
+$global-padding: spacing(xl);
 
 $global-header-border-width: 3px;
 $global-header-border-color: color(brand);
