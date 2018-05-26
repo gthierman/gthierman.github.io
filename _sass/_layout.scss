@@ -1,34 +1,86 @@
-$left-side-bar-width: 200px;
+$header-width: 65px;
+$nav-width: 230px;
 $meta-side-bar-width: 200px;
-$meta-side-bar-bg-color: color(grey-100);
-$global-nav-width: 230px;
 
-.left-nav,
+header,
+nav,
 .content,
 .content-wrapper,
 .meta-sidebar {
   position: absolute;
 }
-.left-nav {
-  width: $global-nav-width;
-  top: 0;
-  left: 0;
-  bottom: 0;
+header {
   display: flex;
-  width: $left-side-bar-width;
-  padding: $global-padding spacing(l);
-  flex-direction: column;
   justify-content: space-between;
-  overflow-y: scroll;
-
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $header-width;
+  background: color(grey-500);
+  padding: spacing(l) 0 spacing(xl);
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid color(white);
+    box-sizing: content-box;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    align-items: center;
+    width: 100%;
+    a {
+      margin-top: spacing(l);
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: color(white);
+    }
+    a:hover {
+      color: color(brand-light);
+    }
+  }
 }
-.global-nav-link,
-.social-links a {
+nav {
+  display: flex;
+  width: $nav-width;
+  top: 0;
+  left: $header-width;
+  bottom: 0;
+  padding: $global-padding 0;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: color(grey-400);
+}
+nav h4,
+.nav-link {
+  padding: 0 spacing(xl);
+}
+nav h4 {
+  color: color(white);
+  letter-spacing: 1px;
+}
+.nav-link {
+  display: flex;
+  height: 36px;
+  line-height: 36px;
+  align-content: center;
+  position: relative;
+  color: rgba(color(white), .5);
   text-decoration: none;
 }
-.global-nav-link {
-  display: block;
-  margin-bottom: spacing(s);
+.nav-link:hover {
+  background: color(grey-300);
+}
+nav .status-dot {
+  position: absolute;
+  margin-top: -($status-dot-width/2);
+  top: 50%;
+  left: 12px;
+
 }
 
 .content-wrapper,
@@ -41,7 +93,7 @@ $global-nav-width: 230px;
   padding: $global-padding;
 }
 .content-wrapper {
-  left: $left-side-bar-width;
+  left: $nav-width + $header-width;
   overflow: auto;
 }
 .content {
@@ -51,20 +103,8 @@ $global-nav-width: 230px;
 .meta-sidebar {
   left: initial;
   width: $meta-side-bar-width;
-  background-color: $meta-side-bar-bg-color;
+  background-color: color(grey-100);
   padding-left: spacing(l);
   position: fixed;
 
-}
-.global-header-identity {
-  display: flex;
-  align-self: stretch;
-  align-items: center;
-  flex: 0 0 auto;
-  @include type(small);
-}
-.global-header-identity-avatar {
-  width: 30px;
-  height:30px;
-  margin-right: spacing(m);
 }

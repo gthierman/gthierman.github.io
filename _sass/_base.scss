@@ -1,11 +1,11 @@
 $colors: (
-  brand: #178AFF,
-  brand-dark: #001B37,
+  brand: #1381D3,
+  brand-light: #2694E6,
   grey-100: #FAFAFB,
   grey-200: #F1F5F9,
-  grey-250: #DAE0E7,
-  grey-300: #667881,
-  grey-400: #263238,
+  grey-300: #3D4C53,
+  grey-400: #364248,
+  grey-500: #263238,
   white: #fff,
 );
 
@@ -92,7 +92,7 @@ $type-styles: (
     color: type-color(default)
   ),
   h4: (
-    font-size: 12px,
+    font-size: 11px,
     line-height: 18px,
     font-weight: type-weight(bold),
     color: type-color(default),
@@ -277,4 +277,13 @@ blockquote {
 }
 .flex-direction-column {
   flex-direction: column!important;
+}
+
+$status-dot-width: 8px;
+.status-dot {
+  width: $status-dot-width;
+  height: $status-dot-width;
+  border-radius: 50%;
+  background: color(brand);
+  display: flex;
 }

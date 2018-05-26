@@ -1,29 +1,5 @@
-<nav class="left-nav">
-  <div>
-    <div class="spacing-stack-xl">
-      <h4>Case studies</h4>
-
-      {% for post in site.categories.case_studies  %}
-        <a
-          class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
-          href="{{post.url}}"
-          alt="{{ item.title }}"
-        > {{post.title}}
-        </a>
-      {% endfor %}
-    </div>
-    <div class="spacing-stack-xl">
-      <h4>Blog posts</h4>
-      {% for post in site.categories.blog  %}
-        <a
-          class="global-nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
-          href="{{post.url}}"
-          alt="{{ item.title }}"
-        > {{post.title}}
-        </a>
-      {% endfor %}
-    </div>
-  </div>
+<header>
+  <img src="../images/avatar.png" class="avatar">
   <div class="social-links">
     <a href="https://dribbble.com/gthierman" target="_blank">
       <i class="fab fa-dribbble"></i>
@@ -34,5 +10,33 @@
     <a href="https://github.com/gthierman" target="_blank">
       <i class="fab fa-github"></i>
     </a>
+  </div>
+
+</header>
+<nav>
+  <div class="spacing-stack-xl">
+    <h4>Case studies</h4>
+
+    {% for post in site.categories.case_studies  %}
+      <a
+        class="nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+        href="{{post.url}}"
+        alt="{{ item.title }}"
+      >
+      <span class="status-dot"></span>
+      {{post.title}}
+      </a>
+    {% endfor %}
+  </div>
+  <div class="spacing-stack-xl">
+    <h4>Blog posts</h4>
+    {% for post in site.categories.blog  %}
+      <a
+        class="nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+        href="{{post.url}}"
+        alt="{{ item.title }}"
+      > {{post.title}}
+      </a>
+    {% endfor %}
   </div>
 </nav>
