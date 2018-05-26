@@ -49,6 +49,10 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "mixins",
+        "colors",
+        "spacing",
+        "breakpoints",
+        "typography",
         "base",
         "grid",
         "layout",

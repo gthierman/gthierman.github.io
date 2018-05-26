@@ -1,0 +1,124 @@
+$font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$type-weights: (
+  light: 300,
+  regular: 400,
+  bold: 500
+);
+// Gets a type weight e.g. type-weight(bold);
+@function type-weight($weight) {
+  @return map-get($type-weights, $weight)
+};
+
+$type-colors: (
+  default: color(grey-600),
+  subdued: color(grey-300),
+  header: color(brand),
+  link: color(brand)
+);
+// Gets the type color e.g. type-color(link);
+@function type-color($color) {
+  @return map-get($type-colors, $color)
+};
+
+$type-styles: (
+  body: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: type-weight(regular),
+    color: type-color(default)
+  ),
+  link: (
+    color: color(brand)
+  ),
+  h1: (
+    font-size: 32px,
+    line-height: 36px,
+    font-weight: type-weight(regular),
+    color: type-color(header)
+  ),
+  h2: (
+    font-size: 24px,
+    line-height: 28px,
+    font-weight: type-weight(regular),
+    color: type-color(header)
+  ),
+  h3: (
+    font-size: 18px,
+    line-height: 24px,
+    font-weight: type-weight(regular),
+    color: type-color(header)
+  ),
+  h4: (
+    font-size: 11px,
+    line-height: 18px,
+    font-weight: type-weight(bold),
+    color: type-color(default),
+    text-transform: uppercase
+  ),
+  tagline: (
+    font-size: 20px,
+    line-height: 24px,
+    font-weight: type-weight(bold),
+    color: type-color(subdued)
+  ),
+  small: (
+    font-size: 14px,
+    line-height: 18px
+  ),
+  subdued: (
+    color: type-color(subdued)
+  ),
+  strong: (
+    font-weight: type-weight(bold)
+  ),
+  tab: (
+    font-size: 12px,
+    line-height: 14px,
+    font-weight: type-weight(bold),
+    text-transform: uppercase
+  )
+);
+
+// e.g. color: property(body-subdued, color)
+@function type-property($type-style, $property) {
+  @return map-deep-get($type-styles, $type-style, $property);
+}
+
+@mixin type( $type-style: body, $type-color: null, $type-weight: null ) {
+  @if $type-style {
+    $type-style: map-get($type-styles, $type-style);
+    @if map-has-key($type-style, font-size) {
+      font-size: map-get($type-style, font-size);
+    }
+    @if map-has-key($type-style, font-weight) and not $type-weight {
+      font-weight: map-get($type-style, font-weight);
+    }
+    @if map-has-key($type-style, line-height) {
+      line-height: map-get($type-style, line-height);
+    }
+    @if map-has-key($type-style, color) and not $type-color {
+      color: map-get($type-style, color);
+    }
+    @if map-has-key($type-style, text-transform) {
+      text-transform: map-get($type-style, text-transform);
+    }
+  }
+  @if $type-color {
+    @if map-has-key($type-colors, $type-color) {
+      color: map-get($type-colors, $type-color);
+    }
+  }
+  @if $type-weight {
+    @if map-has-key($type-weights, $type-weight) {
+      font-weight: map-get($type-weights, $type-weight);
+    }
+  }
+}
+
+// Utility classes - class="type-body"
+@each $name, $value in $type-styles {
+  .type-#{$name} {
+    @include type($name)
+  }
+}

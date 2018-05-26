@@ -4,6 +4,7 @@ category: case_studies
 title:  "Case study title"
 date:   2016-01-23 02:10:43
 image: "placeholder.png"
+company: Clio
 role: Role here
 time: Timeframe here
 team: Team size here
