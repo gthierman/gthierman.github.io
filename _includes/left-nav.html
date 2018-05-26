@@ -19,7 +19,7 @@
 
     {% for post in site.categories.case_studies  %}
       <a
-        class="nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+        class="nav-link{% if page.url == post.url %} active{% endif %}"
         href="{{post.url}}"
         alt="{{ item.title }}"
       >
@@ -32,10 +32,12 @@
     <h4>Blog posts</h4>
     {% for post in site.categories.blog  %}
       <a
-        class="nav-link{% if page.url == 'item.category' or page.url contains item.category %} active{% endif %}"
+        class="nav-link{% if page.url == post.url %} active{% endif %}"
         href="{{post.url}}"
         alt="{{ item.title }}"
-      > {{post.title}}
+      >
+      <span class="status-dot"></span>
+      {{post.title}}
       </a>
     {% endfor %}
   </div>

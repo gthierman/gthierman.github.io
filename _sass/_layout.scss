@@ -62,6 +62,7 @@ nav h4,
 nav h4 {
   color: color(white);
   letter-spacing: 1px;
+  margin-bottom: spacing(s);
 }
 .nav-link {
   display: flex;
@@ -69,18 +70,27 @@ nav h4 {
   line-height: 36px;
   align-content: center;
   position: relative;
-  color: rgba(color(white), .5);
+  color: color(grey-200);
   text-decoration: none;
+  font-size: 14px;
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   background: color(grey-300);
 }
-nav .status-dot {
+.nav-link.active {
+  color: color(white);
+}
+.nav-link .status-dot {
   position: absolute;
   margin-top: -($status-dot-width/2);
   top: 50%;
   left: 12px;
-
+  display: none;
+  background: color(brand-light);
+}
+.nav-link.active .status-dot {
+  display: flex;
 }
 
 .content-wrapper,
