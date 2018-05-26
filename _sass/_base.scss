@@ -1,11 +1,12 @@
 $colors: (
-  brand: #1381D3,
-  brand-light: #2694E6,
-  grey-100: #FAFAFB,
+  brand: #0092FF,
+  grey-50: #FAFDFE,
+  grey-100: #D7DEE2,
   grey-200: #9BA8B0,
-  grey-300: #3D4C53,
-  grey-400: #364248,
-  grey-500: #263238,
+  grey-300: #667881,
+  grey-400: #3D4C53,
+  grey-500: #364248,
+  grey-600: #263238,
   white: #fff,
 );
 
@@ -45,7 +46,7 @@ $spacing: (
 $font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $type-weights: (
-  regular: 300,
+  regular: 400,
   bold: 500
 );
 // Gets a type weight e.g. type-weight(bold);
@@ -54,8 +55,9 @@ $type-weights: (
 };
 
 $type-colors: (
-  default: color(grey-400),
+  default: color(grey-600),
   subdued: color(grey-300),
+  header: color(brand),
   link: color(brand)
 );
 // Gets the type color e.g. type-color(link);
@@ -68,7 +70,7 @@ $type-styles: (
     font-size: 16px,
     line-height: 24px,
     font-weight: type-weight(regular),
-    color: type-color(subdued)
+    color: type-color(default)
   ),
   link: (
     color: color(brand)
@@ -76,20 +78,20 @@ $type-styles: (
   h1: (
     font-size: 32px,
     line-height: 36px,
-    font-weight: type-weight(bold),
-    color: type-color(default)
+    font-weight: type-weight(regular),
+    color: type-color(header)
   ),
   h2: (
     font-size: 24px,
     line-height: 28px,
-    font-weight: type-weight(bold),
-    color: type-color(default)
+    font-weight: type-weight(regular),
+    color: type-color(header)
   ),
   h3: (
     font-size: 18px,
     line-height: 24px,
-    font-weight: type-weight(bold),
-    color: type-color(default)
+    font-weight: type-weight(regular),
+    color: type-color(header)
   ),
   h4: (
     font-size: 11px,
@@ -165,8 +167,8 @@ $type-styles: (
   }
 }
 
-$border-dark: 1px solid color(grey-250);
-$border-light: 1px solid color(grey-200);
+$border-dark: 1px solid color(grey-200);
+$border-light: 1px solid color(grey-100);
 $border-radius: 6px;
 
 $global-margin-x: spacing(xl);//TODO delete
@@ -179,7 +181,7 @@ $global-header-height: 56px;
 $global-header-background-color: color(white);
 $global-header-padding-x: $global-margin-x;
 
-$code-snippet-background-color: color(grey-100);
+$code-snippet-background-color: color(grey-50);
 $code-snippet-padding: spacing(l);
 
 $image-box-shadow: 0 0 15px 0 rgba(38,50,56,0.20);
@@ -205,22 +207,22 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h1 {
   @include type(h1);
-  margin-bottom: spacing(l);
+  margin-bottom: spacing(xl);
 }
 h2 {
   @include type(h2);
-  margin-bottom: spacing(m);
+  margin-bottom: spacing(xl);
 }
 h3 {
   @include type(h3);
-  margin-bottom: spacing(s);
+  margin-bottom: spacing(xl);
 }
 h4 {
   @include type(h4);
-  margin-bottom: spacing(xs);
+  margin-bottom: spacing(xl);
 }
 p {
-  margin-bottom: spacing(l);
+  margin-bottom: spacing(xl);
 }
 strong {
   @include type(strong);

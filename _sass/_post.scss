@@ -18,19 +18,9 @@ $post-hero-padding: spacing(l);
   padding: $post-hero-padding;
   margin-bottom: spacing(xl);
 }
-.post-meta-data {
-  display: flex;
-  position: absolute;
-  top:$post-hero-padding;
-  right: $post-hero-padding;
-  background: color(white);
-  flex-direction: row;
-  border-radius: $border-radius;
-  padding: spacing(m);
-  box-shadow: 0 2px 20px 0 rgba(0,42,85,0.05);
-}
 .post-meta-data-item {
   @include type(small);
+  @include type(subdued);
   margin-bottom: spacing(l);
   &:last-child {
     margin-bottom: 0;

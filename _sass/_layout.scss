@@ -18,7 +18,7 @@ header {
   bottom: 0;
   left: 0;
   width: $header-width;
-  background: color(grey-500);
+  background: color(grey-600);
   padding: spacing(l) 0 spacing(xl);
   .avatar {
     width: 36px;
@@ -40,7 +40,7 @@ header {
       color: color(white);
     }
     a:hover {
-      color: color(brand-light);
+      color: color(brand);
     }
   }
 }
@@ -50,10 +50,10 @@ nav {
   top: 0;
   left: $header-width;
   bottom: 0;
-  padding: $global-padding 0;
+  padding: spacing(xl) 0;
   flex-direction: column;
   overflow-y: scroll;
-  background: color(grey-400);
+  background: color(grey-500);
 }
 nav h4,
 .nav-link {
@@ -73,10 +73,12 @@ nav h4 {
   color: color(grey-200);
   text-decoration: none;
   font-size: 14px;
+  letter-spacing: 0.2px;
+  font-weight: 300;
 }
 .nav-link:hover,
 .nav-link.active {
-  background: color(grey-300);
+  background: color(grey-400);
 }
 .nav-link.active {
   color: color(white);
@@ -87,7 +89,7 @@ nav h4 {
   top: 50%;
   left: 12px;
   display: none;
-  background: color(brand-light);
+  background: color(brand);
 }
 .nav-link.active .status-dot {
   display: flex;
@@ -109,12 +111,16 @@ nav h4 {
 .content {
   right: $meta-side-bar-width;
   bottom: initial;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .meta-sidebar {
   left: initial;
   width: $meta-side-bar-width;
-  background-color: color(grey-100);
+  background-color: color(grey-50);
   padding-left: spacing(l);
+  padding-top: spacing(xl);
   position: fixed;
+  border-left: $border-light;
 
 }
