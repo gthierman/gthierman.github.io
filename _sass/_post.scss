@@ -18,10 +18,18 @@ $post-hero-padding: spacing(l);
   padding: $post-hero-padding;
   margin-bottom: spacing(xl);
 }
+.meta-data {
+  display: flex;
+  border-top: $border-light;
+  border-bottom: $border-light;
+  padding: spacing(xl) 0;
+  margin-bottom: spacing(xl);
+}
 .post-meta-data-item {
   @include type(small);
   @include type(subdued);
-  margin-bottom: spacing(l);
+  margin-right: spacing(xl);
+  color: color(grey-200);
   &:last-child {
     margin-bottom: 0;
   }

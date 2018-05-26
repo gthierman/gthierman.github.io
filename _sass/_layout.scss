@@ -1,6 +1,5 @@
 $header-width: 65px;
 $nav-width: 230px;
-$meta-side-bar-width: 200px;
 
 header,
 nav,
@@ -109,18 +108,8 @@ nav h4 {
   overflow: auto;
 }
 .content {
-  right: $meta-side-bar-width;
+  right: 0;
   bottom: initial;
   max-width: 1000px;
   margin: 0 auto;
-}
-.meta-sidebar {
-  left: initial;
-  width: $meta-side-bar-width;
-  background-color: color(grey-50);
-  padding-left: spacing(l);
-  padding-top: spacing(xl);
-  position: fixed;
-  border-left: $border-light;
-
 }
