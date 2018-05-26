@@ -20,17 +20,20 @@ header {
   background: color(grey-600);
   padding: spacing(l) 0 spacing(xl);
   .avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 2px solid color(white);
-    box-sizing: content-box;
     margin-bottom: spacing(s);
+    img {
+      box-sizing: content-box;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid color(white);
+    }
   }
   .menu-toggle {
     flex: 0 0 auto;
     margin-top: spacing(s);
     color: color(white);
+    cursor: pointer;
     &:hover {
       color: color(brand);
     }
