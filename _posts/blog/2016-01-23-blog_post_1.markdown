@@ -1,9 +1,9 @@
 ---
-layout: "post"
-title:  "Blog post template"
+layout: blog
+title:  Blog post template
 date:   2016-01-23 02:10:43
-intro: "This is the blog intro"
-image: "placeholder.png"
+intro: This is the blog intro
+image: placeholder.png
 category: blog
 published: true
 ---

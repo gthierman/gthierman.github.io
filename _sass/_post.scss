@@ -33,7 +33,6 @@ $post-hero-padding: spacing(l);
   @include type-style(small);
   @include type-style(subdued);
   margin-right: spacing(xl);
-  color: color(grey-200);
   flex: 0 0 auto;
   &:last-child {
     margin-bottom: 0;
