@@ -1,7 +1,7 @@
 ---
 layout: post
 category: case_studies
-title:  "Case study template"
+title:  "Case study title"
 date:   2016-01-23 02:10:43
 image: "placeholder.png"
 role: Role here
@@ -14,13 +14,11 @@ hero: hero
 category: case_studies
 ---
 
-# This is header 1
-
-## This is a header 2
+## Header 2
 
 Magna pars studiorum, prodita quaerimus. Mercedem aut nummos unde unde extricat, amaras. Ut enim ad minim veniam, quis nostrud exercitation. Etiam habebis sem dicantur magna mollis euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Petierunt uti sibi concilium totius Galliae in diem certam indicere.
 
-### This is a header 3
+### Header 3
 
 Magna pars studiorum, prodita quaerimus. Mercedem aut nummos unde unde extricat, amaras. Ut enim ad minim veniam, quis nostrud exercitation. Etiam habebis sem dicantur magna mollis euismod. Plura mihi bona sunt, inclinet, amari petere vellent. Petierunt uti sibi concilium totius Galliae in diem certam indicere.
 
@@ -29,5 +27,3 @@ def foo
   puts 'foo'
 end
 {% endhighlight %}
-
-#### This is a header 4
