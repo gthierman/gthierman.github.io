@@ -7,7 +7,7 @@ image: "placeholder.png"
 role: Role here
 time: Timeframe here
 team: Team size here
-status: Shipped/In Development/etc
+status: Status here
 tagline: Case study tag line
 thumbnail: /path/to/hero
 hero: hero

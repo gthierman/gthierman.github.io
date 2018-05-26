@@ -22,10 +22,15 @@ $post-hero-padding: spacing(l);
   display: flex;
   border-top: $border-light;
   border-bottom: $border-light;
-  padding: spacing(xl) 0;
+  padding: spacing(l) 0;
   margin-bottom: spacing(xl);
 }
-.post-meta-data-item {
+.nav-active .meta-data {
+  @include breakpoint(ipad-portrait) {
+    flex-wrap: wrap;
+  }
+}
+.meta-data-item {
   @include type(small);
   @include type(subdued);
   margin-right: spacing(xl);
@@ -38,6 +43,16 @@ $post-hero-padding: spacing(l);
     @include type(h4);
     display: block;
     width: 70px;
+  }
+}
+.nav-active .meta-data-item {
+  @include breakpoint(ipad-portrait) {
+    flex: 1 1 50%;
+    margin-right: 0;
+    margin-bottom: spacing(l);
+    &:nth-last-child(-n+2) {
+      margin: 0;
+    }
   }
 }
 img {

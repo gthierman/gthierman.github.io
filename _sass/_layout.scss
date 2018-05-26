@@ -63,9 +63,6 @@ nav {
   overflow-y: scroll;
   background: color(grey-500);
   z-index: 1;
-  @include breakpoint(ipad-portrait){
-    display: none;
-  }
 }
 .nav-active nav {
   display: flex;
@@ -124,9 +121,6 @@ nav h4 {
 .content-wrapper {
   left: $header-width;
   overflow: auto;
-  @include breakpoint(ipad-portrait){
-    left: $header-width;
-  }
 }
 .nav-active .content-wrapper {
   display: flex;
