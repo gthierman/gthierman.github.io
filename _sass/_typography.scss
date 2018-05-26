@@ -1,11 +1,17 @@
-$font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$type-families: (
+  rubik: #{'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif}
+);
+// e.g. font-family: type-family(rubik);
+@function type-family($family) {
+  @return map-get($type-families, $family)
+};
 
 $type-weights: (
   light: 300,
   regular: 400,
   bold: 500
 );
-// Gets a type weight e.g. type-weight(bold);
+// e.g. font-weight: type-weight(bold);
 @function type-weight($weight) {
   @return map-get($type-weights, $weight)
 };
@@ -29,7 +35,7 @@ $type-styles: (
     color: type-color(default)
   ),
   link: (
-    color: color(brand)
+    color: type-color(link)
   ),
   h1: (
     font-size: 32px,
@@ -56,12 +62,6 @@ $type-styles: (
     color: type-color(default),
     text-transform: uppercase
   ),
-  tagline: (
-    font-size: 20px,
-    line-height: 24px,
-    font-weight: type-weight(bold),
-    color: type-color(subdued)
-  ),
   small: (
     font-size: 14px,
     line-height: 18px
@@ -71,12 +71,6 @@ $type-styles: (
   ),
   strong: (
     font-weight: type-weight(bold)
-  ),
-  tab: (
-    font-size: 12px,
-    line-height: 14px,
-    font-weight: type-weight(bold),
-    text-transform: uppercase
   )
 );
 
@@ -85,7 +79,7 @@ $type-styles: (
   @return map-deep-get($type-styles, $type-style, $property);
 }
 
-@mixin type( $type-style: body, $type-color: null, $type-weight: null ) {
+@mixin type-style( $type-style: body, $type-color: null, $type-weight: null ) {
   @if $type-style {
     $type-style: map-get($type-styles, $type-style);
     @if map-has-key($type-style, font-size) {
@@ -103,6 +97,9 @@ $type-styles: (
     @if map-has-key($type-style, text-transform) {
       text-transform: map-get($type-style, text-transform);
     }
+    @if map-has-key($type-style, font-family) {
+      font-family: map-get($type-style, font-family);
+    }
   }
   @if $type-color {
     @if map-has-key($type-colors, $type-color) {
@@ -119,6 +116,6 @@ $type-styles: (
 // Utility classes - class="type-body"
 @each $name, $value in $type-styles {
   .type-#{$name} {
-    @include type($name)
+    @include type-style($name)
   }
 }

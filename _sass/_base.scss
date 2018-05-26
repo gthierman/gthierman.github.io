@@ -2,28 +2,14 @@ $border-dark: 1px solid color(grey-200);
 $border-light: 1px solid color(grey-100);
 $border-radius: 6px;
 
-$global-margin-x: spacing(xl);//TODO delete
-
-$global-padding: spacing(xl);
-
-$global-header-border-width: 3px;
-$global-header-border-color: color(brand);
-$global-header-height: 56px;
-$global-header-background-color: color(white);
-$global-header-padding-x: $global-margin-x;
-
-$code-snippet-background-color: color(grey-50);
-$code-snippet-padding: spacing(l);
-$image-box-shadow: 0 0 15px 0 rgba(38,50,56,0.20);
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include type(body);
+  font-family: type-family(rubik);
+  @include type-style(body);
   height: 100%;
-  font-family: $font-family;
   margin: 0;
 }
 
@@ -36,29 +22,29 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 h1 {
-  @include type(h1);
+  @include type-style(h1);
   margin-bottom: spacing(xl);
 }
 h2 {
-  @include type(h2);
+  @include type-style(h2);
   margin-bottom: spacing(xl);
 }
 h3 {
-  @include type(h3);
+  @include type-style(h3);
   margin-bottom: spacing(xl);
 }
 h4 {
-  @include type(h4);
+  @include type-style(h4);
   margin-bottom: spacing(xl);
 }
 p {
   margin-bottom: spacing(xl);
 }
 strong {
-  @include type(strong);
+  @include type-style(strong);
 }
 a {
-  @include type(link)
+  @include type-style(link)
 }
 ul {
   list-style: none;
@@ -70,7 +56,7 @@ blockquote {
   padding-left: spacing(l);
   font-style: italic;
   cite {
-    @include type(body, default, bold);
+    @include type-style(body, default, bold);
     font-style: normal;
   }
 }
@@ -99,7 +85,7 @@ blockquote {
 }
 .about-lists h3 {
   flex: 1 0 auto;
-  @include type(body, default, bold);
+  @include type-style(body, default, bold);
 }
 .d-flex {
   display: flex!important;

@@ -1,6 +1,8 @@
 /**
  * Syntax highlighting styles
  */
+ $code-snippet-background-color: color(grey-50);
+ $code-snippet-padding: spacing(l);
 .highlight {
     background-color: $code-snippet-background-color;
     border: $border-light;

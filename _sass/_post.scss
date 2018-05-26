@@ -7,7 +7,6 @@ $post-hero-padding: spacing(l);
   margin-bottom: spacing(xs);
 }
 .post-tagline {
-  @include type(tagline);
   margin-bottom: spacing(m);
 }
 .post-hero {
@@ -31,8 +30,8 @@ $post-hero-padding: spacing(l);
   }
 }
 .meta-data-item {
-  @include type(small);
-  @include type(subdued);
+  @include type-style(small);
+  @include type-style(subdued);
   margin-right: spacing(xl);
   color: color(grey-200);
   flex: 0 0 auto;
@@ -40,7 +39,7 @@ $post-hero-padding: spacing(l);
     margin-bottom: 0;
   }
   strong {
-    @include type(h4);
+    @include type-style(h4);
     display: block;
     width: 70px;
   }
