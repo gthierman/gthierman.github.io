@@ -3,9 +3,7 @@ $nav-width: 230px;
 
 header,
 nav,
-.content,
-.content-wrapper,
-.meta-sidebar {
+.content {
   position: absolute;
 }
 header {
@@ -24,24 +22,15 @@ nav {
   display: flex;
   left: $header-width;
 }
-.content-wrapper,
-.content,
-.meta-sidebar {
-  right: 0;
+.content {
+  display: block;
   top: 0;
   bottom: 0;
-  left: 0;
-  padding: spacing(xl);
-}
-.content-wrapper {
   left: $header-width;
-  overflow: auto;
-}
-.nav-active .content-wrapper {
-  display: flex;
-  left: $header-width + $nav-width;
-}
-.content {
   right: 0;
-  bottom: initial;
+  overflow: auto;
+  padding: spacing(xxxl) spacing(xl) spacing(xl);
+}
+.nav-active .content {
+  left: $header-width + $nav-width;
 }
