@@ -29,7 +29,7 @@ nav {
   left: $header-width;
   right: 0;
   overflow: auto;
-  padding: spacing(xxxl) spacing(xl) spacing(xl);
+  padding: spacing(xl);
 }
 .nav-active .content {
   left: $header-width + $nav-width;
