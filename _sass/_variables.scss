@@ -10,12 +10,13 @@ $colors: (
   accent:       #0086DD,
   accent-light: #CFECFF,
   grey-50:      #FAFDFE,
-  grey-100:     #D7DEE2,
-  grey-200:     #9BA8B0,
-  grey-300:     #667881,
-  grey-400:     #3D4C53,
-  grey-500:     #364248,
-  grey-600:     #263238,
+  grey-100:     #F4F7F9,
+  grey-200:     #EBF3F6,
+  grey-300:     #CCD9E0,
+  grey-400:     #90A6BC,
+  grey-500:     #576C82,
+  grey-600:     #2C3D4E,
+  grey-700:     #001C37,
   white:        #fff,
 );
 
@@ -58,14 +59,30 @@ $font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
+$font-color-default: color(grey-700);
+$font-color-subdued: color(grey-500);
+
 $font-styles: (
   body: (
-    font-size: 14px,
-    font-line-height: 16px
+    font-size:   14px,
+    line-height: 20px,
+    color: $font-color-default
   ),
   h1: (
-    font-size: 20px,
-    font-line: 24px
+    font-size:   20px,
+    line-height: 24px,
+    font-weight: $font-weight-bold
+  ),
+  h2: (
+    font-size:   16px,
+    line-height: 20px,
+    font-weight: $font-weight-bold
+  ),
+  subheading: (
+    font-size:   16px,
+    line-height: 20px,
+    font-weight: $font-weight-regular,
+    color: $font-color-subdued
   )
 );
 

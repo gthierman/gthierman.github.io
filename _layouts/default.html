@@ -6,10 +6,8 @@
   <body>
     <div class="site-container">
       {% include branding.html %}
+      {% include nav.html %}
       {% include content.html %}
-      {% for post in site.posts %}
-        <a href="{{post.url}}">{{ post.title }}</a>
-      {% endfor %}
     </div>
   </body>
 
