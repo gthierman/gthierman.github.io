@@ -4,17 +4,8 @@
 @charset "utf-8";
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  "mixins",
-  "colors",
-  "spacing",
-  "breakpoints",
-  "typography",
+  "variables",
   "base",
   "grid",
-  "layout",
-  "header",
-  "nav",
-  "post",
-  "blog",
   "syntax-highlighting.scss"
 ;

@@ -1,0 +1,145 @@
+// Function for getting nested values in maps
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+$colors: (
+  accent:       #0086DD,
+  accent-light: #CFECFF,
+  grey-50:      #FAFDFE,
+  grey-100:     #D7DEE2,
+  grey-200:     #9BA8B0,
+  grey-300:     #667881,
+  grey-400:     #3D4C53,
+  grey-500:     #364248,
+  grey-600:     #263238,
+  white:        #fff,
+);
+
+// Function for setting color inside rules - background-color: color(brand);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$spacing: (
+  xs:   4px,
+  s:    8px,
+  m:    12px,
+  l:    20px,
+  xl:   32px,
+  xxl:  40px,
+  xxxl: 60px
+);
+
+// Function for setting spacing inside rules - margin-bottom: spacing(xl);
+@function spacing($spacing-size) {
+  @return map-get($spacing, $spacing-size);
+}
+
+// Utility classes - class="stack-xl"
+@each $name, $value in $spacing {
+  .spacing-stack-#{$name} {
+    margin-bottom: $value !important;
+  }
+  .spacing-inline-#{$name} {
+    margin-right: $value !important;
+  }
+  .spacing-insets-#{$name} {
+    padding: $value !important;
+  }
+}
+
+
+$font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$font-styles: (
+  body: (
+    font-size: 14px,
+    font-line-height: 16px
+  ),
+  h1: (
+    font-size: 20px,
+    font-line: 24px
+  )
+);
+
+@mixin font( $font-style: body, $font-color: null, $font-weight: null ) {
+  @if $font-style {
+    $font-style: map-get($font-styles, $font-style);
+    @if map-has-key($font-style, font-size) {
+      font-size: map-get($font-style, font-size);
+    }
+    @if map-has-key($font-style, font-weight) and not $font-weight {
+      font-weight: map-get($font-style, font-weight);
+    }
+    @if map-has-key($font-style, line-height) {
+      line-height: map-get($font-style, line-height);
+    }
+    @if map-has-key($font-style, color) and not $font-color {
+      color: map-get($font-style, color);
+    }
+    @if map-has-key($font-style, text-transform) {
+      text-transform: map-get($font-style, text-transform);
+    }
+  }
+  @if $font-color {
+    @if map-has-key($font-colors, $font-color) {
+      color: map-get($font-colors, $font-color);
+    }
+  }
+  @if $font-weight {
+    @if map-has-key($font-weights, $font-weight) {
+      font-weight: map-get($font-weights, $font-weight);
+    }
+  }
+}
+
+// font utility classes - class="font-body"
+@each $name, $value in $font-styles {
+  .font-#{$name} {
+    @include font($name)
+  }
+}
+
+
+$breakpoints: (
+  iphone:         340px,
+  ipad-portrait:  768px,
+  ipad-landscape: 1024px,
+  laptop:         1440px,
+  desktop-s:      1600px,
+  desktop-m:      1800px,
+  desktop-l:      2000px,
+);
+
+@each $breakpoint, $value in $breakpoints {
+  @media screen and (max-width: $value) {
+    .d-#{$breakpoint}-none {
+      display: none!important;
+    }
+    .d-#{$breakpoint}-flex {
+      display: flex!important;
+    }
+    .d-#{$breakpoint}-block {
+      display: block!important;
+    }
+    .d-#{$breakpoint}-inline-block {
+      display: inline-block!important;
+    }
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  $breakpoint: map-get($breakpoints, $breakpoint);
+  @if $breakpoint {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
