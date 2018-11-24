@@ -2,17 +2,44 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 body {
   font-family: $font-family;
   @include font;
-  height: 100%;
   margin: 0;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-around;
+  max-height: 100%;
+  overflow: hidden;
 }
-
-img {
+.siteContainer {
+  display: flex;
 }
-
+.siteLeftContainer {
+  flex: 1 1 auto;
+}
+.siteLeftContainer--home {
+  width: 20%;
+  background: url('../images/portrait-large-desaturated.png') center;
+  background-size: cover;
+  min-width: 400px;
+}
+.siteLeftContainer--post {
+  min-width: 250px;
+}
+.siteRightContainer {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+.siteRightContainer--home,{
+  border-top: 6px solid color(accent);
+}
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
@@ -29,4 +56,7 @@ h2 {
 }
 .subheading {
   @include font(subheading);
+}
+.home-page-portrait {
+  max-height: 100%;
 }
