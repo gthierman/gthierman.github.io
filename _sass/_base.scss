@@ -89,6 +89,10 @@ h3 {
   @include font(h3);
   margin-bottom: spacing(s);
 }
+h4 {
+  @include font(h4);
+  margin-bottom: spacing(xs);
+}
 .subheading {
   @include font(subheading);
 }
@@ -116,6 +120,7 @@ nav {
   a {
     display: inline-block;
     padding: spacing(xs);
+    margin-left: -(spacing(xs));
     flex: 0 1 auto;
   }
 }
@@ -130,6 +135,9 @@ nav {
   box-sizing: content-box;
   border: 4px solid color(accent);
   box-shadow: 0 4px 8px 0 rgba(0,28,55,0.10);
+  &:hover {
+    box-shadow: 0 4px 20px 0 rgba(0,28,55,0.20);
+  }
 }
 
 // Responsive styles
