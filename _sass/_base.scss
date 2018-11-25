@@ -22,18 +22,23 @@ body {
   display: flex;
   flex: 1 1 auto;
 }
+.layoutContainer--post {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 // Layout - Left side
 .layoutLeft {
   flex: 1 1 auto;
 }
-.layoutLeft--home {
+.layoutContainer--home .layoutLeft{
   width: 20%;
   background: url('../images/portrait-large-desaturated.png') center;
   background-size: cover;
   min-width: 400px;
+  max-width: 600px;
 }
-.layoutLeft--post {
+.layoutContainer--post .layoutLeft {
   padding: spacing(xxxl) spacing(xl);
   flex: 0 0 auto;
 }
@@ -43,15 +48,16 @@ body {
   flex: 1 1 auto;
   overflow-y: auto;
 }
-.layoutRight--home,{
+.layoutContainer--home .layoutRight,{
   border-top: 6px solid color(accent);
 }
 .layoutRight__container {
-  padding: spacing(xxxl) spacing(xl);
+  padding: 160px spacing(xl);
   max-width: 600px;
   margin: 0 auto;
 }
-.layoutRight--post .layoutRight__container {
+.layoutContainer--post .layoutRight .layoutRight__container {
+  padding: spacing(xxxl) spacing(xl);
   max-width: 800px;
 }
 
@@ -66,9 +72,11 @@ ul {
 }
 h1 {
   @include font(h1);
+  margin-bottom: spacing(l);
 }
 h2 {
   @include font(h2);
+  margin-bottom: spacing(m);
 }
 .subheading {
   @include font(subheading);
