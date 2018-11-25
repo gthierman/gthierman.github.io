@@ -30,6 +30,7 @@ body {
 // Layout - Left side
 .layoutLeft {
   flex: 1 1 auto;
+  padding: spacing(xxxl) spacing(xl);
 }
 .layoutContainer--home .layoutLeft{
   width: 20%;
@@ -43,7 +44,6 @@ body {
   display: none;
 }
 .layoutContainer--post .layoutLeft {
-  padding: spacing(xxxl) spacing(xl);
   flex: 0 0 auto;
 }
 
@@ -51,18 +51,23 @@ body {
 .layoutRight {
   flex: 1 1 auto;
   overflow-y: auto;
+  padding: spacing(xxxl) spacing(xl);
 }
 .layoutContainer--home .layoutRight,{
   border-top: 4px solid color(accent);
 }
 .layoutRight__container {
-  padding: spacing(xxxl) spacing(xl);
   max-width: 600px;
   margin: 0 auto;
 }
 .layoutContainer--post .layoutRight .layoutRight__container {
-  padding: spacing(xxxl) spacing(xl);
   max-width: 800px;
+}
+.layoutContainer--post .layoutLeft .avatar {
+  display: inline-block;
+}
+.layoutContainer--post .layoutRight .avatar {
+  display: none;
 }
 
 // Type styles
@@ -125,10 +130,7 @@ nav {
     display: block;
   }
   .layoutContainer--home .layoutRight {
-    border-top-color: transparent;
-  }
-  .layoutRight__container {
-    padding-top: spacing(xl);
+    border-top: none;
   }
   .layoutContainer--post .layoutRight,
   .layoutContainer--post .layoutLeft {
@@ -145,6 +147,12 @@ nav {
     overflow: auto;
   }
   .backLink {
+    display: inline-block;
+  }
+  .layoutContainer--post .layoutLeft .avatar {
+    display: none;
+  }
+  .layoutContainer--post .layoutRight .avatar {
     display: inline-block;
   }
 }
