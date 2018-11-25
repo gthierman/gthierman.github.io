@@ -8,6 +8,8 @@
 
 $colors: (
   accent:       #0EA5C7,
+  link:         #007CA5,
+  link-dark:    #003E53,
   grey-50:      #FAFDFE,
   grey-100:     #F4F7F9,
   grey-200:     #EBF3F6,
@@ -63,23 +65,29 @@ $font-color-subdued: color(grey-500);
 
 $font-styles: (
   body: (
-    font-size:   14px,
-    line-height: 20px,
-    color: $font-color-default
+    font-size:   16px,
+    line-height: 24px,
+    color: $font-color-subdued
   ),
   h1: (
-    font-size:   20px,
-    line-height: 24px,
-    font-weight: $font-weight-bold
+    font-size:   24px,
+    line-height: 30px,
+    font-weight: $font-weight-bold,
+    color: $font-color-default
   ),
   h2: (
+    font-size:   20px,
+    line-height: 28px,
+    font-weight: $font-weight-bold,
+    color: $font-color-default
+  ),
+  h3: (
     font-size:   16px,
-    line-height: 20px,
-    font-weight: $font-weight-bold
+    line-height: 24px,
+    font-weight: $font-weight-bold,
+    color: $font-color-default
   ),
   subheading: (
-    font-size:   16px,
-    line-height: 20px,
     font-weight: $font-weight-regular,
     color: $font-color-subdued
   )
