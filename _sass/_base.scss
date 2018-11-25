@@ -190,7 +190,7 @@ nav {
   .layoutContainer--post .layoutRight,
   .layoutContainer--post .layoutLeft {
     flex: 0 0 100%;
-    align-items: flex-start;
+    // align-items: flex-start;
   }
   .layoutContainer--post .layoutLeft {
     order: 1;
@@ -213,6 +213,9 @@ nav {
   }
   .backLink {
     display: inline-block;
+  }
+  .layoutContainer {
+    align-items: center;
   }
 }
 @include breakpoint-horiz("iphone") {
