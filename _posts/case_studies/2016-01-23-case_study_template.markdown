@@ -13,6 +13,7 @@ tagline: Case study tag line
 thumbnail: /path/to/hero
 hero: hero
 category: case_studies
+published: false
 ---
 
 ## Header 2
