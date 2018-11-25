@@ -159,8 +159,12 @@ nav {
   }
 }
 
-.socialIcons svg {
+.socialIcons a {
+  border: none;
   margin-right: spacing(m);
+  display: inline-block;
+  height: 20px;
+  width: 20px;
 }
 
 .backLink {
