@@ -1,4 +1,4 @@
-
+// Scaffolding
 * {
   box-sizing: border-box;
 }
@@ -20,26 +20,42 @@ body {
 }
 .siteContainer {
   display: flex;
-}
-.siteLeftContainer {
   flex: 1 1 auto;
 }
-.siteLeftContainer--home {
+
+// Layout - Left side
+.siteLeft {
+  flex: 1 1 auto;
+}
+.siteLeft--home {
   width: 20%;
   background: url('../images/portrait-large-desaturated.png') center;
   background-size: cover;
   min-width: 400px;
 }
-.siteLeftContainer--post {
-  min-width: 250px;
+.siteLeft--post {
+  padding: spacing(xl);
+  flex: 0 0 auto;
 }
-.siteRightContainer {
+
+//Layout- Right side
+.siteRight {
   flex: 1 1 auto;
   overflow-y: auto;
 }
-.siteRightContainer--home,{
+.siteRight--home,{
   border-top: 6px solid color(accent);
 }
+.siteRight__container {
+  padding: spacing(xl);
+  max-width: 410px;
+  margin: 0 auto;
+}
+.siteRight--post .siteRight__container {
+  max-width: 800px;
+}
+
+// Type styles
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
@@ -57,6 +73,16 @@ h2 {
 .subheading {
   @include font(subheading);
 }
-.home-page-portrait {
-  max-height: 100%;
+
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  a {
+    flex: 0 1 auto;
+  }
 }
