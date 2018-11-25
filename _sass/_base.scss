@@ -18,40 +18,40 @@ body {
   max-height: 100%;
   overflow: hidden;
 }
-.siteContainer {
+.layoutContainer {
   display: flex;
   flex: 1 1 auto;
 }
 
 // Layout - Left side
-.siteLeft {
+.layoutLeft {
   flex: 1 1 auto;
 }
-.siteLeft--home {
+.layoutLeft--home {
   width: 20%;
   background: url('../images/portrait-large-desaturated.png') center;
   background-size: cover;
   min-width: 400px;
 }
-.siteLeft--post {
-  padding: spacing(xl);
+.layoutLeft--post {
+  padding: spacing(xxxl) spacing(xl);
   flex: 0 0 auto;
 }
 
 //Layout- Right side
-.siteRight {
+.layoutRight {
   flex: 1 1 auto;
   overflow-y: auto;
 }
-.siteRight--home,{
+.layoutRight--home,{
   border-top: 6px solid color(accent);
 }
-.siteRight__container {
-  padding: spacing(xl);
-  max-width: 410px;
+.layoutRight__container {
+  padding: spacing(xxxl) spacing(xl);
+  max-width: 600px;
   margin: 0 auto;
 }
-.siteRight--post .siteRight__container {
+.layoutRight--post .layoutRight__container {
   max-width: 800px;
 }
 
@@ -72,6 +72,10 @@ h2 {
 }
 .subheading {
   @include font(subheading);
+}
+a {
+  color: color(accent);
+  text-decoration: none;
 }
 
 
