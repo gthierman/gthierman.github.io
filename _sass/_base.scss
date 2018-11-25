@@ -217,6 +217,6 @@ nav {
 }
 @include breakpoint-horiz("iphone") {
   .layoutContainer--home  .layoutRight {
-    align-items: flex-start;
+    // align-items: flex-start;
   }
 }
