@@ -8,7 +8,7 @@ role: "Design"
 tagline: "Or: How I learned to stop worrying and love system fonts"
 category: case_studies
 timeframe: 6 months
-published: true
+published: false
 ---
 ![palette](/images/posts/color_system/symbollib.png)
 
