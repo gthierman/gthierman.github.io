@@ -97,6 +97,10 @@ $font-styles: (
   subheading: (
     font-weight: $font-weight-regular,
     color: $font-color-subdued
+  ),
+  small: (
+    font-size: 14px,
+    line-height: 20px
   )
 );
 

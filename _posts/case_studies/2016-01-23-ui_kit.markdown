@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Sketch symbol library"
+title:  "Goodbye, custom fonts"
 date:   2016-01-23 02:10:43
 intro: "Intro text"
 image: "placeholder.png"
 role: "Design"
-tagline: Nihil hic munitissimus habendi senatus
+tagline: "Or: How I learned to stop worrying and love system fonts"
 category: case_studies
 timeframe: 6 months
 published: true

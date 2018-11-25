@@ -104,6 +104,9 @@ h4 {
 .subheading {
   @include font(subheading);
 }
+.small {
+  @include font(small);
+}
 p {
   margin-bottom: spacing(xl);
 }
@@ -160,6 +163,12 @@ nav {
   margin-right: spacing(m);
 }
 
+.backLink {
+  border: none;
+  display: none;
+  margin-bottom: spacing(xl);
+}
+
 // Responsive styles
 @include breakpoint-horiz("ipad-portrait") {
   .layoutRight, .layoutLeft {
@@ -183,6 +192,9 @@ nav {
     order: 1;
     flex: 0 0 0;
   }
+  .layoutContainer--post .layoutRight {
+    border-top: 6px solid color(accent);
+  }
   .layoutContainer--post {
     flex-direction: column;
   }
@@ -193,6 +205,9 @@ nav {
     display: none;
   }
   .layoutContainer--post .layoutRight .avatar {
+    display: inline-block;
+  }
+  .backLink {
     display: inline-block;
   }
 }
