@@ -8,11 +8,18 @@
       <div class="layoutLeft">
         {% include avatar.html %}
         {% include nav.html %}
+        {% include social.html %}
       </div>
       <div class="layoutRight">
         <div class="layoutRight__container">
           {% include avatar.html %}
-          <h1>{{page.title}}</h1>
+          <div class="post__header spacing-stack-xxl">
+            <h1 class="spacing-stack-xs">{{page.title}}</h1>
+            {% if page.tagline%}
+              <h2 class="subheading spacing-stack-xl">{{page.tagline}}</h2>
+            {% endif %}
+          </div>
+          <h4 class="subheading spacing-stack-xxl">Posted on {{page.date | date: '%b %d, %Y'}}</h4>
           {% include content.html %}
           Qui ipsorum lingua Celtae, nostra Galli appellantur. Cum ceteris in veneratione tui montes, nascetur mus. At nos hinc posthac, sitientis piros Afros. Curabitur est gravida et libero vitae dictum. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Fictum, deserunt mollit anim laborum astutumque!
   Nec dubitamus multa iter quae et nos invenerat. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cum sociis natoque penatibus et magnis dis parturient. Excepteur sint obcaecat cupiditat non proident culpa. Ut enim ad minim veniam, quis nostrud exercitation.

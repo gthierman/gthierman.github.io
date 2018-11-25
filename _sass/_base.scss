@@ -34,7 +34,9 @@ body {
 .layoutContainer--home .layoutLeft{
   width: 20%;
   background: url('../images/portrait-large-desaturated.png') center center;
+  // background-color: color(accent);
   background-size: cover;
+  padding:20px;
   min-width: 400px;
   max-width: 1000px;
   max-height: 100%
@@ -48,14 +50,20 @@ body {
 
 //Layout- Right side
 .layoutRight {
+  display: flex;
   flex: 1 1 auto;
-  padding: spacing(xxxl) spacing(xl);
+  padding: spacing(xxxl);
 }
-.layoutContainer--home .layoutRight,{
-  border-top: 4px solid color(accent);
+.layoutContainer--home .layoutRight,
+.layoutContainer--home .layoutLeft{
+  border-top: 20px solid color(link);
+  align-items: center;
+}
+.layoutContainer--home .layoutLeft{
+  border-top: 20px solid color(accent);
 }
 .layoutRight__container {
-  max-width: 600px;
+  max-width: 460px;
   margin: 0 auto;
 }
 .layoutContainer--post .layoutRight .layoutRight__container {
@@ -102,11 +110,18 @@ p {
 a {
   color: color(link);
   text-decoration: none;
-  border-radius: 6px;
+  border-bottom: 1px solid color(link);
   &:hover {
+    background-color: #F3FBFD;
     color: color(link-dark);
-    background: color(grey-100);
   }
+  &:active {
+    background: #F3FBFD;
+  }
+}
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 4px color(focus);
 }
 
 img {
@@ -117,11 +132,13 @@ nav {
   display: flex;
   flex-direction: column;
   max-width: 200px;
+  margin-bottom: spacing(xxxl);
   a {
     display: inline-block;
-    padding: spacing(xs);
-    margin-left: -(spacing(xs));
+    border: none;
+    border-radius: 6px;
     flex: 0 1 auto;
+    margin-bottom: spacing(xs);
   }
 }
 .layoutContainer--home nav {
@@ -134,14 +151,22 @@ nav {
   border-radius: 50%;
   box-sizing: content-box;
   border: 4px solid color(accent);
-  box-shadow: 0 4px 8px 0 rgba(0,28,55,0.10);
   &:hover {
-    box-shadow: 0 4px 20px 0 rgba(0,28,55,0.20);
+    border-color: color(link);
   }
+}
+
+.socialIcons svg {
+  margin-right: spacing(m);
 }
 
 // Responsive styles
 @include breakpoint-horiz("ipad-portrait") {
+  .layoutRight, .layoutLeft {
+    display: block;
+    padding-left: spacing(l);
+    padding-right: spacing(l);
+  }
   .layoutContainer--home .layoutLeft { display: none;}
   .layoutContainer--home .avatar {
     display: block;
@@ -151,10 +176,12 @@ nav {
   }
   .layoutContainer--post .layoutRight,
   .layoutContainer--post .layoutLeft {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
+    align-items: flex-start;
   }
   .layoutContainer--post .layoutLeft {
     order: 1;
+    flex: 0 0 0;
   }
   .layoutContainer--post {
     flex-direction: column;
@@ -167,5 +194,10 @@ nav {
   }
   .layoutContainer--post .layoutRight .avatar {
     display: inline-block;
+  }
+}
+@include breakpoint-horiz("iphone") {
+  .layoutContainer--home  .layoutRight {
+    align-items: flex-start;
   }
 }
