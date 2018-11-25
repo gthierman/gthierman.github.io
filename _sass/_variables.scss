@@ -7,8 +7,7 @@
 }
 
 $colors: (
-  accent:       #0086DD,
-  accent-light: #CFECFF,
+  accent:       #0EA5C7,
   grey-50:      #FAFDFE,
   grey-100:     #F4F7F9,
   grey-200:     #EBF3F6,
@@ -152,7 +151,7 @@ $breakpoints: (
   }
 }
 
-@mixin breakpoint($breakpoint) {
+@mixin breakpoint-horiz($breakpoint) {
   $breakpoint: map-get($breakpoints, $breakpoint);
   @if $breakpoint {
     @media screen and (max-width: $breakpoint) {
