@@ -17,64 +17,6 @@ body {
   justify-content: space-around;
   max-height: 100%;
 }
-.layoutContainer {
-  display: flex;
-  flex: 1 1 auto;
-}
-.layoutContainer--post {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-// Layout - Left side
-.layoutLeft {
-  flex: 1 1 auto;
-  padding: spacing(xxxl) spacing(xl);
-}
-.layoutContainer--home .layoutLeft{
-  width: 20%;
-  background: url('../images/portrait-large-desaturated.png') center center;
-  // background-color: color(accent);
-  background-size: cover;
-  padding:20px;
-  min-width: 400px;
-  max-width: 1000px;
-  max-height: 100%
-}
-.layoutContainer--home .avatar  {
-  display: none;
-}
-.layoutContainer--post .layoutLeft {
-  flex: 0 0 auto;
-}
-
-//Layout- Right side
-.layoutRight {
-  display: flex;
-  flex: 1 1 auto;
-  padding: spacing(xxxl);
-}
-.layoutContainer--home .layoutRight,
-.layoutContainer--home .layoutLeft{
-  border-top: 8px solid color(link);
-  align-items: center;
-}
-.layoutContainer--home .layoutLeft{
-  border-top: 8px solid color(accent);
-}
-.layoutRight__container {
-  max-width: 460px;
-  margin: 0 auto;
-}
-.layoutContainer--post .layoutRight .layoutRight__container {
-  max-width: 800px;
-}
-.layoutContainer--post .layoutLeft .avatar {
-  display: inline-block;
-}
-.layoutContainer--post .layoutRight .avatar {
-  display: none;
-}
 
 // Type styles
 h1, h2, h3, h4, h5, h6, p {
@@ -173,6 +115,64 @@ nav {
   margin-bottom: spacing(xl);
 }
 
+.layoutContainer {
+  display: flex;
+  flex: 1 1 auto;
+}
+.layoutContainer--post {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// Layout - Left side
+.layoutLeft {
+  flex: 1 1 auto;
+  padding: spacing(xxxl) spacing(xl);
+}
+.layoutContainer--home .layoutLeft{
+  width: 20%;
+  background: url('../images/portrait-large-desaturated.png') center center;
+  background-size: cover;
+  padding:20px;
+  min-width: 400px;
+  max-width: 1000px;
+  max-height: 100%
+}
+.layoutContainer--home .avatar  {
+  display: none;
+}
+.layoutContainer--post .layoutLeft {
+  flex: 0 0 auto;
+}
+
+//Layout- Right side
+.layoutRight {
+  display: flex;
+  flex: 1 1 auto;
+  padding: spacing(xxxl);
+}
+.layoutContainer--home .layoutRight,
+.layoutContainer--home .layoutLeft{
+  border-top: 8px solid color(accent);
+  align-items: center;
+}
+.layoutContainer--home .layoutLeft{
+  border-top: 8px solid color(accent);
+}
+.layoutRight__container {
+  max-width: 460px;
+  margin: 0 auto;
+}
+.layoutContainer--post .layoutRight .layoutRight__container {
+  max-width: 800px;
+}
+.layoutContainer--post .layoutLeft .avatar {
+  display: inline-block;
+}
+.layoutContainer--post .layoutRight .avatar {
+  display: none;
+}
+
 // Responsive styles
 @include breakpoint-horiz("ipad-portrait") {
   .layoutRight, .layoutLeft {
@@ -216,6 +216,7 @@ nav {
   }
   .layoutContainer {
     align-items: center;
+    margin-top: -56px - 32px;
   }
 }
 @include breakpoint-horiz("iphone") {
