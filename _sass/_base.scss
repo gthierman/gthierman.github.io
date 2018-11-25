@@ -114,6 +114,11 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0,28,55,0.10);
 }
 
+.backLink {
+  margin-bottom: spacing(xxl);
+  display: none;
+}
+
 @include breakpoint-horiz("ipad-portrait") {
   .layoutContainer--home .layoutLeft { display: none;}
   .layoutContainer--home .avatar {
@@ -138,5 +143,8 @@ nav {
   }
   body {
     overflow: auto;
+  }
+  .backLink {
+    display: inline-block;
   }
 }
