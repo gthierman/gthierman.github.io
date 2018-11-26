@@ -1,7 +1,7 @@
 /**
  * Syntax highlighting styles
  */
- $code-snippet-background-color: color(grey-50);
+ $code-snippet-background-color: color(grey-100);
  $code-snippet-padding: spacing(l);
 .highlight {
     background-color: $code-snippet-background-color;
@@ -11,6 +11,7 @@
     padding: $code-snippet-padding;
     overflow-x: scroll;
     margin-bottom: spacing(l);
+    border-radius: 6px;
     pre {
       padding: 0;
       margin: 0;

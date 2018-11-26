@@ -7,5 +7,3 @@ company: Clio
 tagline: Keep checking back to see updates
 category: case_studies
 ---
-
-I'll be posting case studies as I write them up.

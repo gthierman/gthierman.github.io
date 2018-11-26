@@ -16,6 +16,7 @@ body {
   flex: 1 1 auto;
   justify-content: space-around;
   max-height: 100%;
+  border-top: 4px solid color(accent);
 }
 
 // Type styles
@@ -153,7 +154,6 @@ nav {
 }
 .layoutContainer--home .layoutRight,
 .layoutContainer--home .layoutLeft{
-  border-top: 8px solid color(accent);
   align-items: center;
 }
 .layoutRight__container {
@@ -162,6 +162,7 @@ nav {
 }
 .layoutContainer--post .layoutRight .layoutRight__container {
   max-width: 800px;
+  flex: 1 1 auto;
 }
 .layoutContainer--post .layoutLeft .avatar {
   display: inline-block;
@@ -186,15 +187,14 @@ nav {
   }
   .layoutContainer--post .layoutRight,
   .layoutContainer--post .layoutLeft {
-    flex: 0 0 100%;
+    flex: 0 0;
+    width: 100%;
     // align-items: flex-start;
   }
   .layoutContainer--post .layoutLeft {
     order: 1;
     flex: 0 0 0;
-  }
-  .layoutContainer--post .layoutRight {
-    border-top: 6px solid color(accent);
+    background: color(grey-100);
   }
   .layoutContainer--post {
     flex-direction: column;
@@ -213,6 +213,7 @@ nav {
   }
   .layoutContainer {
     align-items: center;
+    justify-content: space-between;
   }
 }
 @include breakpoint-horiz("iphone") {
