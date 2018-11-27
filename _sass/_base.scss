@@ -144,6 +144,8 @@ nav {
 }
 .layoutContainer--post .layoutLeft {
   flex: 0 0 auto;
+  padding-right: 0;
+  padding-left: spacing(xxxl);
 }
 
 //Layout- Right side
