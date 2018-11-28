@@ -16,7 +16,7 @@ body {
   flex: 1 1 auto;
   justify-content: space-around;
   max-height: 100%;
-  border-top: 4px solid color(accent);
+  border-top: 4px solid color(accent-500);
 }
 
 // Type styles
@@ -53,16 +53,13 @@ h4 {
 p {
   margin-bottom: spacing(xl);
 }
-a {
-  color: color(link);
+a , a:visited{
+  color: $link-color;
   text-decoration: none;
-  border-bottom: 1px solid color(link);
+  border-bottom: 1px solid $link-color;
   &:hover {
-    background-color: #F3FBFD;
-    color: color(link-dark);
-  }
-  &:active {
-    background: #F3FBFD;
+    background-color: $link-hover-background-color;
+    color: $link-hover-color;
   }
 }
 :focus {
@@ -98,7 +95,7 @@ nav {
   box-sizing: content-box;
   border: 4px solid color(accent);
   &:hover {
-    border-color: color(link);
+    border-color: color(accent-600);
   }
 }
 
