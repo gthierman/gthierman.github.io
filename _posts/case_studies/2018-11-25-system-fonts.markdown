@@ -5,7 +5,7 @@ title:  "Embracing system fonts at Clio"
 date:   2018-11-25 02:10:43
 tagline: "Updating our font stack for performance, maintainability, consistency and readability"
 category: case_studies
-published: true
+published: false
 ---
 
 ## A brief history of type (at Clio)
