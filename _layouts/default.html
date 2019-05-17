@@ -4,18 +4,19 @@
   {% include head.html %}
 
   <body>
-    <div class="layoutContainer layoutContainer--home">
-      <div class="layoutLeft layoutLeft">
+    <div class="intro-page">
+      <div class="intro-page__portrait">
       </div>
-      <article class="layoutRight layoutRight">
-        <div class="layoutRight__container">
+      <article class="intro-page__frame">
+        <div class="intro-page__content">
           {% include avatar.html %}
           <h1>Geoff Thierman</h1>
           <h2 class="subheading spacing-stack-xxl">
             Product designer working on design systems at <a href="https://clio.com" target="_blank">Clio.</a>
           </h2>
-          {% comment %}{% include nav.html %}{% endcomment %}
+          {% include nav.html %}
           {% include social.html %}
+        </div>
       </article>
     </div>
   </body>
