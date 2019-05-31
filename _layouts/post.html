@@ -11,14 +11,14 @@
         {% include social.html %}
       </nav>
       <div class="post-page__content">
-        <a href="/" class="back-link">Back</a>
-        <div class="post__header spacing-stack-xxl">
-          <h1 class="spacing-stack-xs">{{page.title}}</h1>
+        <a href="/" class="post-page__back-link">Back</a>
+        <div class="post-header">
+          <h1>{{page.title}}</h1>
           {% if page.tagline%}
-            <h2 class="subheading spacing-stack-xl">{{page.tagline}}</h2>
+            <h2 class="post-header__subheading">{{page.tagline}}</h2>
           {% endif %}
         </div>
-        <h4 class="subheading small spacing-stack-xxl">Posted on {{page.date | date: '%b %d, %Y'}}</h4>
+        <h4 class="post-page__date">Posted on {{page.date | date: '%b %d, %Y'}}</h4>
         {{content}}
       </div>
     </div>

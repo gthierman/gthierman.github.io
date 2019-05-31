@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: $font-family;
-  @include font;
+  @include font-style(body);
   margin: 0;
   display: flex;
   flex: 1 1 auto;
@@ -29,26 +29,26 @@ ul {
   padding: 0;
 }
 h1 {
-  @include font(h1);
+  @include font-style(h1);
   margin-bottom: spacing(xl);
 }
 h2 {
-  @include font(h2);
+  @include font-style(h2);
   margin-bottom: spacing(l);
 }
 h3 {
-  @include font(h3);
+  @include font-style(h3);
   margin-bottom: spacing(m);
 }
 h4 {
-  @include font(h4);
+  @include font-style(h4);
   margin-bottom: spacing(s);
 }
 .subheading {
-  @include font(subheading);
+  @include font-style(subheading);
 }
 .small {
-  @include font(small);
+  @include font-style(small);
 }
 p {
   margin-bottom: spacing(xl);
@@ -65,23 +65,22 @@ a , a:visited{
 :focus {
   outline: 0;
   box-shadow: 0 0 0 4px color(focus);
+  border-radius: 4px;
 }
-
 img {
   max-width: 100%;
 }
-
 nav {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
-  max-width: 240px;
   margin-bottom: spacing(xxl);
   a {
     display: inline-block;
     border: none;
     border-radius: 6px;
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     margin-bottom: spacing(xs);
+    align-self: flex-start;
   }
 }
 
@@ -98,111 +97,10 @@ nav {
   }
 }
 
-.socialIcons a {
+.social-icons a {
   border: none;
   margin-right: spacing(m);
   display: inline-block;
   height: 20px;
   width: 20px;
-}
-
-.back-link {
-  border: none;
-  display: none;
-  margin-bottom: spacing(xl);
-}
-
-.intro-page {
-  display: flex;
-  flex: 1 1 auto;
-}
-.intro-page__portrait{
-  flex: 1 1 auto;
-  padding: spacing(xxxl) spacing(xl);
-  width: 20%;
-  background: url('../images/portrait-large-desaturated.png') center center;
-  background-size: cover;
-  padding: spacing(l);
-  min-width: 400px;
-  max-width: 600px;
-  max-height: 100%;
-}
-.intro-page .avatar  {
-  display: none;
-}
-.intro-page__frame {
-  display: flex;
-  flex: 1 1 auto;
-  padding: spacing(xxxl);
-  align-items: center;
-}
-.intro-page__content {
-  max-width: 460px;
-  margin: 0 auto;
-}
-.post-page {
-  display: flex;
-  flex: 1 1 auto;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.post-page__nav {
-  flex: 1 1 auto;
-  padding: spacing(xxxl) spacing(xl);
-  flex: 0 0 auto;
-  padding-right: 0;
-  padding-left: spacing(xxxl);
-}
-.post-page__content{
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  padding: spacing(xxxl);
-}
-.post-page .avatar {
-  display: inline-block;
-}
-
-// Responsive styles
-@include breakpoint-horiz("ipad-portrait") {
-  .intro-page__frame {
-    display: block;
-    padding-left: spacing(l);
-    padding-right: spacing(l);
-  }
-  .intro-page__portrait { display: none;}
-  .intro-page .avatar { display: block; }
-  .intro-page__frame { border-top: none; }
-  .intro-page {
-    align-items: center;
-    justify-content: space-between;
-  }
-  .post-page {
-    flex-direction: column;
-    max-width: 100%;
-  }
-  .post-page__content,
-  .post-page__nav  {
-    display: block;
-    padding-left: spacing(l);
-    padding-right: spacing(l);
-  }
-  .post-page__nav {
-    order: 1;
-    flex: 0 0 0;
-    width: 100%;
-    background: color(grey-100);
-  }
-  .post-page .avatar {
-    display: none;
-  }
-  .back-link {
-    display: inline-block;
-  }
-  .post-page {
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-@include breakpoint-horiz("iphone") {
 }

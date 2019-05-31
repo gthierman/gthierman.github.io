@@ -61,91 +61,77 @@ $spacing: (
 
 
 $font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
-
-$font-weight-regular: 400;
-$font-weight-bold: 700;
-
-$font-color-default: color(grey-700);
-$font-color-subdued: color(grey-500);
-
+$font-weights: (
+  regular: 400,
+  bold: 700
+);
+@function get-font-weight($weight) {
+  @if map-has-key($font-weights, $weight) {
+    @return map-get($font-weights, $weight);
+  }
+  @error "Invalid type-weight: `#{$weight}`.";
+};
+$font-colors: (
+  dark: color(grey-700),
+  subdued: color(grey-500) 
+);
+@function get-font-color($color) {
+  @if map-has-key($font-colors, $color) {
+    @return map-get($font-colors, $color);
+  }
+  @error "Invalid font-color: `#{$color}`.";
+};
 $font-styles: (
   body: (
     font-size:   16px,
     line-height: 24px,
-    color: $font-color-subdued
+    color: get-font-color(subdued)
   ),
   h1: (
     font-size:   30px,
     line-height: 38px,
-    font-weight: $font-weight-bold,
-    color: $font-color-default
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark)
   ),
   h2: (
     font-size:   24px,
     line-height: 32px,
-    font-weight: $font-weight-bold,
-    color: $font-color-default
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark)
   ),
   h3: (
     font-size:   18px,
     line-height: 24px,
-    font-weight: $font-weight-bold,
-    color: $font-color-default
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark)
   ),
   h4: (
     font-size:   16px,
     line-height: 24px,
-    font-weight: $font-weight-bold,
-    color: $font-color-default
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark),
   ),
   subheading: (
-    font-weight: $font-weight-regular,
-    color: $font-color-subdued
+    font-weight: get-font-weight(regular),
+    color: get-font-color(subdued)
   ),
   small: (
     font-size: 14px,
     line-height: 20px
   )
 );
-
-@mixin font( $font-style: body, $font-color: null, $font-weight: null ) {
-  @if $font-style {
-    $font-style: map-get($font-styles, $font-style);
-    @if map-has-key($font-style, font-size) {
-      font-size: map-get($font-style, font-size);
-    }
-    @if map-has-key($font-style, font-weight) and not $font-weight {
-      font-weight: map-get($font-style, font-weight);
-    }
-    @if map-has-key($font-style, line-height) {
-      line-height: map-get($font-style, line-height);
-    }
-    @if map-has-key($font-style, color) and not $font-color {
-      color: map-get($font-style, color);
-    }
-    @if map-has-key($font-style, text-transform) {
-      text-transform: map-get($font-style, text-transform);
-    }
-  }
-  @if $font-color {
-    @if map-has-key($font-colors, $font-color) {
-      color: map-get($font-colors, $font-color);
-    }
-  }
-  @if $font-weight {
-    @if map-has-key($font-weights, $font-weight) {
-      font-weight: map-get($font-weights, $font-weight);
-    }
+@mixin font-weight($weight) {
+  font-weight: map-get($font-weights, $weight);
+}
+@mixin font-color($color) {
+  color: get-font-color(#{$color});
+}
+@mixin font-style($style) {
+  @each $value, $property in map-get($font-styles, $style) {
+    @debug $property;
+    #{$value}: #{$property};
   }
 }
-
-// font utility classes - class="font-body"
-@each $name, $value in $font-styles {
-  .font-#{$name} {
-    @include font($name)
-  }
-}
-
 
 $breakpoints: (
   iphone:         340px,
@@ -156,7 +142,6 @@ $breakpoints: (
   desktop-m:      1800px,
   desktop-l:      2000px,
 );
-
 @each $breakpoint, $value in $breakpoints {
   @media screen and (max-width: $value) {
     .d-#{$breakpoint}-none {
@@ -173,7 +158,6 @@ $breakpoints: (
     }
   }
 }
-
 @mixin breakpoint-horiz($breakpoint) {
   $breakpoint: map-get($breakpoints, $breakpoint);
   @if $breakpoint {

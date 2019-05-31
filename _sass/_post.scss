@@ -1,0 +1,63 @@
+.post-page {
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.post-page__nav {
+  flex: 1 1 auto;
+  padding: spacing(xxxl) 0 spacing(xl)  spacing(xxxl);
+  flex: 0 0 auto;
+  display: flex;
+}
+.post-page__content{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: spacing(xxxl);
+}
+.post-page .avatar {
+  display: inline-block;
+}
+.post-page__back-link {
+  border: none;
+  display: none;
+  margin-bottom: spacing(xl);
+}
+.post-header {
+  margin-bottom: spacing(xxl);
+}
+.post-header h1 {
+  margin-bottom: spacing(s);
+}
+.post-header__subheading {
+  @include font-weight(regular);
+  margin-bottom: margin-bottom(l);
+}
+
+@include breakpoint-horiz("ipad-portrait") {
+  .post-page {
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .post-page__content,
+  .post-page__nav  {
+    display: block;
+    padding-left: spacing(l);
+    padding-right: spacing(l);
+  }
+  .post-page__nav {
+    order: 1;
+    flex: 0 0 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .post-page .avatar {
+    display: none;
+  }
+  .post-page__back-link {
+    display: inline-block;
+  }
+}
