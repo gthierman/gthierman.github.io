@@ -3,9 +3,13 @@
 ---
 @charset "utf-8";
 @import
-  "variables",
+  "foundation/colors",
+  "foundation/typography",
+  "foundation/spacing",
+  "foundation/breakpoints",
   "base",
   "intro",
   "post",
-  "syntax-highlighting"
+  "syntax-highlighting",
+  "masthead"
 ;

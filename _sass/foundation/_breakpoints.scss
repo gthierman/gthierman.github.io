@@ -1,0 +1,33 @@
+$breakpoints: (
+  iphone:         340px,
+  ipad-portrait:  768px,
+  ipad-landscape: 1024px,
+  laptop:         1440px,
+  desktop-s:      1600px,
+  desktop-m:      1800px,
+  desktop-l:      2000px,
+);
+@each $breakpoint, $value in $breakpoints {
+  @media screen and (max-width: $value) {
+    .d-#{$breakpoint}-none {
+      display: none!important;
+    }
+    .d-#{$breakpoint}-flex {
+      display: flex!important;
+    }
+    .d-#{$breakpoint}-block {
+      display: block!important;
+    }
+    .d-#{$breakpoint}-inline-block {
+      display: inline-block!important;
+    }
+  }
+}
+@mixin breakpoint-horiz($breakpoint) {
+  $breakpoint: map-get($breakpoints, $breakpoint);
+  @if $breakpoint {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}

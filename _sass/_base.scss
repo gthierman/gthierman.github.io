@@ -2,21 +2,14 @@
 * {
   box-sizing: border-box;
 }
-html {
+html,
+body {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 body {
   font-family: $font-family;
   @include font-style(body);
   margin: 0;
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: space-around;
-  max-height: 100%;
-  border-top: 4px solid color(accent-500);
 }
 
 // Type styles
@@ -56,7 +49,7 @@ p {
 a , a:visited{
   color: $link-color;
   text-decoration: none;
-  border-bottom: 1px solid $link-color;
+  // border-bottom: 1px solid $link-color;
   &:hover {
     background-color: $link-hover-background-color;
     color: $link-hover-color;
@@ -92,6 +85,12 @@ nav {
   border-radius: 50%;
   box-sizing: content-box;
   border: 4px solid color(accent);
+  background: color(white);
+  display: inline-block;
+  img {
+    border: 4px solid color(white);
+    border-radius: 50%;
+  }
   &:hover {
     border-color: color(accent-600);
   }
@@ -103,4 +102,12 @@ nav {
   display: inline-block;
   height: 20px;
   width: 20px;
+}
+
+
+header {
+  padding: spacing(xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

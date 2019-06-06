@@ -1,0 +1,72 @@
+$font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+$font-weights: (
+  regular: 400,
+  bold: 700
+);
+@function get-font-weight($weight) {
+  @if map-has-key($font-weights, $weight) {
+    @return map-get($font-weights, $weight);
+  }
+  @error "Invalid type-weight: `#{$weight}`.";
+};
+$font-colors: (
+  dark: color(grey-700),
+  subdued: color(grey-500) 
+);
+@function get-font-color($color) {
+  @if map-has-key($font-colors, $color) {
+    @return map-get($font-colors, $color);
+  }
+  @error "Invalid font-color: `#{$color}`.";
+};
+$font-styles: (
+  body: (
+    font-size:   16px,
+    line-height: 24px,
+    color: get-font-color(subdued)
+  ),
+  h1: (
+    font-size:   30px,
+    line-height: 38px,
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark)
+  ),
+  h2: (
+    font-size:   24px,
+    line-height: 32px,
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark)
+  ),
+  h3: (
+    font-size:   18px,
+    line-height: 24px,
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark)
+  ),
+  h4: (
+    font-size:   16px,
+    line-height: 24px,
+    font-weight: get-font-weight(bold),
+    color: get-font-color(dark),
+  ),
+  subheading: (
+    font-weight: get-font-weight(regular),
+    color: get-font-color(subdued)
+  ),
+  small: (
+    font-size: 14px,
+    line-height: 20px
+  )
+);
+@mixin font-weight($weight) {
+  font-weight: map-get($font-weights, $weight);
+}
+@mixin font-color($color) {
+  color: get-font-color(#{$color});
+}
+@mixin font-style($style) {
+  @each $value, $property in map-get($font-styles, $style) {
+    @debug $property;
+    #{$value}: #{$property};
+  }
+}
