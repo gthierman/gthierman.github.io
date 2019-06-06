@@ -13,35 +13,34 @@ $font-styles: (
   body: (
     font-size:   16px,
     line-height: 24px,
-    color: color(grey-500)
+    color: $text-subdued
   ),
   h1: (
     font-size:   30px,
     line-height: 38px,
     font-weight: get-font-weight(bold),
-    color: color(grey-700)
+    color: $text-default
   ),
   h2: (
     font-size:   24px,
     line-height: 32px,
     font-weight: get-font-weight(bold),
-    color: color(grey-700)
+    color: $text-default
   ),
   h3: (
     font-size:   18px,
     line-height: 24px,
     font-weight: get-font-weight(bold),
-    color: color(grey-700)
+    color: $text-default
   ),
   h4: (
     font-size:   16px,
     line-height: 24px,
     font-weight: get-font-weight(bold),
-    color: color(grey-700)
+    color: $text-default
   ),
   subheading: (
-    font-weight: get-font-weight(regular),
-    color: color: color(grey-700)
+    font-weight: get-font-weight(regular)
   ),
   small: (
     font-size: 14px,
@@ -50,9 +49,6 @@ $font-styles: (
 );
 @mixin font-weight($weight) {
   font-weight: map-get($font-weights, $weight);
-}
-@mixin font-color($color) {
-  color: get-font-color(#{$color});
 }
 @mixin font-style($style) {
   @each $value, $property in map-get($font-styles, $style) {

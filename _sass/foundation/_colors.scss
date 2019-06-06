@@ -8,11 +8,18 @@ $colors: (
   grey-600:     #2C3D4E,
   grey-700:     #001C37,
   white:        #fff,
-  accent:       #00A5C5,
-  accent-light: #D7F4FA,
+  teal-500:     #00A5C5,
+  teal-400:     #97E9FA,
+  teal-300:     #D7F4FA,
   focus:        #9ED8FF,
 );
-// Function for setting color inside rules - background-color: color(brand);
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
+
+// Variables
+$accent: color(teal-500);
+$accent-light: color(teal-300);
+$text-default: color(grey-700);
+$text-subdued: color(grey-500); 
+$focus-border: color(teal-400);
