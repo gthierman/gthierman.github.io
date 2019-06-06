@@ -1,10 +1,4 @@
 $colors: (
-  accent-100:   #F3FBFD,
-  accent-500:   #0EA5C7,
-  accent-600:   #007CA5,
-  accent-700:   #003E53,
-  accent:       #00A5C5,
-  focus:        #9ED8FF,
   grey-50:      #FAFDFE,
   grey-100:     #F4F7F9,
   grey-200:     #EBF3F6,
@@ -14,12 +8,11 @@ $colors: (
   grey-600:     #2C3D4E,
   grey-700:     #001C37,
   white:        #fff,
+  accent:       #00A5C5,
+  accent-light: #D7F4FA,
+  focus:        #9ED8FF,
 );
 // Function for setting color inside rules - background-color: color(brand);
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-
-$link-color: color(accent-600);
-$link-hover-background-color: color(accent-100);
-$link-hover-color: color(accent-700);

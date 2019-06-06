@@ -40,12 +40,12 @@ p {
   margin-bottom: spacing(xl);
 }
 a , a:visited{
-  color: $link-color;
-  text-decoration: none;
-  &:hover {
-    background-color: $link-hover-background-color;
-    color: $link-hover-color;
-  }
+  // color: $link-color;
+  // text-decoration: none;
+  // &:hover {
+  //   background-color: $link-hover-background-color;
+  //   color: $link-hover-color;
+  // }
 }
 :focus {
   outline: 0;
