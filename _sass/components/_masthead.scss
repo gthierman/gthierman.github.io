@@ -36,3 +36,15 @@
     border-color: color(accent-600);
   }
 }
+
+.social-icons a {
+  border: none;
+  margin-right: spacing(l);
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  color: color(grey-500);
+}
+.social-icons a path {
+  fill: color(grey-500);
+}
