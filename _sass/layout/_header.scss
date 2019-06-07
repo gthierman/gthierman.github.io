@@ -1,6 +1,10 @@
 header {
-  padding: spacing(xl);
+  padding: spacing(xl) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.masthead {
+  @include font-style(header-20);
+  margin: 0;
 }

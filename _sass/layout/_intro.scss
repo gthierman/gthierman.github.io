@@ -1,44 +1,4 @@
-.intro-page {
-  display: flex;
-  flex: 1 1 auto;
-}
-.intro-page__portrait{
-  flex: 1 1 auto;
-  padding: spacing(xxxl) spacing(xl);
-  width: 20%;
-  background: url('../images/portrait-large-desaturated.png') center center;
-  background-size: cover;
-  padding: spacing(l);
-  min-width: 400px;
-  max-width: 600px;
-  max-height: 100%;
-}
-.intro-page .avatar  {
-  display: none;
-}
-.intro-page__content {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  padding: spacing(xxxl);
-  align-items: center;
-  max-width: 460px;
-  margin: 0 auto;
-  align-items: start;
-  max-height: max-content;
-  align-self: center;
-}
-// Responsive styles
-@include breakpoint-horiz("ipad-portrait") {
-  .intro-page__content {
-    display: block;
-    padding-left: spacing(l);
-    padding-right: spacing(l);
-  }
-  .intro-page__portrait { display: none;}
-  .intro-page .avatar { display: block; }
-  .intro-page {
-    align-items: center;
-    justify-content: space-between;
-  }
+.intro-text {
+  margin-top: spacing(xxxl);
+  @include font-style(body-32);
 }
