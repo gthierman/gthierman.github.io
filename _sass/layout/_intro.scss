@@ -1,4 +1,27 @@
 .intro-text {
-  margin-top: spacing(xxxl);
+  margin: spacing(60) 0 spacing(120);
   @include font-style(body-32);
+  color: $text-subdued;
+}
+
+section {
+  &:not(:last-child):after {
+    background: color(grey-300);
+    height: 1px;
+    width: 60px;
+    margin-top: spacing(120);
+    margin-bottom: spacing(120);
+    display: block;
+    content: "";
+  }
+}
+.project-menu {
+  display: flex;
+}
+.project-menu__group {
+  flex: 1 1 100%;
+}
+.project-menu__group__header {
+  @include font-style(header-16);
+  margin-bottom: spacing(12);
 }

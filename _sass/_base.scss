@@ -7,7 +7,8 @@ body {
 }
 body {
   font-family: $font-family;
-  @include font-style(body);
+  @include font-style(body-14);
+  color: $text-subdued;
   margin: 0;
 }
 
@@ -22,30 +23,33 @@ ul {
 }
 h1 {
   @include font-style(h1);
-  margin-bottom: spacing(xl);
+  margin-bottom: spacing(32);
 }
 h2 {
   @include font-style(h2);
-  margin-bottom: spacing(l);
+  margin-bottom: spacing(32);
 }
 h3 {
   @include font-style(h3);
-  margin-bottom: spacing(m);
+  margin-bottom: spacing(32);
 }
 h4 {
   @include font-style(h4);
-  margin-bottom: spacing(s);
+  margin-bottom: spacing(32);
 }
 p {
-  margin-bottom: spacing(xl);
+  margin-bottom: spacing(32);
 }
 a , a:visited{
+  color: $link-default;
   // color: $link-color;
-  // text-decoration: none;
-  // &:hover {
-  //   background-color: $link-hover-background-color;
-  //   color: $link-hover-color;
-  // }
+  text-decoration: none;
+  &:hover {
+    // background-color: $link-hover-background-color;
+    // color: $link-hover-color;
+    text-decoration: underline;
+  
+  }
 }
 :focus {
   outline: 0;

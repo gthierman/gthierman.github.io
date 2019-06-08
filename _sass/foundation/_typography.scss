@@ -18,6 +18,10 @@ $font-styles: (
     font-size:   16px,
     line-height: 24px,
   ),
+  body-14: (
+    font-size:   14px,
+    line-height: 20px,
+  ),
   body: (
     font-size:   16px,
     line-height: 24px,
@@ -50,6 +54,10 @@ $font-styles: (
   header-20: (
     font-size: 20px,
     line-height: 24px
+  ),
+  header-16: (
+    font-size: 16px,
+    line-height: 20px
   ),
   subheading: (
     font-weight: get-font-weight(regular)

@@ -1,11 +1,12 @@
 $spacing: (
-  xs:   4px,
-  s:    8px,
-  m:    12px,
-  l:    20px,
-  xl:   32px,
-  xxl:  40px,
-  xxxl: 60px
+   4: 4px,
+   8: 8px,
+  12: 12px,
+  20: 20px,
+  32: 32px,
+  40: 40px,
+  60: 60px,
+ 120: 120px
 );
 @function spacing($spacing-size) {
   @return map-get($spacing, $spacing-size);
