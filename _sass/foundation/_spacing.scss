@@ -11,3 +11,5 @@ $spacing: (
 @function spacing($spacing-size) {
   @return map-get($spacing, $spacing-size);
 }
+
+$gutter: spacing(40);
