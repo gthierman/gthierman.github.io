@@ -1,18 +1,20 @@
 .intro-text {
-  margin: spacing(60) 0 spacing(120);
   @include font-style(body-32);
   color: $text-subdued;
 }
-section {
+.section {
+  padding: 0 0 $section-padding-y 0;
   &:not(:last-child):after {
     background: color(grey-300);
     height: 1px;
     width: 60px;
-    margin-top: spacing(120);
-    margin-bottom: spacing(120);
+    margin-top: $section-padding-y;
     display: block;
     content: "";
   }
+}
+.section__header {
+  // @include fon
 }
 .project-menus {
   @include row; 
