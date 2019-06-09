@@ -3,7 +3,6 @@
   @include font-style(body-32);
   color: $text-subdued;
 }
-
 section {
   &:not(:last-child):after {
     background: color(grey-300);
@@ -16,20 +15,15 @@ section {
   }
 }
 .project-menus {
-  display: flex; 
+  @include row; 
 }
 .project-menus__category {
-  flex: 1 1 100%;
-  margin-right: $gutter;
-  &:last-child {
-    margin-right: 0;
-  }
+  @include column;
 }
 .project-menus__category__header {
   @include font-style(header-16);
   margin-bottom: spacing(12);
 }
-
 .about__content {
   display: flex;
 }
