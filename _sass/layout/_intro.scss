@@ -1,7 +1,3 @@
-.intro-text {
-  @include font-style(body-32);
-  color: $text-subdued;
-}
 .section {
   padding: 0 0 $section-padding-y 0;
   &:not(:last-child):after {
@@ -14,7 +10,10 @@
   }
 }
 .section__header {
-  // @include fon
+  margin-bottom: $gutter;
+}
+.section-header--intro {
+  @include font-style(body-32);
 }
 .project-menus {
   @include row; 

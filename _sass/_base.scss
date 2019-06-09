@@ -22,19 +22,15 @@ ul {
   padding: 0;
 }
 h1 {
-  @include font-style(h1);
+  @include font-style(header-32);
   margin-bottom: spacing(32);
 }
 h2 {
-  @include font-style(h2);
+  @include font-style(header-24);
   margin-bottom: spacing(32);
 }
 h3 {
-  @include font-style(h3);
-  margin-bottom: spacing(32);
-}
-h4 {
-  @include font-style(h4);
+  @include font-style(header-16);
   margin-bottom: spacing(32);
 }
 p {
@@ -42,11 +38,8 @@ p {
 }
 a , a:visited{
   color: $link-default;
-  // color: $link-color;
   text-decoration: none;
   &:hover {
-    // background-color: $link-hover-background-color;
-    // color: $link-hover-color;
     text-decoration: underline;
   
   }

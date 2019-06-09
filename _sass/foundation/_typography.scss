@@ -13,58 +13,44 @@ $font-styles: (
   body-32: (
     font-size:   32px,
     line-height: 40px,
+    color: $text-subdued,
+    font-weight: get-font-weight(regular)
   ),
   body-16: (
     font-size:   16px,
     line-height: 24px,
+    color: $text-subdued,
+    font-weight: get-font-weight(regular)
   ),
   body-14: (
     font-size:   14px,
     line-height: 20px,
+    color: $text-subdued,
+    font-weight: get-font-weight(regular)
   ),
-  body: (
-    font-size:   16px,
-    line-height: 24px,
-    color: $text-subdued
-  ),
-  h1: (
-    font-size:   30px,
-    line-height: 38px,
+  header-32: (
+    font-size: 32px,
+    line-height: 40px,
     font-weight: get-font-weight(bold),
     color: $text-default
   ),
-  h2: (
-    font-size:   24px,
+  header-24: (
+    font-size: 24px,
     line-height: 32px,
-    font-weight: get-font-weight(bold),
-    color: $text-default
-  ),
-  h3: (
-    font-size:   18px,
-    line-height: 24px,
-    font-weight: get-font-weight(bold),
-    color: $text-default
-  ),
-  h4: (
-    font-size:   16px,
-    line-height: 24px,
     font-weight: get-font-weight(bold),
     color: $text-default
   ),
   header-20: (
     font-size: 20px,
-    line-height: 24px
+    line-height: 24px,
+    font-weight: get-font-weight(bold),
+    color: $text-default
   ),
   header-16: (
     font-size: 16px,
-    line-height: 20px
-  ),
-  subheading: (
-    font-weight: get-font-weight(regular)
-  ),
-  small: (
-    font-size: 14px,
-    line-height: 20px
+    line-height: 20px,
+    font-weight: get-font-weight(bold),
+    color: $text-default
   )
 );
 @mixin font-weight($weight) {
@@ -72,7 +58,6 @@ $font-styles: (
 }
 @mixin font-style($style) {
   @each $value, $property in map-get($font-styles, $style) {
-    @debug $property;
     #{$value}: #{$property};
   }
 }
