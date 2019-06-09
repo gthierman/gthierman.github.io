@@ -61,3 +61,10 @@ $font-styles: (
     #{$value}: #{$property};
   }
 }
+@each $style, $map in $font-styles {
+  .#{$style} {
+    @each $property, $value in $map {
+      #{$property}: #{$value};
+    }
+  }
+}
