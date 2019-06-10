@@ -51,6 +51,13 @@ $font-styles: (
     line-height: 20px,
     font-weight: get-font-weight(bold),
     color: $text-default
+  ),
+  header-12: (
+    font-size: 12px,
+    line-height: 16px,
+    font-weight: get-font-weight(bold),
+    color: $text-subdued,
+    text-transform: uppercase,
   )
 );
 @mixin font-weight($weight) {

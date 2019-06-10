@@ -9,11 +9,14 @@
     content: "";
   }
 }
-.section__header {
+.section-header {
   margin-bottom: $gutter;
 }
 .section-header--intro {
   @include font-style(body-32);
+}
+.section-header--styleguide {
+  @include font-style(header-12);
 }
 .project-menus {
   @include row; 
