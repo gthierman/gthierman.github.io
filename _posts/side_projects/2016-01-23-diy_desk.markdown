@@ -1,0 +1,11 @@
+---
+layout: post
+category: side_projects
+title:  "DIY sit/stand desk"
+date:   2016-01-23 02:10:43
+published: true
+---
+
+<section class="section">
+  <h1 class="section-header">Lessons</h1>
+</section>

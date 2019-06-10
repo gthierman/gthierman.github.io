@@ -1,0 +1,23 @@
+---
+layout: post
+category: product_design
+title:  "DIY sit/stand desk"
+date:   2016-01-23 02:10:43
+published: true
+---
+
+<section class="section">
+  <h1 class="section-header">The plan</h1>
+</section>
+
+<section class="section">
+  <h1 class="section-header">First attempt</h1>
+</section>
+
+<section class="section">
+  <h1 class="section-header">Stripping it down & starting again</h1>
+</section>
+
+<section class="section">
+  <h1 class="section-header">Second attempt</h1>
+</section>

@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-    <div class="post-page">
-      <nav class="post-page__nav">
-        {% include nav.html %}
-        {% include social.html %}
-      </nav>
-      <div class="post-page__content">
-        <a href="/" class="post-page__back-link">Back</a>
-        <div class="post-header">
-          <h1>{{page.title}}</h1>
-          {% if page.tagline%}
-            <h2 class="post-header__subheading">{{page.tagline}}</h2>
-          {% endif %}
-        </div>
-        <h4 class="post-page__date">Posted on {{page.date | date: '%b %d, %Y'}}</h4>
-        {{content}}
-      </div>
+---
+layout: default
+---
+<section class="section">
+  <h1 class="section-header section-header--intro">{{page.title}}</h1>
+  {{page.date | date: '%B %Y' }} 
+</section>
+{{content}}
+    <!-- <a href="/" class="post-page__back-link">Back</a>
+      <h1>{{page.title}}</h1>
+      {% if page.tagline%}
+        <h2 class="post-header__subheading">{{page.tagline}}</h2>
+      {% endif %}
     </div>
-  </body>
-</html>
+    <h4 class="post-page__date">Posted on {{page.date | date: '%b %d, %Y'}}</h4>
+    {{content}}
+  </div>
+</div> -->

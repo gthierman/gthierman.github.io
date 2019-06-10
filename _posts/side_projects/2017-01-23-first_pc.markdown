@@ -1,0 +1,11 @@
+---
+layout: post
+category: side_projects
+title:  "First PC build"
+date:   2016-01-23 02:10:43
+published: true
+---
+
+<section class="section">
+  <h1 class="section-header section-header">Lessons</h1>
+</section>

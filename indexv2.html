@@ -5,23 +5,41 @@ layout: default
 <section class="section">
   <h1 class="section-header section-header--intro">👋<br><br>Sed haec quis possit intrepidus aestimare tellus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.</p>
 </section>
-<section class="section">
-  <h1 class="section-header">Projects</h1>
-  <div class="project-menus">
-    <div class="project-menus__category">
-      <h1 class="project-menus__category__header">Product design</h1>
-      <a href="#">Finishing my dream desk</a>
+{% if site.posts.size > 0 %}
+  <section class="section">
+    <h1 class="section-header">Projects</h1>
+    <div class="project-menus">
+      {% if site.categories.product_design %}
+        <div class="project-menus__category">
+          <h1 class="project-menus__category__header">Product design</h1>
+          {% for post in site.categories.product_design %}
+            <a href="{{post.url}}">{{post.title}}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if site.categories.code %}
+        <div class="project-menus__category">
+          <h1 class="project-menus__category__header">Code</h1>
+          <ul>
+            {% for post in site.categories.code %}
+              <li><a href="{{post.url}}">{{post.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if site.categories.side_projects %}
+        <div class="project-menus__category">
+          <h1 class="project-menus__category__header">Side projects</h1>
+          <ul>
+            {% for post in site.categories.side_projects %}
+            <li><a href="{{post.url}}">{{post.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
     </div>
-    <div class="project-menus__category">
-      <h1 class="project-menus__category__header">Code</h1>
-      <a href="#">Finishing my dream desk</a>
-    </div>
-    <div class="project-menus__category">
-      <h1 class="project-menus__category__header">Side projects</h1>
-      <a href="#">Finishing my dream desk</a>
-    </div>
-  </div>
-</section>
+  </section>
+{% endif %}
 <section class="section">
   <h1 class="section-header">About</h1>
   <div class="about__content">
