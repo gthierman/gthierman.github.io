@@ -1,21 +1,8 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
-  <body>
-    <div class="intro-page">
-      <div class="intro-page__portrait">
-      </div>
-      <article class="intro-page__content">
-        <h1>Geoff Thierman</h1>
-        <h2 class="subheading spacing-stack-xxl">
-          Product designer working on design systems at <a href="https://clio.com" target="_blank">Clio.</a>
-        </h2>
-        {% include nav.html %}
-        {% include social.html %}
-      </article>
-    </div>
+  <body class="container">
+    {% include header.html %}
+    {{content}}
   </body>
-
 </html>
