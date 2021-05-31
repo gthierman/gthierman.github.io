@@ -1,0 +1,8 @@
+@mixin breakpoint($breakpoint) {
+  $breakpoint: map-get($breakpoints, $breakpoint);
+  @if $breakpoint {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}

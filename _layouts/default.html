@@ -4,20 +4,16 @@
   {% include head.html %}
 
   <body>
-    <div class="layoutContainer layoutContainer--home">
-      <div class="layoutLeft layoutLeft">
+    <header class="py-l">
+      <div class="container flex flex-wrap space-between">
+        <h1 class="text-h6">{{site.title}}</h1>
+        <nav class="flex">
+          <a href="">Nav</a>
+          <a href="">Nav</a>  
+        </nav>
       </div>
-      <article class="layoutRight layoutRight">
-        <div class="layoutRight__container">
-          {% include avatar.html %}
-          <h1>Geoff Thierman</h1>
-          <h2 class="subheading spacing-stack-xxl">
-            Product designer working on design systems at <a href="https://clio.com" target="_blank">Clio.</a>
-          </h2>
-          {% comment %}{% include nav.html %}{% endcomment %}
-          {% include social.html %}
-      </article>
-    </div>
+    </header>
+    {{content}}
   </body>
 
 </html>

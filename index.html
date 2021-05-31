@@ -1,3 +1,21 @@
 ---
 layout: default
 ---
+
+<div class="container">
+  <div class="grid grid-gap-xxl" style="--s-columns: 1fr 1fr 1fr;">
+    {% for testimonial in site.data.testimonials %}
+      <div>
+        <div class="flex mb-l">
+          <img src="images/avatars/{{testimonial.image}}" width="52px" height="52px">
+          <div class="ml-l">
+            <strong>{{testimonial.name}}</strong>
+            <div class="text-small mt-xs">{{testimonial.role}}</div>
+          </div>
+        </div>
+        <div class="mb-l">{{testimonial.excerpt}}</div>
+        <a href="#">Read Full Quote</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

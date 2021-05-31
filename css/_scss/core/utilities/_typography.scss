@@ -1,0 +1,43 @@
+// FONT SIZES
+@each $name, $value in $font-sizes {
+  .text-#{$name} {
+    font-size: var(--font-size-#{$name});
+  }
+}
+// FONT STACKS
+@each $name, $value in $font-stacks {
+  .#{$name} {
+    font-family: var(--font-stack-#{$name});
+  }
+}
+
+// FONT WEIGHTS
+@each $name, $value in $font-weights {
+  .weight-#{$name} {
+    font-weight: var(--font-weight-#{$name});
+  }
+}
+
+@each $name, $value in $breakpoints {
+  $breakpoint: $name;
+  @media screen and (min-width:#{$value} ) {
+
+    @each $name, $value in $font-sizes {
+      .#{$breakpoint}\:text-#{$name} {
+        font-size: var(--font-size-#{$name});
+      }
+    }
+    // FONT STACKS
+    @each $name, $value in $font-stacks {
+      .#{$breakpoint}\:#{$name} {
+        font-family: var(--font-stack-#{$name});
+      }
+    }
+    @each $name, $value in $font-weights {
+      .#{$breakpoint}\:weight-#{$name} {
+        font-weight: var(--font-weight-#{$name});
+      }
+    }
+    
+  }
+}
