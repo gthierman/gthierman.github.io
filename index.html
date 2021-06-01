@@ -5,7 +5,7 @@ layout: default
 <div class="container container--1000">
   <h1 class="mt-xxxl">Hey, I'm Geoff.</h1>
   <h2 class="weight-regular">I design and build stuff for the web.</h2>
-  <div class="flex gap-m my-xxl text-h4 social-icons ">
+  <div class="flex gap-m my-xxl text-h5 social-icons">
     <a href="https://dribbble.com/gthierman" target="_blank">
       <i class="fab fa-dribbble"></i>
     </a>
@@ -16,21 +16,21 @@ layout: default
       <i class="fab fa-twitter"></i>
     </a>
   </div>
-  <h3 class="weight-regular my-xxxl">I'm looking for my next (remote) gig.</h3>
+  <h3 class="weight-regular my-xxxl color--grey-600">
+    I'm looking for my next (remote) gig.
+  </h3>
 </div>
 
 <div class="container container--1000">
-  <div class="grid grid-gap-xxxl my-xxxl" style="--s-columns: 1fr auto">
-
+  <div class="grid grid-gap-xxxl my-xxl" style="--s-columns: 1fr auto">
     <div>
-      <h4 class="mb-xxl">Work experience</h4>
+      <h4 class="mb-xxl color--brand">Work experience</h4>
       <div class="grid grid-gap-xxl" style="--s-columns: 1fr">
         {% for job in site.data.jobs %}
         <div class="mb-l">
-          <!-- <img src="images/{{job.image}}" /> -->
           <h5 class="text-h6 mb-xs">{{job.company}}</h5>
+          <p class="text-small weight-bold color--grey-700">{{job.title}}</p>
           <p class="text-small mb-xs">{{job.date}}</p>
-          <p class="text-small">{{job.title}}</p>
           <p class="mt-l">{{job.excerpt}}</p>
         </div>
         {% endfor %}
@@ -38,22 +38,25 @@ layout: default
     </div>
 
     <div>
-      <h4 class="mb-xxl">Skills</h4>
-      {% for skill in site.data.skills %}
+      <h4 class="mb-xxl color--brand">Skills</h4>
+      <div
+        class="grid grid-gap-l my-xxl"
+        style="--xs-columns: auto auto; --s-columns: 1fr"
+      >
+        {% for skill in site.data.skills %}
         <div class="mb-xl">
           <h5 class="text-h6 mb-xs">{{{skill.title}}</h5>
           {% for skill in skill.skills %}
-            <div class="text-small mb-s">
-              {{skill}}
-            </div>
+          <div class="text-small mb-s">{{skill}}</div>
           {% endfor %}
         </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-
   </div>
 </div>
 
+<div class="bg-color--grey-100 py-xl">
   <div class="container container--1000">
     <div class="grid grid-gap-xxl my-xxxl" style="--s-columns: 1fr 1fr">
       {% for testimonial in site.data.testimonials %}
@@ -71,8 +74,7 @@ layout: default
             <div class="text-small mt-xs">{{testimonial.role}}</div>
           </div>
         </div>
-        <div class="mb-l">{{testimonial.excerpt}}</div>
-        <a href="#">Read Full Quote</a>
+        <div>{{testimonial.excerpt}}</div>
       </div>
       {% endfor %}
     </div>

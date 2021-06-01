@@ -1,18 +1,8 @@
 $colors: (
-  accent-100: #f3fbfd,
-  accent-500: #0ea5c7,
-  accent-600: #007ca5,
-  accent-700: #003e53,
-  focus: #9ed8ff,
-  grey-50: #fafdfe,
-  grey-100: #f4f7f9,
-  grey-200: #ebf3f6,
-  grey-300: #ccd9e0,
-  grey-400: #90a6bc,
-  grey-500: #576c82,
-  grey-600: #2c3d4e,
-  grey-700: #001c37,
-  white: #fff,
+  brand: #1558be,
+  grey-700: #000f24,
+  grey-600: #434d5a,
+  grey-100: #f5f7f9,
 ) !default;
 
 $spacing: (
@@ -49,7 +39,7 @@ $font-stacks: (
 $container-sizes: (
   400: 400px,
   600: 600px,
-  1000: 1000px,
+  1000: 900px,
   1200: 1200px,
   1440: 1440px,
 ) !default;
