@@ -1,6 +1,6 @@
 // Reset from https://dev.to/mendyberger/simple-tiny-css-reset-50f1
 * {
-  display: revert;
+  // display: revert;
   margin: unset;
   box-sizing: border-box;
 }
@@ -48,6 +48,15 @@ h6,
 strong {
   font-weight: var(--font-weight-bold);
   color: var(--grey-700);
+  line-height: 1.2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
 }
 
 a {
