@@ -61,7 +61,6 @@
         padding: var(--spacing-#{$name});
       }
     }
-
     @each $name, $value in $spacing {
       .#{$breakpoint}\:my-#{$name} {
         margin: var(--spacing-#{$name}) 0;
