@@ -78,7 +78,11 @@
 }
 
 .flex-none {
-  flex: none;
+  --flex: none;
+}
+
+.flex-none {
+  --flex: 1 1 auto;
 }
 
 // .align-self-center {
@@ -97,7 +101,7 @@
 //   --align-self: stretch;
 // }
 
-.space-around { 
+.space-around {
   --justify-content: space-around;
 }
 .space-between {
@@ -106,18 +110,17 @@
 
 $breakpoint-sizes: [];
 @each $breakpoint-name, $value in $breakpoints {
-
   // Loop over the breakpoints and build a list of breakpoint-specific custom properties with fallbacks
-  $breakpoint-sizes: append($breakpoint-sizes, $breakpoint-name); 
+  $breakpoint-sizes: append($breakpoint-sizes, $breakpoint-name);
   $flex-props: false;
   $previous-flex-props: false;
   @each $breakpoint-size in $breakpoint-sizes {
-      @if $flex-props {
-        $previous-flex-props: $flex-props;
-      } @else {
-        $previous-flex-props: var(--flex);
-      };
-      $flex-props: var(--#{$breakpoint-size}-flex, $previous-flex-props); 
+    @if $flex-props {
+      $previous-flex-props: $flex-props;
+    } @else {
+      $previous-flex-props: var(--flex);
+    }
+    $flex-props: var(--#{$breakpoint-size}-flex, $previous-flex-props);
   }
 
   @media screen and (min-width:#{$value} ) {
@@ -149,7 +152,7 @@ $breakpoint-sizes: [];
     .#{$breakpoint-name}\:direction-row {
       --flex-direction: row;
     }
-    
+
     .#{$breakpoint-name}\:direction-col {
       --flex-direction: column;
     }
@@ -167,23 +170,23 @@ $breakpoint-sizes: [];
         gap: var(--spacing-#{$name});
       }
     }
-    
+
     .#{$breakpoint-name}\:items-center {
       --align-items: center;
     }
-    
+
     .#{$breakpoint-name}\:items-start {
       --align-items: flex-start;
     }
-    
+
     .#{$breakpoint-name}\:items-end {
       --align-items: flex-end;
     }
-    
+
     .#{$breakpoint-name}\:items-stretch {
       --align-items: stretch;
     }
-    
+
     .#{$breakpoint-name}\:items-baseline {
       --align-items: baseline;
     }
