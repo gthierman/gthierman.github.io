@@ -1,0 +1,11 @@
+@each $color-name, $value in $colors {
+  .color--#{$color-name} {
+    color: #{$value};
+  }
+  .bg-color--#{$color-name} {
+    background-color: #{$value};
+  }
+  .border-color--#{$color-name} {
+    border-color: #{$value};
+  }
+}

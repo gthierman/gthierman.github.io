@@ -4,25 +4,9 @@
   {% include head.html %}
 
   <body>
-    <div class="layoutContainer layoutContainer--post">
-      <div class="layoutLeft">
-        {% include avatar.html %}
-        {% include nav.html %}
-        {% include social.html %}
-      </div>
-      <div class="layoutRight">
-        <div class="layoutRight__container">
-          <a href="/" class="backLink">Back</a>
-          <div class="post__header spacing-stack-xxl">
-            <h1 class="spacing-stack-xs">{{page.title}}</h1>
-            {% if page.tagline%}
-              <h2 class="subheading spacing-stack-xl">{{page.tagline}}</h2>
-            {% endif %}
-          </div>
-          <h4 class="subheading small spacing-stack-xxl">Posted on {{page.date | date: '%b %d, %Y'}}</h4>
-          {{content}}
-        </div>
-      </div>
+    <div class="container">
+      Hello
+      
     </div>
   </body>
 

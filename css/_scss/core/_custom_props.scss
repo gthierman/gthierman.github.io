@@ -1,0 +1,17 @@
+:root {
+  @each $name, $value in $font-sizes {
+    --font-size-#{$name}: #{$value};
+  }
+  @each $name, $value in $font-stacks {
+    --font-stack-#{$name}: #{$value};
+  }
+  @each $name, $value in $font-weights {
+    --font-weight-#{$name}: #{$value};
+  }
+  @each $name, $value in $spacing {
+    --spacing-#{$name}: #{$value};
+  }
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+}

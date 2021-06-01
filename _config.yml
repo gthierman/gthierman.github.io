@@ -18,3 +18,8 @@ defaults:
       path: "images"
     values:
       image: true
+
+sass:
+  load_paths:
+    - css/_scss
+    - node_modules
