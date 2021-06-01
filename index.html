@@ -2,20 +2,58 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="grid grid-gap-xxl" style="--s-columns: 1fr 1fr 1fr;">
+<div class="container container--1000">
+  <h1 class="mt-xxxl">Hey, I'm Geoff.</h1>
+  <h2 class="weight-regular">I design and build stuff for the web.</h2>
+  <div class="flex gap-m my-xxl">
+    <a href="https://dribbble.com/gthierman" target="_blank">
+      <i class="fab fa-dribbble"></i>
+    </a>
+    <a href="https://github.com/gthierman" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://twitter.com/geeofftee" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <h3 class="weight-regular my-xxxl">I'm looking for my next (remote) gig.</h3>
+</div>
+
+<div class="container container--1000">
+  <h4 class="mb-xxl">Previously</h4>
+  <div class="grid grid-gap-xxl" style="--s-columns: 1fr 1fr">
+    {% for job in site.data.jobs %}
+    <div class="mb-xxxl">
+      <img src="images/{{job.image}}" />
+      <h5 class="mt-xl mb-xs">{{job.company}}</h5>
+      <p class="text-small mb-xs">{{job.date}}</p>
+      <p>{{job.title}}</p>
+      <p class="mt-l">{{job.excerpt}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="container container--1000">
+  <div class="grid grid-gap-xxl my-xxxl" style="--s-columns: 1fr 1fr">
     {% for testimonial in site.data.testimonials %}
-      <div>
-        <div class="flex mb-l">
-          <img src="images/avatars/{{testimonial.image}}" width="52px" height="52px">
-          <div class="ml-l">
-            <strong>{{testimonial.name}}</strong>
-            <div class="text-small mt-xs">{{testimonial.role}}</div>
-          </div>
+    <div>
+      <div class="flex mb-l">
+        <img
+          src="images/avatars/{{testimonial.image}}"
+          width="52px"
+          height="52px"
+          class="testimonial__avatar"
+          alt="A photo of {{testimonial.name}}"
+        />
+        <div class="ml-l">
+          <strong>{{testimonial.name}}</strong>
+          <div class="text-small mt-xs">{{testimonial.role}}</div>
         </div>
-        <div class="mb-l">{{testimonial.excerpt}}</div>
-        <a href="#">Read Full Quote</a>
       </div>
+      <div class="mb-l">{{testimonial.excerpt}}</div>
+      <a href="#">Read Full Quote</a>
+    </div>
     {% endfor %}
   </div>
 </div>
