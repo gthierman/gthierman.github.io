@@ -13,13 +13,13 @@
     margin: var(--spacing-#{$name}) 0;
   }
   .py-#{$name} {
-    padding: var(--spacing-#{$name}) 0; 
+    padding: var(--spacing-#{$name}) 0;
   }
   .mx-#{$name} {
     margin: 0 var(--spacing-#{$name});
   }
   .px-#{$name} {
-    padding: 0 var(--spacing-#{$name}); 
+    padding: 0 var(--spacing-#{$name});
   }
 }
 
@@ -45,7 +45,7 @@
   .ml-#{$name} {
     margin-left: var(--spacing-#{$name});
   }
-  .pr-#{$name} {
+  .pl-#{$name} {
     padding-left: var(--spacing-#{$name});
   }
 }
@@ -61,22 +61,21 @@
         padding: var(--spacing-#{$name});
       }
     }
-    
     @each $name, $value in $spacing {
       .#{$breakpoint}\:my-#{$name} {
         margin: var(--spacing-#{$name}) 0;
       }
       .#{$breakpoint}\:py-#{$name} {
-        padding: var(--spacing-#{$name}) 0; 
+        padding: var(--spacing-#{$name}) 0;
       }
       .#{$breakpoint}\:mx-#{$name} {
         margin: 0 var(--spacing-#{$name});
       }
       .#{$breakpoint}\:px-#{$name} {
-        padding: 0 var(--spacing-#{$name}); 
+        padding: 0 var(--spacing-#{$name});
       }
     }
-    
+
     @each $name, $value in $spacing {
       .#{$breakpoint}\:mb-#{$name} {
         margin-bottom: var(--spacing-#{$name});
@@ -99,9 +98,24 @@
       .#{$breakpoint}\:ml-#{$name} {
         margin-left: var(--spacing-#{$name});
       }
-      .#{$breakpoint}\:pr-#{$name} {
+      .#{$breakpoint}\:pl-#{$name} {
         padding-left: var(--spacing-#{$name});
       }
+    }
+    .#{$breakpoint}\:p-none {
+      padding: 0;
+    }
+    .#{$breakpoint}\:pl-none {
+      padding-left: 0;
+    }
+    .#{$breakpoint}\:pr-none {
+      padding-right: 0;
+    }
+    .#{$breakpoint}\:pt-none {
+      padding-top: 0;
+    }
+    .#{$breakpoint}\:pb-none {
+      padding-bottom: 0;
     }
   }
 }
