@@ -3,6 +3,9 @@
 
 @import "index";
 
+body {
+  border-top: 8px solid var(--brand);
+}
 .testimonial__avatar {
   width: 52px;
   height: 52px;
