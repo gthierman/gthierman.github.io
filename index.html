@@ -9,7 +9,7 @@ layout: default
       I'm a web designer and developer based in Vancouver, Canada.
     </h2>
     <h3 class="weight-regular text-h4 my-xl color--grey-600">
-      I'm looking for my next (remote) gig.
+      I make apps and websites. I'm looking for my next (remote) gig.
     </h3>
     <div class="flex gap-m my-xxl text-h5 social-icons">
       <a href="https://dribbble.com/gthierman" target="_blank">
@@ -24,46 +24,24 @@ layout: default
     </div>
   </div>
 </section>
-
+<section class="flex mb-xxxl">
   <div class="container container--1000">
-    <div class="grid grid-gap-xxxl my-xxl" style="--s-columns: 1fr auto">
-      <div>
-        <h4 class="mb-xxl color--brand">Work experience</h4>
-        <div class="grid grid-gap-xxl" style="--s-columns: 1fr">
-          {% for job in site.data.jobs %}
-          <div class="mb-l m:pr-xl">
-            <h5 class="text-h6 mb-xs">{{job.company}}</h5>
-            <p class="text-small weight-bold color--grey-700">{{job.title}}</p>
-            <p class="text-small mb-xs">{{job.date}}</p>
-            <p class="mt-l">{{job.excerpt}}</p>
-          </div>
-          {% endfor %}
-        </div>
+    <h4 class="mb-xl">What I Do</h4>
+    <div class="grid grid-gap-xl" style="--s-columns: 1fr 1fr 1fr">
+      {% for service in site.data.services %}
+      <div class="card">
+        <h5 class="mb-l">{{service.title}}</h5>
+        <p>{{service.caption}}</p>
       </div>
-
-      <div>
-        <h4 class="mb-xxl color--brand">Skills</h4>
-        <div
-          class="grid grid-gap-l my-xxl"
-          style="--xs-columns: auto auto; --s-columns: 1fr"
-        >
-          {% for skill in site.data.skills %}
-          <div class="mb-xl">
-            <h5 class="text-h6 mb-l">{{{skill.title}}</h5>
-            {% for skill in skill.skills %}
-            <div class="text-small mb-s">{{skill}}</div>
-            {% endfor %}
-          </div>
-          {% endfor %}
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
+</section>
 
-  <div class="bg-color--grey-100 py-xl">
-    <div class="container container--1000">
-      <div class="grid grid-gap-xxl my-xxxl" style="--s-columns: 1fr 1fr">
-        {% for testimonial in site.data.testimonials %}
+<section class="bg-color--grey-100 py-xl">
+  <div class="container container--1000">
+    <div class="grid grid-gap-xxl my-xxxl" style="--s-columns: 1fr 1fr">
+      {% for testimonial in site.data.testimonials %}
         <div>
           <div class="flex mb-l">
             <img
@@ -79,9 +57,8 @@ layout: default
             </div>
           </div>
           <div>{{testimonial.excerpt}}</div>
-        </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>

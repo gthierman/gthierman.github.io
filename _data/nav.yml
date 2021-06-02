@@ -1,0 +1,7 @@
+- label: Resume
+  path: /resume/
+  published: true
+
+- label: Styleguide
+  path: /styleguide/
+  published: true
