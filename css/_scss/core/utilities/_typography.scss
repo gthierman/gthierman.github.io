@@ -21,8 +21,13 @@
 .text-decoration-underline {
   text-decoration: underline;
 }
+
 .text-decoration-none {
   text-decoration: none;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 @each $name, $value in $breakpoints {

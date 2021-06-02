@@ -19,6 +19,9 @@
   .container--#{$size} {
     --container-max-width: #{$value};
   }
+  .max-width--#{$size} {
+    max-width: #{$value};
+  }
 }
 
 $breakpoint-sizes: [];

@@ -1,7 +1,11 @@
+- label: About
+  path: /
+  published: true
+
 - label: Resume
   path: /resume/
   published: true
 
 - label: Styleguide
   path: /styleguide/
-  published: true
+  published: false

@@ -2,37 +2,50 @@
 layout: default
 ---
 
-<section class="flex mb-xxxl">
-  <div class="container container--1000">
-    <h1 class="mt-xxxl text-h2 s:text-h1 mb-xxl">Hey, I'm Geoff.</h1>
-    <h2 class="weight-regular text-h3 s:text-h2 color--grey-600 mb-xxl">
+<section class="flex py-xl m:py-xxxl">
+  <div class="container container--690">
+    <h1 class="text-h3 s:text-h1 mb-xl s:mb-xxl">Hey, I'm Geoff.</h1>
+    <h2 class="weight-regular text-body s:text-h4 color--grey-600 mb-xl s:mb-xxl">
       I'm a web designer and developer based in Vancouver, Canada.
     </h2>
-    <h3 class="weight-regular text-h4 color--grey-600">
-      I make apps and websites. I'm looking for my next (remote) gig.
+    <h3 class="weight-regular text-body s:text-h4 color--grey-600">
+      Currently seeking remote opportunities.
+      Previously design & front-end at <a class="text-decoration-none weight-bold" href="https://www.clio.com/" target="_blank">Clio</a> and <a class="text-decoration-none weight-bold" href="https://www.clio.com/" target="_blank">Casting Workbook</a>. 
     </h3>
   </div>
 </section>
-<section class="flex mb-xxxl">
-  <div class="container container--1000">
-    <h4 class="mb-l s:mb-xxl text-h6 m:text-h5"><span class="color--brand">01.</span> What I Do</h4>
-    <div class="grid grid-gap-xxl s:grid-gap-xxxl" style="--s-columns: 1fr 1fr 1fr">
+
+<section class="flex">
+  <div class="container container--full s:container--1000 m:container--1000">
+    <img
+src="images/test.png"
+class="mt-xxxl flex">
+   
+  </div>
+</section>
+
+<section class="flex direction-col py-xxxl">
+  <div class="container container--440 s:container--690 m:container--1000">
+    <h4 class="mb-l s:mb-xxl text-h6 m:text-h5 color--brand">What I Do</h4>
+    <div class="grid grid-gap-xxl s:grid-gap-xxl" style="--s-columns: 1fr 1fr 1fr">
       {% for service in site.data.services %}
       <div>
-        <h5 class="mb-l text-h4">{{service.title}}</h5>
+        <h5 class="mb-l text-h5 m:text-h4">{{service.title}}</h5>
         <p>{{service.caption}}</p>
       </div>
       {% endfor %}
     </div>
   </div>
+
 </section>
 
-<section class="bg-color--grey-100 py-xl">
-  <div class="container container--1000">
-    <div class="grid grid-gap-xxl my-xxxl" style="--s-columns: 1fr 1fr">
+<section class="bg-color--grey-100 py-xl s:py-xxxl m:py-4xl">
+  <div class="container s:container--690 m:container--1000">
+    <div class="grid grid-gap-xxl justify-content-center" style="--m-columns: 1fr 1fr; --s-columns:1fr">
       {% for testimonial in site.data.testimonials %}
-        <div>
-          <div class="flex mb-l">
+        <div class="testimonial bg-color--white p-xxxl">
+          <div class="text-h4 mb-xxl">{{testimonial.excerpt}}</div>
+          <div class="flex mb-l align-items-center">
             <img
               src="images/avatars/{{testimonial.image}}"
               width="52px"
@@ -40,12 +53,11 @@ layout: default
               class="testimonial__avatar"
               alt="A photo of {{testimonial.name}}"
             />
-            <div class="ml-l">
-              <strong>{{testimonial.name}}</strong>
-              <div class="text-small mt-xs">{{testimonial.role}}</div>
+            <div class="ml-xl">
+              <strong class="text-h4">{{testimonial.name}}</strong>
+              <div class="mt-xs">{{testimonial.role}}</div>
             </div>
           </div>
-          <div>{{testimonial.excerpt}}</div>
       </div>
       {% endfor %}
     </div>
