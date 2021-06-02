@@ -3,15 +3,32 @@
   {% include head.html %}
 
   <body>
-    <!-- <header class="py-l">
-      <div class="container flex flex-wrap space-between">
-        <h1 class="text-h6">{{site.title}}</h1>
-        <nav class="flex">
-          <a href="">Nav</a>
-          <a href="">Nav</a>
+    <header class="py-xxl flex align-items-center">
+      <div class="container container--1000 flex flex-wrap space-between">
+        <a class="text-h6 color--grey-700 weight-bold">
+          Geoff Thierman
+          <div class="color--grey-600 text-small weight-regular">Design & Code</div>
+        </a>
+        <nav class="flex gap-xxl">
+          {% for nav in site.data.nav %} 
+            {% if nav.published %}
+              <a href="{{nav.path}}" class="weight-bold text-decoration-none">{{nav.label}}</a>
+            {% endif %} 
+          {% endfor %}
+          <div class="flex gap-m my-xxl text-h5 social-icons">
+            <a href="https://dribbble.com/gthierman" target="_blank">
+              <i class="fab fa-dribbble"></i>
+            </a>
+            <a href="https://github.com/gthierman" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/geeofftee" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
         </nav>
       </div>
-    </header> -->
+    </header>
     {{content}}
   </body>
 </html>

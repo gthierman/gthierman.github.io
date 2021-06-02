@@ -3,6 +3,7 @@ $colors: (
   grey-700: #000f24,
   grey-600: #434d5a,
   grey-100: #f5f7f9,
+  white: #ffffff,
 ) !default;
 
 $spacing: (
@@ -13,6 +14,7 @@ $spacing: (
   xl: 20px,
   xxl: 32px,
   xxxl: 60px,
+  4xl: 120px,
 ) !default;
 
 $font-sizes: (
@@ -37,9 +39,9 @@ $font-stacks: (
 ) !default;
 
 $container-sizes: (
-  400: 400px,
-  600: 600px,
-  1000: 900px,
+  440: 440px,
+  690: 690px,
+  1000: 1000px,
   1200: 1200px,
   1440: 1440px,
 ) !default;

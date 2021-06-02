@@ -18,10 +18,21 @@
   }
 }
 
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
 @each $name, $value in $breakpoints {
   $breakpoint: $name;
   @media screen and (min-width:#{$value} ) {
-
     @each $name, $value in $font-sizes {
       .#{$breakpoint}\:text-#{$name} {
         font-size: var(--font-size-#{$name});
@@ -38,6 +49,5 @@
         font-weight: var(--font-weight-#{$name});
       }
     }
-    
   }
 }
