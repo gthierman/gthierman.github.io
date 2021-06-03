@@ -3,13 +3,13 @@ layout: default
 ---
 
 <section class="flex mb-xxl">
-  <div class="container container--1000">
+  <div class="container container--440 s:container--1000">
     <h1 class="text-h2 s:text-h1 mb-m">Resume</h1>
   </div>
 </section>
 
 <section>
-  <div class="container container--1000">
+  <div class="container container--440 s:container--1000">
     <div class="grid grid-gap-xxxl my-xxl" style="--s-columns: 1fr auto">
       <div>
         <h4 class="mb-xxl color--brand">Work experience</h4>
@@ -28,8 +28,8 @@ layout: default
       <div>
         <h4 class="mb-xxl color--brand">Skills</h4>
         <div
-          class="grid grid-gap-l my-xxl"
-          style="--xs-columns: auto auto; --s-columns: 1fr"
+          class="grid grid-gap-xxxl my-xxl"
+          style="--xs-columns: auto auto; --s-columns: 1fr 1fr"
         >
           {% for skill in site.data.skills %}
           <div class="mb-xl">
