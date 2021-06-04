@@ -33,7 +33,7 @@ layout: default
         >
           {% for skill in site.data.skills %}
           <div class="mb-xl">
-            <h5 class="text-h6 mb-l">{{{skill.title}}</h5>
+            <h5 class="text-h6 mb-l">{{skill.title}}</h5>
             {% for skill in skill.skills %}
             <div class="text-small mb-s">{{skill}}</div>
             {% endfor %}
