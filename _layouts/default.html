@@ -4,14 +4,10 @@
 
   <body>
     <header class="py-xxl flex align-items-center">
-      <div class="container xs:container--440 s:container--690 m:container--1000 flex flex-wrap direction-col s:direction-row items-start
+      <div class="container xs:container--440 s:container--1000 m:container--1000 flex flex-wrap direction-col s:direction-row items-start
       ">
-        <!-- <a class="text-h6 color--grey-700 weight-bold mb-xl">
-          Geoff Thierman
-          <div class="color--grey-600 text-small weight-regular">Design & Code</div>
-        </a> -->
         <nav class="flex space-between flex-auto gap-xxl wrap width-100 space-between">
-          <div class="flex gap-xxl">
+          <div class="flex gap-m">
             {% for nav in site.data.nav %} 
               {% if nav.published %}
                 <a href="{{nav.path}}" class="weight-bold text-decoration-none">{{nav.label}}</a>

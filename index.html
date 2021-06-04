@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<section class="flex py-xl m:py-xxxl">
-  <div class="container xs:container--440 s:container--690 m:container--1000 flex items-start direction-col">
-    <h1 class="text-h3 s:text-h1 mb-xl s:mb-xxl">Hey, I'm Geoff.</h1>
+<section class="flex py-xxxl">
+  <div class="container xs:container--440 s:container--1000 m:container--1000 flex items-start direction-col">
+    <h1 class="text-h2 s:text-h1 mb-s s:mb-s">Hey, I'm Geoff.</h1>
     <p class="weight-regular text-body s:text-h4 color--grey-600">
       I'm a web designer and developer based in Vancouver, Canada.
       Currently seeking remote opportunities.
@@ -13,32 +13,22 @@ layout: default
   </div>
 </section>
 
-<section class="flex mt-xxl">
-  <div class="container container--full s:container--1000 m:container--1000">
-    <img
-src="images/test.png"
-class="flex">
-   
-  </div>
-</section>
-
-<section class="flex direction-col py-xxxl">
-  <div class="container container--440 s:container--690 m:container--1000">
-    <h4 class="mb-l s:mb-xxl text-h6 m:text-h5 color--brand">What I Do</h4>
+<section class="flex direction-col pb-xxxl">
+  <div class="container container--440 s:container--1000 m:container--1000">
+    <h4 class="mb-l mb-xxl s:mb-xxl text-h6 m:text-h5 color--brand">What I Do</h4>
     <div class="grid grid-gap-xxl s:grid-gap-xxl" style="--s-columns: 1fr 1fr 1fr">
       {% for service in site.data.services %}
       <div>
-        <h5 class="mb-l text-h5 m:text-h4">{{service.title}}</h5>
+        <h5 class="mb-s text-h4 m:text-h4">{{service.title}}</h5>
         <p>{{service.caption}}</p>
       </div>
       {% endfor %}
     </div>
   </div>
-
 </section>
 
 <section class="bg-color--grey-100 py-l s:py-xxl xs:py-xl m:py-xxxl">
-  <div class="container xs:container--440 s:container--690 m:container--1000">
+  <div class="container xs:container--440 s:container--1000 m:container--1000">
     <div class="grid grid-gap-xxl justify-content-center" style="--m-columns: 1fr 1fr; --s-columns:1fr 1fr; --xs-columns: 1fr; ">
       {% for testimonial in site.data.testimonials %}
         <div class="flex space-between direction-col m:items-start items-left testimonial bg-color--white p-xl xs:p-xxl">

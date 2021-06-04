@@ -24,8 +24,8 @@ $font-sizes: (
   h4: 2.4rem,
   h5: 2rem,
   h6: 1.8rem,
-  body: 1.6rem,
-  small: 1.4rem,
+  body: 1.8rem,
+  small: 1.6rem,
 ) !default;
 
 $font-weights: (
@@ -39,15 +39,13 @@ $font-stacks: (
 ) !default;
 
 $container-sizes: (
-  440: 440px,
+  440: 500px,
   690: 690px,
   1000: 1000px,
   1200: 1200px,
   1440: 1440px,
 ) !default;
 
-// $type-scale: 1.125;
-// $base-font-size: 14px
 $breakpoints: (
   xs: 320px,
   s: 768px,
