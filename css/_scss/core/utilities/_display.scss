@@ -81,8 +81,12 @@
   --flex: none;
 }
 
-.flex-none {
+.flex-auto {
   --flex: 1 1 auto;
+}
+
+.flex-wrap {
+  --flex-wrap: flex-wrap;
 }
 
 // .align-self-center {

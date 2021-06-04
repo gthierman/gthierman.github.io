@@ -5,7 +5,7 @@ layout: default
 <section class="flex py-xl m:py-xxxl">
   <div class="container container--690 xs:container--440 s:container--690">
     <h1 class="text-h3 s:text-h1 mb-xl s:mb-xxl">Hey, I'm Geoff.</h1>
-    <h2 class="weight-regular text-body s:text-h4 color--grey-600 mb-xl s:mb-xxl">
+    <p class="weight-regular text-body s:text-h4 color--grey-600 mb-xl s:mb-xxl">
       I'm a web designer and developer based in Vancouver, Canada.
       Currently seeking remote opportunities.
       Previously design & front-end at <a class="text-decoration-none weight-bold" href="https://www.clio.com/" target="_blank">Clio</a> and <a class="text-decoration-none weight-bold" href="https://www.clio.com/" target="_blank">Casting Workbook</a>.
@@ -41,9 +41,9 @@ class="mt-xxxl flex">
   <div class="container xs:container--440 s:container--690 m:container--1000">
     <div class="grid grid-gap-xxl justify-content-center" style="--m-columns: 1fr 1fr; --s-columns:1fr 1fr; --xs-columns: 1fr; ">
       {% for testimonial in site.data.testimonials %}
-        <div class="testimonial bg-color--white p-xl xs:p-xxl text-align-center m:text-align-left">
+        <div class="flex space-between direction-col m:items-start items-left testimonial bg-color--white p-xl xs:p-xxl">
           <div class="text-small s:text-h6 mb-xxl">"{{testimonial.excerpt}}"</div>
-          <div class="flex align-items-center direction-col m:direction-row">
+          <div class="flex items-center direction-col m:direction-row">
             <img
               src="images/avatars/{{testimonial.image}}"
               width="52px"
@@ -51,7 +51,7 @@ class="mt-xxxl flex">
               class="testimonial__avatar mb-m m:mb-none"
               alt="A photo of {{testimonial.name}}"
             />
-            <div class="s:ml-xl">
+            <div class="m:ml-xl text-align-center m:text-align-left">
               <strong class="text-small s:text-h6">{{testimonial.name}}</strong>
               <div class="mt-xs text-small s:text-body">{{testimonial.role}}</div>
             </div>

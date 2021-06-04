@@ -1,9 +1,11 @@
 .grid {
   --gutter: var(--spacing-l);
   --columns: 1;
+  --rows: 1;
   display: grid;
   grid-gap: var(--gutter);
   grid-template-columns: var(--columns);
+  grid-template-rows: var(--rows);
 }
 
 .grid--repeat {
@@ -33,29 +35,40 @@
 $breakpoint-sizes: [];
 @each $breakpoint-name, $value in $breakpoints {
   // Loop over the breakpoints and build a list of breakpoint-specific custom properties with fallbacks to previous breakpoint-specific custom properties. This is so you don't need to set the custom property at every breakpoint.
-  $breakpoint-sizes: append($breakpoint-sizes, $breakpoint-name); 
+  $breakpoint-sizes: append($breakpoint-sizes, $breakpoint-name);
   $grid-col-props: false;
   $previous-grid-col-props: false;
+  $grid-row-props: false;
+  $previous-grid-row-props: false;
   @each $breakpoint-size in $breakpoint-sizes {
     @if $grid-col-props {
       $previous-grid-col-props: $grid-col-props;
     } @else {
       $previous-grid-col-props: var(--columns);
-    };
-    $grid-col-props: var(--#{$breakpoint-size}-columns, $previous-grid-col-props); 
+    }
+    $grid-col-props: var(
+      --#{$breakpoint-size}-columns,
+      $previous-grid-col-props
+    );
+    @if $grid-row-props {
+      $previous-grid-row-props: $grid-row-props;
+    } @else {
+      $previous-grid-row-props: var(--rows);
+    }
+    $grid-row-props: var(--#{$breakpoint-size}-rows, $previous-grid-row-props);
   }
   @media screen and (min-width:#{$value} ) {
     .grid {
       grid-template-columns: #{$grid-col-props};
+      grid-template-rows: #{$grid-row-props};
     }
     .grid--repeat {
-      grid-template-columns: #{$grid-col-props}; 
+      grid-template-columns: #{$grid-col-props};
     }
     @each $name, $value in $spacing {
       .#{$breakpoint-name}\:grid-gap-#{$name} {
         grid-gap: var(--spacing-#{$name});
       }
     }
-    
   }
 }
