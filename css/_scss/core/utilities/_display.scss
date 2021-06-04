@@ -109,6 +109,14 @@
   justify-content: center;
 }
 
+.justify-content-end {
+  justify-content: end;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
 .space-around {
   --justify-content: space-around;
 }
@@ -197,6 +205,19 @@ $breakpoint-sizes: [];
 
     .#{$breakpoint-name}\:items-baseline {
       --align-items: baseline;
+    }
+    .#{$breakpoint-name}\:space-around {
+      --justify-content: space-around;
+    }
+    .#{$breakpoint-name}\:space-between {
+      --justify-content: space-between;
+    }
+    .#{$breakpoint-name}\:justify-content-end {
+      justify-content: end;
+    }
+
+    .#{$breakpoint-name}\:justify-content-start {
+      justify-content: start;
     }
   }
 }

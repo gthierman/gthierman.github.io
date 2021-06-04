@@ -4,17 +4,20 @@
 
   <body>
     <header class="py-xxl flex align-items-center">
-      <div class="container container--1000 flex flex-wrap space-between direction-col s:direction-row">
-        <a class="text-h6 color--grey-700 weight-bold">
+      <div class="container xs:container--440 s:container--690 m:container--1000 flex flex-wrap direction-col s:direction-row items-start
+      ">
+        <!-- <a class="text-h6 color--grey-700 weight-bold mb-xl">
           Geoff Thierman
           <div class="color--grey-600 text-small weight-regular">Design & Code</div>
-        </a>
-        <nav class="flex gap-xxl">
-          {% for nav in site.data.nav %} 
-            {% if nav.published %}
-              <a href="{{nav.path}}" class="weight-bold text-decoration-none">{{nav.label}}</a>
-            {% endif %} 
-          {% endfor %}
+        </a> -->
+        <nav class="flex space-between flex-auto gap-xxl wrap">
+          <div class="flex gap-xxl">
+            {% for nav in site.data.nav %} 
+              {% if nav.published %}
+                <a href="{{nav.path}}" class="weight-bold text-decoration-none">{{nav.label}}</a>
+              {% endif %} 
+            {% endfor %}
+          </div>
           <div class="flex gap-m text-h5 social-icons">
             <a href="https://dribbble.com/gthierman" target="_blank">
               <i class="fab fa-dribbble"></i>
