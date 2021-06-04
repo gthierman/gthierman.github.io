@@ -38,21 +38,21 @@ class="mt-xxxl flex">
 </section>
 
 <section class="bg-color--grey-100 py-xl s:py-xxxl m:py-4xl">
-  <div class="container s:container--690 m:container--1000">
+  <div class="container xs:container--440 s:container--690 m:container--1000">
     <div class="grid grid-gap-xxl justify-content-center" style="--m-columns: 1fr 1fr; --s-columns:1fr">
       {% for testimonial in site.data.testimonials %}
-        <div class="testimonial bg-color--white p-xxxl">
-          <div class="text-h4 mb-xxl">{{testimonial.excerpt}}</div>
-          <div class="flex align-items-center">
+        <div class="testimonial bg-color--white p-xxxl xs:p-xxl text-align-center s:text-align-left">
+          <div class="text-body s:text-h4 mb-xxl">"{{testimonial.excerpt}}"</div>
+          <div class="flex align-items-center direction-col s:direction-row">
             <img
               src="images/avatars/{{testimonial.image}}"
               width="52px"
               height="52px"
-              class="testimonial__avatar"
+              class="testimonial__avatar mb-m s:mb-none"
               alt="A photo of {{testimonial.name}}"
             />
-            <div class="ml-xl">
-              <strong class="text-h5">{{testimonial.name}}</strong>
+            <div class="s:ml-xl">
+              <strong class="text-body s:text-h6">{{testimonial.name}}</strong>
               <div class="mt-xs">{{testimonial.role}}</div>
             </div>
           </div>

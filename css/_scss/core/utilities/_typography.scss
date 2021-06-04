@@ -30,6 +30,14 @@
   text-align: center;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
 @each $name, $value in $breakpoints {
   $breakpoint: $name;
   @media screen and (min-width:#{$value} ) {
@@ -48,6 +56,23 @@
       .#{$breakpoint}\:weight-#{$name} {
         font-weight: var(--font-weight-#{$name});
       }
+    }
+    .#{$breakpoint}\:text-decoration-underline {
+      text-decoration: underline;
+    }
+
+    .#{$breakpoint}\:text-decoration-none {
+      text-decoration: none;
+    }
+
+    .#{$breakpoint}\:text-align-center {
+      text-align: center;
+    }
+    .#{$breakpoint}\:text-align-left {
+      text-align: left;
+    }
+    .#{$breakpoint}\:text-align-right {
+      text-align: right;
     }
   }
 }
