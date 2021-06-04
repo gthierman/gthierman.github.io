@@ -39,21 +39,21 @@ class="mt-xxxl flex">
 
 <section class="bg-color--grey-100 py-xl s:py-xxxl xs:py-xxxl m:py-4xl">
   <div class="container xs:container--440 s:container--690 m:container--1000">
-    <div class="grid grid-gap-xxl justify-content-center" style="--m-columns: 1fr 1fr; --s-columns:1fr">
+    <div class="grid grid-gap-xxl justify-content-center" style="--m-columns: 1fr 1fr; --s-columns:1fr 1fr; --xs-columns: 1fr; ">
       {% for testimonial in site.data.testimonials %}
-        <div class="testimonial bg-color--white p-xxl xs:p-xxl text-align-center s:text-align-left">
-          <div class="text-body s:text-h4 mb-xxl">"{{testimonial.excerpt}}"</div>
-          <div class="flex align-items-center direction-col s:direction-row">
+        <div class="testimonial bg-color--white p-xl xs:p-xxl text-align-center m:text-align-left">
+          <div class="text-small s:text-h6 mb-xxl">"{{testimonial.excerpt}}"</div>
+          <div class="flex align-items-center direction-col m:direction-row">
             <img
               src="images/avatars/{{testimonial.image}}"
               width="52px"
               height="52px"
-              class="testimonial__avatar mb-m s:mb-none"
+              class="testimonial__avatar mb-m m:mb-none"
               alt="A photo of {{testimonial.name}}"
             />
             <div class="s:ml-xl">
-              <strong class="text-body s:text-h6">{{testimonial.name}}</strong>
-              <div class="mt-xs">{{testimonial.role}}</div>
+              <strong class="text-small s:text-h6">{{testimonial.name}}</strong>
+              <div class="mt-xs text-small s:text-body">{{testimonial.role}}</div>
             </div>
           </div>
       </div>
